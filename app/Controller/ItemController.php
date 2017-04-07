@@ -136,7 +136,7 @@ class ItemController extends Controller
 
 
 				$item = new ItemsModel();
-				$item->insert($datas);
+				$item->update($datas, $id);
 			}
 			else 
 			{

@@ -98,7 +98,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="submit">Double Button</label>
                         <div class="col-md-8">
-                            <button id="submit" name="submit" type="submit" class="btn btn-success">Ajouter l'article</button>
+                            <button id="submit" name="submit" type="submit" class="btn btn-success">Modifier l'article</button>
                             <!-- <button id="button2id" name="button2id" class="btn btn-danger">Scary Button</button> -->
                         </div>
                     </div>
