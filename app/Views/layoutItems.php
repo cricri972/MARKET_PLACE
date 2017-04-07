@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
 
-
 	<!-- Pour Internet Explorer : S'assurer qu'il utilise la dernière version du moteur de rendu -->    
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     
@@ -19,15 +18,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js" integrity="sha256-sqQlcOZwgKkBRRn5WvShSsuopOdq9c3U+StqgPiFhHQ=" crossorigin="anonymous"></script>
     
      <!-- Styles CSS -->
-
-	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/itemsStyle.css') ?>">
 </head>
 <body>
 	<div class="container">
 		<header>
-
 			<h1><?= $this->e($title) ?></h1>
-
 		</header>
 
 		<section>
