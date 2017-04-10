@@ -4,6 +4,7 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \Model\ClientsModel;
+use \W\Security\AuthentificationModel as aut;
 
 class ClientsController extends Controller{
 
@@ -76,8 +77,12 @@ class ClientsController extends Controller{
 
 
     public function listclient(){
-    $clientsModel = new ClientsModel(); // On instancie la classe ClientsModel;
-    $clients = $clientsModel->findAll(); // Stock tout les clients dans la variable $clients
+
+    $clientsModel = new ClientsModel();
+    // On instancie la classe ClientsModel;
+
+    $clients = $clientsModel->findAll();
+    // Stock tout les clients dans la variable $clients
         
     $this->show('clients/list', ['clients' =>$clients]);
     }
@@ -117,16 +122,41 @@ class ClientsController extends Controller{
 		if ($client-> delete($id)){
 		$this->show('clients/delete');
         }
+
+// <script src="js/jquery-3.2.0.min.js"></script>
+// <script>
+// //pour signifier que le dom est prêt
+// $(function(){
+//     $('#submitForm').click(function(el){
+//         el.preventDefault(); // On bloque l'action par défaut
+
+//         var form_user = $('#addUser'); // On récupère le formulaire, form_user pe Toto, #addUser c'est le nom du formulaire en haut
+//         $.ajax({
+//             method: 'post',
+//             url: 'inc/ajax_add_user.php', //va chercher le fichier dans inc (vérifs etc)
+//             data: form_user.serialize(), // On récupère les données à envoyer
+//             success: function(resultat){
+//                 $('#result').html(resultat); // id de la div indiquant l'endroit du formulaire où on affichera le résultat.
+//                 // result a été utilisé dans ajax_add_user pour afficher le succes ou l'echec; ne pas oublier le echo $result.
+//                 form_user.find('input').val(''); // Permet de vider les champs du formulaire.. 
+//             }
+//         });
+//     });
+// });
+// </script>
 	}
 
 
+
+
 	public function modifyClient($id){
+
             $post = [];
             $errors = [];
 
-			$client = new ClientsModel();
+            $client = new ClientsModel();
 
-			$detail = $client->find($id);
+            $detail = $client->find($id);
 
             if(!empty($_POST)){
                 foreach($_POST as $key => $value){
@@ -137,53 +167,50 @@ class ClientsController extends Controller{
                     $errors[] = 'Veuillez saisir un pseudo';
                 }
 
-                if(strlen($post['lastname']) < 2) {
-					$errors[] = "Le champ Nom doit contenir au moins 2 caractères";
-				}
+                if(strlen($post['lastname']) < 2){
+                    $errors[] = "Le champ Nom doit contenir au moins 2 caractères";
+                }
 
-				if(strlen($post['firstname']) < 2) {
-					$errors[] = "Le champ Prénom doit contenir au moins 2 caractères";
-				}
+                if(strlen($post['firstname']) < 2){
+                    $errors[] = "Le champ Prénom doit contenir au moins 2 caractères";
+                }
                 
-                if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
-					$errors[] = "Saisissez un email valide";
-				}
+                if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL)){
+                    $errors[] = "Saisissez un email valide";
+                }
 
-                if(strlen($post['password']) < 8 || strlen($post['password']) > 16) {
-					$errors[] = "Votre mot de passe doit contenir de 8 à 16 caractères";
-				}
+                if(strlen($post['password'])<8 || strlen($post['password'])>16){
+                    $errors[] = "Votre mot de passe doit contenir de 8 à 16 caractères";
+                }
 
-                if(!is_numeric($post['phone']) || strlen($post['phone']) != 10) {
-					$errors[] = "Le numéro de portable doit compter 10 chiffres";
-				}
+                if(!is_numeric($post['phone']) || strlen($post['phone']) != 10){
+                    $errors[] = "Le numéro de portable doit compter 10 chiffres";
+                }
 
-				if(!is_numeric($post['phone_2']) || strlen($post['phone']) != 10) {
-					$errors[] = "Le numéro de téléphone fixe doit compter 10 chiffres";
-				}
+                if(!is_numeric($post['phone_2']) || strlen($post['phone']) != 10){
+                    $errors[] = "Le numéro de téléphone fixe doit compter 10 chiffres";
+                }
 
-				if(strlen($post['address']) < 2) {
-					$errors[] = "Votre adresse doit contenir au minimum 2 caractères";
-				}
+                if(strlen($post['address'])<2){
+                    $errors[] = "Votre adresse doit contenir au minimum 2 caractères";
+                }
 
-				if(strlen($post['city']) < 2) {
-					$errors[] = "La ville doit doit contenir au minimum 2 caractères";
-				}
+                if(strlen($post['city'])<2){
+                    $errors[] = "La ville doit doit contenir au minimum 2 caractères";
+                }
 
-				if(!is_numeric($post['zip_code']) || strlen($post['zip_code']) != 5) {
-					$errors[] = "Le code postal doit compter 5 chiffres";
-				}
+                if(!is_numeric($post['zip_code']) || strlen($post['zip_code']) != 5){
+                    $errors[] = "Le code postal doit compter 5 chiffres";
+                }
 
                 if(count($errors) === 0){
-                	$post['password'] = password_hash($post['password'], PASSWORD_DEFAULT);
+                    $post['password'] = password_hash($post['password'], PASSWORD_DEFAULT);
 
-                	$updateUsr = $client->update($post, $id);
+                    $updateUsr = $client->update($post, $id);
                     if ($updateUsr){
-
-                    	$result = 'Vos modifications ont bien été transmises';
-                    	$this->redirectToRoute('Clients_addClient');
-                    }
-
-                    
+                        $result = 'Vos modifications ont bien été transmises';
+                        $this->redirectToRoute('Clients_addClient');
+                    }   
                 }
                 else {
                     $result =implode("<br>",$errors);
@@ -192,7 +219,6 @@ class ClientsController extends Controller{
             }
                 if(isset($result)){
                  $this->show('clients/modify');
-
                 } 
                 else{
                 $this->show('clients/modify',['detail' => $detail]);
@@ -200,4 +226,52 @@ class ClientsController extends Controller{
                 //$detail correspond à la variable définie en haut de cette fonction
             }
     }
+
+
+
+    public function loginClient(){
+        $post = [];
+        $errors = [];
+
+        $login = new aut();
+
+        if(!empty($_POST)){
+                foreach($_POST as $key => $value){
+                    $post[$key] = trim(strip_tags($value));
+                }
+
+            if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
+                    $errors[] = "Email invalide";
+                }
+
+                if(strlen($post['password']) < 8 || strlen($post['password']) > 16) {
+                    $errors[] = "Mot de passe invalide";
+                }
+
+                if(count($errors) === 0){
+                    $login->isValidLoginInfo($post['email'], $post['password']);
+                    $result = 'Connexion réussie';
+                } else {
+                    $result =implode("<br>", $errors);
+                }
+                echo $result;
+        }
+        
+        $this->show('clients/login');
 }
+    // // Connecte un utilisateur
+    // // L'argument à passer est un tableau contenant les données utilisateur
+    // // Les données seront stockées sous la clé 'user' dans $_SESSION
+    // public function logUserIn($user)
+
+    // // Déconnecte un utilisateur
+    // public function logUserOut(){
+    //     $logout = new ClientsModel();
+    //     //création d'1 variable qui permet l'utilisation des fonctions de ClientsModel.
+
+    //     $detail = $client->find($id);
+    //     }
+
+    // }
+}
+

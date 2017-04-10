@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Liste clients']) ?>
+<?php $this->layout('layout', ['title' => 'Liste utilisateur']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -10,27 +10,27 @@
 		<thead>
 			<tr>
 				<th>N°</th>
-				<th>Pseudo</th>
 				<th>Nom</th>
 				<th>Prénom</th>
+				<th>Boutique</th>
 			</tr>
 		</thead>
 
 		<tbody>
-			<!-- foreach permettant d'avoir une ligne <tr> par ligne SQL (pour chaque donnée de ma table item, on définit une valeur  avec attribut-->
-			<?php foreach($clients as $client): ?>
+			<!-- foreach permettant d'avoir une ligne <tr> par ligne SQL (pour chaque donnée de ma table item, on définit une valeur avec attribut-->
+			<?php foreach($users as $user): ?>
 				<tr>
-					<td><?=$client['id']; ?></td>
-					<td><?=$client['pseudo']; ?></td>
-					<td><?=$client['lastname']; ?></td>
-					<td><?=$client['firstname']; ?></td>
+					<td><?=$user['id']; ?></td>
+					<td><?=$user['lastname']; ?></td>
+					<td><?=$user['firstname']; ?></td>
+					<td><?=$user['id_shop']; ?></td>
 					<td>
-					<a href="<?php echo $this->url('Clients_viewClient', ['id' => $client['id']]) ;?>" class="btn btn-info">
+					<a href="<?php echo $this->url('Users_viewUser', ['id' => $user['id']]) ;?>" class="btn btn-info">
 						Détails
 						</a>
 					</td>
 					<td>
-					<a href="<?php echo $this->url('Clients_viewClient', ['id' => $client['id']]) ;?>" class="btn btn-warning">
+					<a href="<?php echo $this->url('Users_viewUser', ['id' => $user['id']]) ;?>" class="btn btn-warning">
 						Supprimer
 						</a>
 					</td>

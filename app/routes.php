@@ -14,6 +14,15 @@
 		['GET|POST', '/client/details/[i:id]', 'Clients#viewClient', 'Clients_viewClient'],
 		['GET|POST', '/client/delete/[i:id]', 'Clients#deleteClient', 'Clients_deleteClient'],
 		['GET|POST', '/client/modify/[i:id]', 'Clients#modifyClient', 'Clients_modifyClient'],
+		['GET|POST', '/client/login', 'Clients#loginClient', 'Clients_loginClient'],
+
+
+		['GET|POST', '/user/add', 'Users#addUser', 'Users_addUser'],
+		['GET|POST', '/user/list', 'Users#listUser', 'Users_listUser'],
+		['GET|POST', '/user/details/[i:id]', 'Users#viewUser', 'Users_viewUser'],
+		['GET|POST', '/user/delete/[i:id]', 'Users#deleteUser', 'Users_deleteUser'],
+		['GET|POST', '/user/modify/[i:id]', 'Users#modifyUser', 'Users_modifyUser'],
+		['GET|POST', '/user/login', 'Users#loginUser', 'Users_loginUser'],
 
 
 		
