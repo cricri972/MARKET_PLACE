@@ -1,0 +1,15 @@
+COMMENT SE COMPOSE LE NUMÉRO SIRET ?
+Le numéro SIRET est délivré par l’INSEE à toute entreprise ou établissement. Une entreprise peut en effet avoir un ou plusieurs établissements (localisations géographiques). Il se compose de 14 chiffres.
+
+Le SIREN (9 chiffres) associé au code NIC (Numéro Interne de Classement sur 5 chiffres) forme le numéro SIRET.
+
+Les 4 premiers chiffres du code NIC sont séquentiels alors que le 5ème est une clef de vérification calculée modulo 10 sur le numéro complet selon l’algorithme de Luhn. Cette clef permet de vérifier la validité de l’ensemble du numéro SIRET.
+
+EXEMPLE DE NUMÉRO SIRET
+Voici un exemple de numéro SIRET :
+404 833 048 00022
+
+Ce SIRET correspond au deuxième établissement (0002) de l'entreprise possédant le SIREN 404 833 048, avec la clé de vérification 2.
+
+
+code ape
