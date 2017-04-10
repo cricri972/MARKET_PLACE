@@ -2,31 +2,26 @@
 
 <?php $this->start('main_content') ?>
 
-<?php
-function prixttc($prixht, $tva)
-    {
-        $prixht = $prixht;
-        $tva = $tva;
-        $prixttc = $prixht + ($prixht*$tva/100);
-        return $prixttc;
-    }
- 	$prixttc = prixttc($view['price_ht'], $view['taxes']);
-?>
-	<h2>reference article:<?php echo $view['ref'];?></h2>
-	<h2>Description article :<?php echo $view['description'];?></h2>
-	<h2>Prix HT :<?php echo $view['price_ht'];?> €</h2>
-	<h2>TVA de :<?php echo $view['taxes'];?> %</h2>
-	<h2>Prix TTC :<?php echo $prixttc;?> €</h2>
-	<h2>Il reste <?php echo $view['stock'];?> articles en stock</h2>
+	<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+	<img src="<?= $this->assetUrl($view['picture']) ?>" alt="<?php echo $view['picture'];?>" class="img-responsive ">
+	</div>
 
+	<div class="col-xs-5" style="border:0px solid gray">
+	<h1>Détail article</h1>
+	<h3>Réference article :<br><?php echo $view['ref'];?></h3>
+	<h3>Description article :<br><?php echo $view['description'];?></h3>
+	
+	<h3>Dont :<br><?php echo \Tools\Utils::calculTVA($view['price_ht'], $view['taxes']);?> € de TVA</h3>
+	<h3>Prix TTC :<br><?php echo \Tools\Utils::prixTTC($view['price_ht'], $view['taxes']);?> €</h3>
+	<h3>Il reste <?php echo $view['stock'];?> articles en stock</h3>
+	</div>
 	
 	
-	<img src="<?= $this->assetUrl($view['picture']) ?>" alt="<?php echo $view['picture'];?>">
 
 	 <button id="button2id" name="button2id" class="btn btn-info"><a href="<?php echo $this->url('item_listItem')?>">Lister les  articles</a></button>
 	
 	<br>
-	<<!-- form class="form-horizontal" method="post" enctype="multipart/form-data">
+	<!-- form class="form-horizontal" method="post" enctype="multipart/form-data">
 
 			
 			<div class="form-group">

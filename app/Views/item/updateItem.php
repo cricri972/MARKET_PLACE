@@ -54,7 +54,7 @@
                 <label class="col-md-4 control-label" for="taxes">Choisir une TVA</label>
                     <div class="col-md-4">
                         <select id="taxes" name="taxes" class="form-control">
-                        	<option value="<?=$view['taxes'];?>">choisir une TVA</option>
+                        	<option value="<?=$view['taxes'];?>"><?=$view['taxes'];?></option>
                             <option value="2.1">tva 2.1 %</option>
                             <option value="8.5">tva 8.5 %</option>
                             <option value="18.6">tva 18.6 %</option>
@@ -76,7 +76,7 @@
                 <label class="col-md-4 control-label" for="category">Choix de la categorie</label>
                     <div class="col-md-4">
                         <select id="category" name="category" class="form-control">
-                        	<option value="<?=$view['category'];?>">choisir une categorie</option>
+                        	<option value="<?=$view['category'];?>"><?=$view['category'];?></option>
                             <option value="toto">toto</option>
                             <option value="tata">tata</option>
                             <option value="titi">titi</option>
@@ -99,7 +99,7 @@
                         <label class="col-md-4 control-label" for="submit">Double Button</label>
                         <div class="col-md-8">
                             <button id="submit" name="submit" type="submit" class="btn btn-success">Modifier l'article</button>
-                            <!-- <button id="button2id" name="button2id" class="btn btn-danger">Scary Button</button> -->
+                            <button id="button2id" name="button2id" class="btn btn-info"><a href="<?php echo $this->url('item_listItem')?>">Lister les  articles</a></button>
                         </div>
                     </div>
 
