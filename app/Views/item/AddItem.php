@@ -96,10 +96,10 @@
 
 			 <!-- Button (Double) -->
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="submit">Double Button</label>
+                        <label class="col-md-4 control-label" for="submit">Votre choix d'action</label>
                         <div class="col-md-8">
                             <button id="submit" name="submit" type="submit" class="btn btn-success">Ajouter l'article</button>
-                            <!-- <button id="button2id" name="button2id" class="btn btn-danger">Scary Button</button> -->
+                            <button id="button2id" name="button2id" class="btn btn-info"><a href="<?php echo $this->url('item_listItem')?>">Lister les  articles</a></button>
                         </div>
                     </div>
 

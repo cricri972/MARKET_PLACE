@@ -10,6 +10,18 @@ use \Model\ItemsModel;
 class ItemController extends Controller
 {
 
+	public function TtcItem($id){
+
+
+
+		$prixht = $_post['price_ht'];
+		$taxes = $_post['taxes'];
+        $prixttc = $prixht +   ($prixht*$taxes/100);
+        return $prixttc;
+       
+    }
+ 
+
 	public function UpdateItem($id){
 
 		$viewItem = new ItemsModel();
@@ -67,7 +79,7 @@ class ItemController extends Controller
 
 
 			//gestion du stock
-			if(!is_numeric($post['stock']) || !($post['stock'] >= 1)){
+			if(!is_int($post['stock']) || !($post['stock'] >= 1)){
 				$errors[] = 'Le montant du incorrect';
 			}
 
@@ -136,7 +148,7 @@ class ItemController extends Controller
 
 
 				$item = new ItemsModel();
-				$item->insert($datas);
+				$item->update($datas, $id);
 			}
 			else 
 			{
@@ -174,6 +186,7 @@ class ItemController extends Controller
             	$errors = [];
                 $post = [];
                 $displayForm = true;
+                $prixttc = '';
 
                 if(!empty($_POST))
                 {
@@ -214,9 +227,13 @@ class ItemController extends Controller
             }
             
             $view = $viewItem->find($id); 
-            //var_dump($view);
+
+            // $prixttc = ($view['price_ht'] * ($view['taxes']/100));
+            // var_dump($prixttc);
+
             $params = [
                 'view' => $view
+               
             ];
 		$this->show('item/ViewItem', $params);
     }

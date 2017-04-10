@@ -1,6 +1,8 @@
 <?php $this->layout('layoutItems', ['title' => 'Liste des articles']) ?>
 
 <?php $this->start('main_content') ?>
+
+<button id="button1id" name="button1id" class="btn btn-success"><a href="<?php echo $this->url('item_addItem')?>">Ajouter un article</a></button>
 	
 	<table>
 		<thead>
