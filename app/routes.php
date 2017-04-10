@@ -5,7 +5,7 @@
 		
         ['GET|POST', '/addshop/', 'Shop#addShop', 'shop_formShop'], 
 	    ['GET|POST', '/listshop/', 'Shop#listShop', 'shop_listShop'],
-	    ['GET|POST', '/detailsshop/[:id]', 'Shop#detailsShop', 'shop_detailsShop'],
+	    ['GET|POST', '/viewshop/[:id]', 'Shop#viewShop', 'shop_viewShop'],
 		['GET|POST', '/mailtoshop/', 'Shop#mailToShop', 'shop_mailToShop'],
 		['GET|POST', '/deleteshop/[:id]', 'Shop#deleteShop', 'shop_deleteShop'],
 

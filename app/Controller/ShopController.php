@@ -76,31 +76,36 @@ class ShopController extends Controller
 
 		
 
-			if(isset($_FILES['cover']) && $_FILES['cover']['error'] === 0){
+			if(isset($_FILES['logo']) && $_FILES['logo']['error'] === 0){
 
 		$finfo = new \finfo();
-		$mimeType = $finfo->file($_FILES['cover']['tmp_name'], FILEINFO_MIME_TYPE);
+		$mimeType = $finfo->file($_FILES['logo']['tmp_name'], FILEINFO_MIME_TYPE);
 
-		$extension = pathinfo($_FILES['cover']['name'], PATHINFO_EXTENSION);
+		$extension = pathinfo($_FILES['logo']['name'], PATHINFO_EXTENSION);
 
 		if(in_array($mimeType, $mimeTypeAvailable)){
 
-			if($_FILES['cover']['size'] <= $maxSize){
+			if($_FILES['logo']['size'] <= $maxSize){
 
-				$uploadDir = $_SERVER['DOCUMENT_ROOT'].$_SERVER['W_BASE'].'/assets/upload/'.$post['commercialName'].'/'; // Répertoire d'upload
+				$uploadPath = $_SERVER['DOCUMENT_ROOT'].$_SERVER['W_BASE'].'/assets/'; // Répertoire d'upload
+
+				$uploadDir = 'upload/'.$post['commercialName'].'/'; 
+
 
 				//var_dump($uploadDir);
 
 		 		//var_dump($_FILES);
 
-				if(!is_dir($uploadDir)){
-					mkdir($uploadDir, 0755);
+				if(!is_dir($uploadPath.$uploadDir)){
+					mkdir($uploadPath.$uploadDir, 0755);
 				}
 
-				$newPictureName = uniqid('cover_').'.'.$extension;
+				$newPictureName = uniqid('logo_').'.'.$extension;
+				//$newPictureName = 'logo.'.$extension;
 
-				if(!move_uploaded_file($_FILES['cover']['tmp_name'], $uploadDir.$newPictureName)){
-					$errors[] = 'Erreur lors de l\'upload de la photo';
+				//if(!move_uploaded_file($_FILES['cover']['tmp_name'], $uploadDir.$newPictureName)){
+					if(!move_uploaded_file($_FILES['logo']['tmp_name'], $uploadPath.$uploadDir.$newPictureName)){
+					$errors[] = 'Erreur lors de l\'upload du logo';
 				}
 			}
 			else {
@@ -126,12 +131,18 @@ class ShopController extends Controller
 				$result = '<p style="color:green">Les informations saisies sont correctes !</p>';
 			// ecriture dans la base
 				
-
+var_dump($post);
+echo '<br>';
+				$post['cover'] = $uploadDir.$newPictureName;
 				$shopModel = new ShopModel();
 
+var_dump($shopModel);
+				
+echo '<br>';
+var_dump($post);
 				$shopModel->insert($post);
 
-
+//'picture'   		=> 'upload/'.$newPictureName,
 			}
 			else { // Si j'ai des erreurs
 
@@ -169,19 +180,20 @@ class ShopController extends Controller
 		$this->show('shop/listShop', $params); // template a afficher pour resultats
 	}
 	
-	public function detailsShop($id)
+
+	public function viewShop($id)
 	{
-		$detailsShopModel = new ShopModel();
-		$detailsShop = $detailsShopModel -> find($id); //tableau/enregistrement d'id $id
+		$viewShopModel = new ShopModel();
+		$viewShop = $viewShopModel -> find($id); //tableau/enregistrement d'id $id
 
 		//var_dump($detailsShop); // affiche valeurs enregistrement
 
 		echo '<br>';
-		$info = ['shop' => $detailsShop]; 
+		$info = ['shop' => $viewShop]; 
 
 		//var_dump($info);
 
-		$this->show('shop/detailsShop', $info);
+		$this->show('shop/viewShop', $info);
 
 	}
 

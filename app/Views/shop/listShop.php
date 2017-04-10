@@ -22,7 +22,7 @@
 		<?php foreach($shop as $shoper): ?>
 			<tr>
 				<th><?= $shoper['id'];?></th>
-				<th><a href="<?= $this->url('shop_detailsShop', ['id'=> $shoper['id']]); ?>"><?= $shoper['commercialName'];?></a></th>
+				<th><a href="<?= $this->url('shop_viewShop', ['id'=> $shoper['id']]); ?>"><?= $shoper['commercialName'];?></a></th>
 				
 				<th><a href="<?= $this->url('shop_mailToShop', ['id'=> $shoper['id']]); ?>"><?= $shoper['email'];?></a></th>
 				

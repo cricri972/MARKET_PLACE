@@ -2,9 +2,10 @@
 <?php $this->start('main_content') ?>
 
 
-<article class="detailsShop">
+<article class="viewShop">
 
-
+<img src="<?= $this->assetUrl($shop['logo']) ?>">
+<?php var_dump($shop);?>
 <h1><?= $shop['commercialName'] ?></h1><br>
 <h3><?= $shop['raisonSocial'] ?></h3><br>
 <h3><?= $shop['immatriculation'] ?></h3><br>
