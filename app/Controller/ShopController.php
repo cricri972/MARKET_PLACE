@@ -131,18 +131,18 @@ class ShopController extends Controller
 				$result = '<p style="color:green">Les informations saisies sont correctes !</p>';
 			// ecriture dans la base
 				
-var_dump($post);
-echo '<br>';
-				$post['cover'] = $uploadDir.$newPictureName;
+			//var_dump($post);
+			//echo '<br>';
+				$post['logo'] = $uploadDir.$newPictureName;
 				$shopModel = new ShopModel();
 
-var_dump($shopModel);
+			//var_dump($shopModel);
 				
-echo '<br>';
-var_dump($post);
+			//echo '<br>';
+			//var_dump($post);
 				$shopModel->insert($post);
 
-//'picture'   		=> 'upload/'.$newPictureName,
+			//'picture'   		=> 'upload/'.$newPictureName,
 			}
 			else { // Si j'ai des erreurs
 
@@ -180,7 +180,6 @@ var_dump($post);
 		$this->show('shop/listShop', $params); // template a afficher pour resultats
 	}
 	
-
 	public function viewShop($id)
 	{
 		$viewShopModel = new ShopModel();
@@ -196,6 +195,8 @@ var_dump($post);
 		$this->show('shop/viewShop', $info);
 
 	}
+
+	public function deleteShop($id)
 
 	
 

@@ -90,11 +90,15 @@
 </div>
 </fieldest>
 
-<label class="col-md-4 control-label" for="cover">Images Société</label>  
+<label class="col-md-4 control-label" for="logo">Logo de la Boutique</label>  
+    <div class="col-md-4">
+        <input id="logo" name="logo" type="file" placeholder="Images à afficher sur le market" class="form-control input-md">
+    </div>
+<!-- <label class="col-md-4 control-label" for="cover">Images Société</label>  
     <div class="col-md-4">
         <input id="cover" name="cover" type="file" placeholder="Images à afficher sur le market" class="form-control input-md">
     </div>
-
+ -->
 
 <!-- Button (Double) -->
 <div class="form-group">
