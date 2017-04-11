@@ -1,6 +1,8 @@
 <?php $this->layout('layoutItems', ['title' => 'Liste des articles']) ?>
 
 <?php $this->start('main_content') ?>
+
+<button id="button1id" name="button1id" class="btn btn-success"><a href="<?php echo $this->url('item_addItem')?>">Ajouter un article</a></button>
 	
 	<table>
 		<thead>
@@ -9,6 +11,7 @@
 				<th>Reference</th>
 				<th>Titre</th>
 				<th>Prix HT</th>
+				<th>TVA</th>
 				<th>stock</th>
 				<th>Visualiser</th>
 				<th>Supprimer</th>
@@ -21,6 +24,7 @@
 				<th><?=$item['ref'];?></th>
 				<th><?=$item['name'];?></th>
 				<th><?=$item['price_ht'];?></th>
+				<th><?=$item['taxes'];?> %</th>
 				<th><?=$item['stock'];?></th>
 				<th><button id="button1id" name="button1id" class="btn btn-success"><a href="<?php echo $this->url('item_ViewItem', ['id' => $item['id']])?>">Visualiser</a></button></th>
 				<th><button id="button1id" name="button1id" class="btn btn-danger"><a href="<?php echo $this->url('item_DeleteItem', ['id' => $item['id']])?>">Supprimer</a></button></th>

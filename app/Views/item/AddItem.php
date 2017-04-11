@@ -1,5 +1,5 @@
 <?php//AddArticle.php ?>
-<?php $this->layout('layoutItems', ['title' => 'Article']) ?>
+<?php $this->layout('layoutItems', ['title' => 'Ajouter un article']) ?>
 
 <?php $this->start('main_content') ?>
 	
@@ -11,7 +11,7 @@
 
 			<!-- reference de l'article -->
 			<div class="form-group">
-				<label class="col-md-4 control-label" for="ref">Reference de l'article</label>
+				<label class="col-md-4 control-label" for="ref">Référence de l'article</label>
 				<div class="col-md-4">
 					<input type="text" id="ref" name="ref" class="form-control input-md">
 				</div>
@@ -19,7 +19,7 @@
 
 			<!-- titre de l'article -->
 			<div class="form-group">
-				<label class="col-md-4 control-label" for="name">Titre</label>
+				<label class="col-md-4 control-label" for="name">Intitulé</label>
 				<div class="col-md-4">
 					<input type="text" id="name" name="name" class="form-control input-md">
 				</div>
@@ -67,7 +67,7 @@
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="discount">Remise</label>
 				<div class="col-md-4">
-					<input type="text" id="discount" name="discount" class="form-control input-md" placeholder="de 0 a 90">
+					<input type="text" id="discount" name="discount" class="form-control input-md" value="<?=(isset($post['discount'])) ? $post['discount'] : 0; ?>" placeholder="remise en chiffre entier">
 				</div>
 			</div>
 
@@ -77,10 +77,11 @@
                     <div class="col-md-4">
                         <select id="category" name="category" class="form-control">
                         	<option value="">choisir une categorie</option>
-                            <option value="toto">toto</option>
-                            <option value="tata">tata</option>
-                            <option value="titi">titi</option>
-                            <option value="tutu">tutu</option>
+                            <option value="sport">sport</option>
+                            <option value="hi-tech">hi-tech</option>
+                            <option value="deco cadeaux">deco cadeaux</option>
+                            <option value="bricolage">bricolage</option>
+                            <option value="electromenager">electromenager</option>
                         </select>
                     </div>
             </div>
@@ -96,10 +97,10 @@
 
 			 <!-- Button (Double) -->
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="submit">Double Button</label>
+                        <label class="col-md-4 control-label" for="submit">Votre choix d'action</label>
                         <div class="col-md-8">
                             <button id="submit" name="submit" type="submit" class="btn btn-success">Ajouter l'article</button>
-                            <!-- <button id="button2id" name="button2id" class="btn btn-danger">Scary Button</button> -->
+                            <button id="button2id" name="button2id" class="btn btn-info"><a href="<?php echo $this->url('item_listItem')?>">Lister les  articles</a></button>
                         </div>
                     </div>
 

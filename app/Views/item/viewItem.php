@@ -1,15 +1,40 @@
-<?php $this->layout('layoutItems', ['title' => 'Detail article']) ?>
+<?php $this->layout('layoutItems', ['title' => '']) ?>
 
 <?php $this->start('main_content') ?>
-	<h2>reference article:<?php echo $view['ref'];?></h2>
-	<h2>Description article :<?php echo $view['description'];?></h2>
-	<h2>Prix HT :<?php echo $view['price_ht'];?> €</h2>
-	<h2>Il reste <?php echo $view['stock'];?> articles en stock</h2>
 	
-	<img src="<?= $this->assetUrl($view['picture']) ?>" alt="<?php echo $view['picture'];?>">
+	<?php
+
+		$priceTTC = \Tools\Utils::priceTTCWithDiscount($view['price_ht'], $view['taxes'], $view['discount']);
+		$discount = \Tools\Utils::discount($view['price_ht'],$view['discount']);
+		$tva = \Tools\Utils::calculTVA($priceTTC, $discount);
+		
+	?>
+
+	<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+	<img src="<?= $this->assetUrl($view['picture']) ?>" alt="<?php echo $view['picture'];?>" class="img-responsive ">
+	</div>
+
+	<div class="col-xs-5" style="border:0px solid gray">
+<!-- 	<h1>Description</h1> -->
+	<h3>Réference :<br><?php echo $view['ref'];?></h3>
+	<h3>Description :<br><?php echo $view['description'];?></h3>
+	
+	<h3>Dont :<br><?php echo $tva;?> € de TVA</h3>
+
+	<h3>Prix HT remisé : <br><?php echo $discount;?> €</h3>
+
+	<h3>Prix TTC :<br><?php echo $priceTTC;?> €</h3>
+
+	<h3>Attention il reste <?php echo $view['stock'];?> articles en stock</h3>
+	</div>
+	
+	
+
+	 <button id="button2id" name="button2id" class="btn btn-info"><a href="<?php echo $this->url('item_listItem')?>">Lister les  articles</a></button>
+
 	
 	<br>
-	<<!-- form class="form-horizontal" method="post" enctype="multipart/form-data">
+	<!-- form class="form-horizontal" method="post" enctype="multipart/form-data">
 
 			
 			<div class="form-group">
