@@ -11,7 +11,7 @@
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="ref">Reference de l'article</label>
 				<div class="col-md-4">
-					<input type="text" id="ref" name="ref" value="<?=$view['ref'];?>"class="form-control input-md">
+					<input type="text" id="ref" name="ref" value="<?=$view['ref'];?>" class="form-control input-md">
 				</div>
 			</div>
 
@@ -77,10 +77,11 @@
                     <div class="col-md-4">
                         <select id="category" name="category" class="form-control">
                         	<option value="<?=$view['category'];?>"><?=$view['category'];?></option>
-                            <option value="toto">toto</option>
-                            <option value="tata">tata</option>
-                            <option value="titi">titi</option>
-                            <option value="tutu">tutu</option>
+                            <option value="sport">sport</option>
+                            <option value="hi-tech">hi-tech</option>
+                            <option value="deco cadeaux">deco cadeaux</option>
+                            <option value="bricolage">bricolage</option>
+                            <option value="electromenager">electromenager</option>
                         </select>
                     </div>
             </div>

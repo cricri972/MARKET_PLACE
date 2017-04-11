@@ -9,16 +9,21 @@ namespace Tools;
 class Utils
 {
 	
-	public static function prixTTC($prixht, $tva)
+	public static function priceTTC($price_ht, $tva)
     {
-		$prixttc = $prixht + ($prixht*$tva/100);
-		return $prixttc;
+		$pricettc = $price_ht + ($price_ht*$tva/100);
+		return $pricettc;
     }
 
-	public static function calculTVA($prixht, $tva)
+	public static function calculTVA($price_ht, $tva)
     {
-        $diftva = ($prixht*$tva/100);
-        return $diftva;
+        $calcultva = ($price_ht*$tva/100);
+        return $calcultva;
+    }
+    public static function discount($discount)
+    {
+		$pricettc = $price_ht + ($price_ht*$tva/100);
+		return $pricettc;
     }
 
 

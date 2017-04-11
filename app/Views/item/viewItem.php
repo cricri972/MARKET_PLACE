@@ -1,4 +1,4 @@
-<?php $this->layout('layoutItems', ['title' => 'Detail article']) ?>
+<?php $this->layout('layoutItems', ['title' => '']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -7,18 +7,19 @@
 	</div>
 
 	<div class="col-xs-5" style="border:0px solid gray">
-	<h1>Détail article</h1>
-	<h3>Réference article :<br><?php echo $view['ref'];?></h3>
-	<h3>Description article :<br><?php echo $view['description'];?></h3>
+<!-- 	<h1>Description</h1> -->
+	<h3>Réference :<br><?php echo $view['ref'];?></h3>
+	<h3>Description :<br><?php echo $view['description'];?></h3>
 	
-	<h3>Dont :<br><?php echo \Tools\Utils::calculTVA($view['price_ht'], $view['taxes']);?> € de TVA</h3>
-	<h3>Prix TTC :<br><?php echo \Tools\Utils::prixTTC($view['price_ht'], $view['taxes']);?> €</h3>
-	<h3>Il reste <?php echo $view['stock'];?> articles en stock</h3>
+	<h3>Dont :<br><?php echo \Tools\Utils::calculTVA($view['price_ht'], $view['taxes'], $view['taxes']);?> € de TVA</h3>
+	<h3>Prix TTC :<br><?php echo \Tools\Utils::priceTTC($view['price_ht'], $view['taxes']);?> €</h3>
+	<h3>Attention il reste <?php echo $view['stock'];?> articles en stock</h3>
 	</div>
 	
 	
 
 	 <button id="button2id" name="button2id" class="btn btn-info"><a href="<?php echo $this->url('item_listItem')?>">Lister les  articles</a></button>
+
 	
 	<br>
 	<!-- form class="form-horizontal" method="post" enctype="multipart/form-data">
