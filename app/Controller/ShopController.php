@@ -196,11 +196,23 @@ class ShopController extends Controller
 
 	}
 
+	public function updateShop($id)
+	{
+		$updateShopModel = new ShopModel();
+		$updateShop = $updateShopModel -> update($id);
+
+		
+		$info = ['shop' => $viewShop];
+		$this->redirectToRoute('shop_viewShop', $);
+	}
+
 	public function deleteShop($id)
+	{
+		$deleteShopModel = new ShopModel();
+		$deleteShop = $deleteShopModel -> delete($id);
 
-	
-
-
+		$this->redirectToRoute('shop_listShop');
+	}
 }
 
 

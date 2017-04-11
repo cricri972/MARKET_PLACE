@@ -1,16 +1,23 @@
 <?php
 	
-	$w_routes = array(
-		['GET', '/', 'Default#home', 'default_home'],
-		
-        ['GET|POST', '/addshop/', 'Shop#addShop', 'shop_formShop'], 
-	    ['GET|POST', '/listshop/', 'Shop#listShop', 'shop_listShop'],
-	    ['GET|POST', '/viewshop/[:id]', 'Shop#viewShop', 'shop_viewShop'],
-		['GET|POST', '/mailtoshop/', 'Shop#mailToShop', 'shop_mailToShop'],
-		['GET|POST', '/deleteshop/[:id]', 'Shop#deleteShop', 'shop_deleteShop'],
+$w_routes = array(
+
+/*
+['METHODE', 'URL', NAMECONTROLLER#METHODE,nom de la route]
+
+*/
 
 	
-	);
+['GET', '/', 'Default#home', 'default_home'], 				// Accueil
+['GET|POST', '/addshop/', 'Shop#addShop', 'shop_formShop'], // Ajout boutique
+['GET|POST', '/listshop/', 'Shop#listShop', 'shop_listShop'], // Liste des boutiques
+['GET|POST', '/viewshop/[:id]', 'Shop#viewShop', 'shop_viewShop'],	// Détails de la boutique
+['GET|POST', '/mailtoshop/', 'Shop#mailToShop', 'shop_mailToShop'], // adresser Mail
+['GET|POST', '/deleteshop/[:id]', 'Shop#deleteShop', 'shop_deleteShop'], // Suppression boutique
+['GET|POST', '/updateshop/[:id]', 'Shop#updateShop', 'shop_updateShop'], // Maj boutique
+
+
+);
 
 	/* ['GET', '/article/enum', 'CreateArticle#enumArticle', 'article_enumArticle']
 	*
