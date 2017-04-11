@@ -11,16 +11,10 @@
 	
 </head>
 
-
 <body>
 
         
-    <!-------------------------------------------------------------------------------------------	
-                        
-                                        HEADER    
-    
-    --------------------------------------------------------------------------------------------->		
-
+    <!-- HEADER -->		
 
 	<div class="container">
 	
@@ -36,7 +30,6 @@
                         Retirer en Boutique</h4>   
                     </ul>
                         
-                      
                         
                 </div>
                     <div class="menu">
@@ -59,10 +52,8 @@
                         <form class="navbar-form inline-form"  method="post">
                             <button id="button" type="submit" action="login.php" class="btn btn-warning btn-md couleur" value="Accès membre">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></button> 
                         
-
                         <input id="button" type="submit" action="add.php" class="btn btn-warning btn-md couleur" value="Inscrivez vous">
                         
-               
                             <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur" value="Mon Panier">Mon Panier&nbsp&nbsp<span class="glyphicon glyphicon-shopping-cart"></span></button>
                    
                         
@@ -74,26 +65,14 @@
               
             </nav>
 
-    <!---------------------------------------------------------------------------------------	
-                        
-                                        END-HEADER    
-    
-     --------------------------------------------------------------------------------------->		
-
-
+    <!-- END-HEADER -->		
 
     </header>
-
-   
 
 		<section>
 			<?= $this->section('main_content') ?>
 
-   <!---------------------------------------------------------------------------------------	
-                        
-                                        SHOP    
-    
-   --------------------------------------------------------------------------------------->		
+   <!-- SHOP -->		
 
             <div class="container-fluid pull-left " id="boutique">
                 <div class="row">
@@ -145,19 +124,11 @@
                 </div><!-- /row -->
             </div><!-- /container -->
             
-   <!------------------------------------------------------------------------------------------	
-                        
-                                       END-SHOP    
-    
-   -------------------------------------------------------------------------------------------->		
+   <!-- END-SHOP -->	
+
 		</section>
 
-   <!------------------------------------------------------------------------------------------	
-                        
-                                       FOOTER    
-    
-   -------------------------------------------------------------------------------------------->		
-
+   <!-- FOOTER -->		
 
 		<footer class="container-full col-sm-12">
 		    <div class="row col-sm-4">
@@ -218,18 +189,10 @@
 		
 		</footer>
 	</div>
-    <!-----------------------------------------------------------------------------------------	
-                        
-                                       END-FOOTER   
-    
-    ------------------------------------------------------------------------------------------->		
-	
+    <!-- END-FOOTER-->		
 	
 <script src="<?= $this->assetUrl('js/jquery-3.2.0.min.js')?>"></script>
 <script src="<?= $this->assetUrl('js/bootstrap.min.js')?>"></script>
-
-
- 
         
 </body>
 </html>
