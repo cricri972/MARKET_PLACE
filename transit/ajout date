@@ -1,0 +1,8 @@
+
+$datas = [
+	'nom_colonne_sql' => 'valeur a inserer',
+	'titre' => $post['title'],
+	'date' => date('Y-m-d'),
+];
+
+$ArticlesModel->insert($datas);
