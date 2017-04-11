@@ -20,6 +20,7 @@ class Utils
         $calcultva = ($price_ht*$tva/100);
         return $calcultva;
     }
+        //pas encore operationnel 
     public static function discount($discount)
     {
 		$pricettc = $price_ht + ($price_ht*$tva/100);

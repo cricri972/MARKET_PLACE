@@ -10,16 +10,7 @@ use \Model\ItemsModel;
 class ItemController extends Controller
 {
 
-	public function TtcItem($id){
 
-
-
-		$prixht = $_post['price_ht'];
-		$taxes = $_post['taxes'];
-        $prixttc = $prixht +   ($prixht*$taxes/100);
-        return $prixttc;
-       
-    }
  
 
 	public function UpdateItem($id){
@@ -28,12 +19,13 @@ class ItemController extends Controller
 		$view = $viewItem->find($id); 
 
 		$maxSize = (1024 * 1000) * 2; // Taille maximum du fichier
-        	$uploadDir = $_SERVER['DOCUMENT_ROOT'].$_SERVER['W_BASE'].'/assets/upload/'; // Répertoire d'upload
-        	$mimeTypeAvailable = ['image/jpg', 'image/jpeg', 'image/pjpeg', 'image/png', 'image/gif'];
+    	$uploadDir = $_SERVER['DOCUMENT_ROOT'].$_SERVER['W_BASE'].'/assets/upload/'; // Répertoire d'upload
+    	$mimeTypeAvailable = ['image/jpg', 'image/jpeg', 'image/pjpeg', 'image/png', 'image/gif'];
 
-	        $errors = [];
-	        $post = [];
-	        $displayForm = true;
+        $errors = [];
+        $post = [];
+        $displayForm = true;
+
 
 
 		if(!empty($_POST))
@@ -43,27 +35,27 @@ class ItemController extends Controller
 				$post[$key] = trim(strip_tags($value));
 			}
 			//gestion de la reference
-			if(!strlen($post['ref'] < 3)){
+			if(strlen($post['ref']) < 3){
 				$errors[] = 'La reference doit faire au moins 3 caractères';
 			}
 
 			//gestion de la du nom de l'article
-			if(!strlen($post['name'] <2)){
+			if(strlen($post['name']) <2){
 				$errors[] = 'Le nom du titre doit avoir au moins 10 caractères';
 			}
 
 			//gestion de la description
-			if(!strlen($post['description'] <10)){
+			if(strlen($post['description']) <10){
 				$errors[] = 'Le nom de l\'article doit avoir au moins 10 caractères';
 			}
 
 			//gestion du prix ht
 			if(!is_numeric($post['price_ht'])){
-				$errors[] = 'Le montant est incorrect';
+				$errors[] = 'Le montant du prix ht est incorrect';
 			}
 
 			//gestion de la tva
-			if(!empty($post['tva'])){
+			if(empty($post['taxes'])){
 				$errors[] = 'Lmerci de choisir une tva';
 			}
 
@@ -79,8 +71,8 @@ class ItemController extends Controller
 
 
 			//gestion du stock
-			if(!is_int($post['stock']) || !($post['stock'] >= 1)){
-				$errors[] = 'Le montant du incorrect';
+			if(!is_numeric($post['stock']) || ($post['stock'] < 1)){
+				$errors[] = 'pas de stock';
 			}
 
 			//gestion de la photo de l'article
@@ -115,7 +107,8 @@ class ItemController extends Controller
                 }
             }
             else {
-                $errors[] = 'Aucune photo sélectionnée';
+                //$errors[] = 'Aucune photo sélectionnée';
+                $post['picture'] = $view['picture'];
             }
 
 // var_dump($post);
@@ -128,7 +121,9 @@ class ItemController extends Controller
                     // colonne sql => valeur à insérer
                     'ref'				=> $post['ref'],
 					'name'				=> $post['name'],
-                    'picture'   		=> 'upload/'.$newPictureName,
+					//s'il n'y a pas de nouvelle photo on recupere l'anciene sinon la nouvelle
+                    'picture'   		=> (empty($_FILES)) ? 'upload/'.$newPictureName : $post['picture'],
+                    //'picture'   		=> 'upload/'.$newPictureName,
                     'description'		=> $post['description'],
                     'price_ht'          => $post['price_ht'],
                     'taxes'				=> $post['taxes'],
@@ -140,15 +135,15 @@ class ItemController extends Controller
                     'id_shop'			=> 10,
                     'id_client'			=> 10,
 
-
-
-                    
+                   
                 ];
 
 
 
 				$item = new ItemsModel();
 				$item->update($datas, $id);
+				$view = $viewItem->find($id); 
+				$this->show('item/viewItem',['view'=> $view]);
 			}
 			else 
 			{
@@ -157,6 +152,7 @@ class ItemController extends Controller
 			}
 	}
 		$this->show('item/UpdateItem',['view'=> $view]);
+		//$this->show('item/viewItem',['view'=> $view]);
 	}
 
 
@@ -195,12 +191,12 @@ class ItemController extends Controller
                         $post[$key] = trim(strip_tags($value));
                     }
 
-                        if(strlen($post['ref'] < 3)){
+                        if(strlen($post['ref']) < 3){
                         $errors[] = 'Le titre doit faire au moins 3 caractères';
                     }
 
 
-                    if(strlen($post['description'] <10)){
+                    if(strlen($post['description']) <10){
                         $errors[] = 'L\'article doit avoir au moins 10 caractères';
                     }
                     
@@ -274,43 +270,45 @@ class ItemController extends Controller
 				$post[$key] = trim(strip_tags($value));
 			}
 			//gestion de la reference
-			if(!strlen($post['ref'] < 3)){
-				$errors[] = 'La reference doit faire au moins 3 caractères';
+			if(strlen($post['ref']) < 6){
+				$errors[] = 'La référence doit contenir au moins 6 caractères !';
 			}
 
 			//gestion de la du nom de l'article
-			if(!strlen($post['name'] <2)){
-				$errors[] = 'Le nom du titre doit avoir au moins 10 caractères';
+			if(strlen($post['name']) <2){
+				$errors[] = 'L\'intitulé de l\'article doit contenir au moins 2 caractères !';
 			}
 
 			//gestion de la description
-			if(!strlen($post['description'] <10)){
-				$errors[] = 'Le nom de l\'article doit avoir au moins 10 caractères';
+			if(strlen($post['description']) <10){
+				$errors[] = 'La description de l\'article doit contenir au moins 10 caractères !';
 			}
 
 			//gestion du prix ht
 			if(!is_numeric($post['price_ht'])){
-				$errors[] = 'Le montant est incorrect';
+				$errors[] = 'Le prix hors-taxe est incorrect !';
 			}
 
 			//gestion de la tva
-			if(!empty($post['tva'])){
-				$errors[] = 'Lmerci de choisir une tva';
+			if(empty($post['taxes'])){
+				$errors[] = 'La tva doit être indiquée !';
+			
+			// is numeric
 			}
 
 			//gestion de la remise
 			if(!is_numeric($post['discount'])){
-				$errors[] = 'Le montant de la remise en incorrect entre 0 et 90';
+				$errors[] = 'Le montant de la remise doit être un nombre !';
 			}
 
 			//gestion de la categorie
 			if(empty($post['category'])){
-				$errors[] = 'merci de choisir une categorie';
+				$errors[] = 'Merci de choisir une categorie !';
 			}
 
 
 			//gestion du stock
-			if(!is_numeric($post['stock']) || !($post['stock'] >= 1)){
+			if($post['stock'] < 0 || !is_numeric($post['stock'])){
 				$errors[] = 'Le montant du incorrect';
 			}
 
@@ -349,8 +347,8 @@ class ItemController extends Controller
                 $errors[] = 'Aucune photo sélectionnée';
             }
 
-// var_dump($post);
-// var_dump($errors);
+ var_dump($post);
+ var_dump($errors);
 			
 			if(count($errors) === 0)
 			{
