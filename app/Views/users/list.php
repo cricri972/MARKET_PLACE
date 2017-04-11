@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Liste utilisateur']) ?>
+<?php $this->layout('layout', ['title' => 'Liste utilisateurs']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -29,11 +29,11 @@
 						Détails
 						</a>
 					</td>
-					<td>
+					<!-- <td>
 					<a href="<?php echo $this->url('Users_viewUser', ['id' => $user['id']]) ;?>" class="btn btn-warning">
 						Supprimer
 						</a>
-					</td>
+					</td> -->
 				</tr>
 
 				

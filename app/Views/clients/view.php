@@ -16,7 +16,7 @@
 <p>Ville :</p><?php echo $descriptif['city'];?>
 <p>Code postal :</p><?php echo $descriptif['zip_code'];?>
 <br>
-<a href="<?php echo $this->url('Clients_deleteClient',['id' => $descriptif['id']]);?>" class="btn btn-warning">Confirmer la suppression</a>
+<a href="<?php echo $this->url('Clients_deleteClient',['id' => $descriptif['id']]);?>" class="btn btn-warning">Supprimer</a>
 <a href="<?php echo $this->url('Clients_listClient');?>" class="btn btn-info">Retour liste</a>
 
 <style>

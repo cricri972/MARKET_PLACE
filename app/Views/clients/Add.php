@@ -9,7 +9,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="pseudo">Pseudo</label>  
   <div class="col-md-4">
-  <input id="pseudo" name="pseudo" type="text" placeholder="Veuillez saisir votre surnom" class="form-control input-md">
+  <input id="pseudo" name="pseudo" type="text" placeholder="Veuillez saisir votre pseudo" class="form-control input-md">
   </div><br>
 </div>
 

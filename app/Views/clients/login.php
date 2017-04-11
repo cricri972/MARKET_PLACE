@@ -20,10 +20,9 @@
       </div>
     </div>
 
-    <!-- Button (Double) -->
     <div class="form-group">
       <label class="col-md-4 control-label" for="submit"></label>
-      <div class="col-md-8">
+      <div class="col-md-4">
         <button type="submit" class="btn btn-primary">Se connecter</button>
         <button type="submit" class="btn btn-warning">Retour Accueil</button>
       </div>

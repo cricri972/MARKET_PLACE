@@ -29,11 +29,11 @@
 						Détails
 						</a>
 					</td>
-					<td>
+					<!-- <td>
 					<a href="<?php echo $this->url('Clients_viewClient', ['id' => $client['id']]) ;?>" class="btn btn-warning">
 						Supprimer
 						</a>
-					</td>
+					</td> -->
 				</tr>
 
 				
