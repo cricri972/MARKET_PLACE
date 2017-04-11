@@ -11,20 +11,33 @@ class Utils
 	
 	public static function priceTTC($price_ht, $tva)
     {
-		$pricettc = $price_ht + ($price_ht*$tva/100);
-		return $pricettc;
+    	$price_ttc = ($price_ht + ($price_ht*$tva/100));
+    	return $price_ttc;
     }
 
-	public static function calculTVA($price_ht, $tva)
+	public static function calculTVA($price_ttc, $price_ht)
     {
-        $calcultva = ($price_ht*$tva/100);
-        return $calcultva;
+        $calcul_tva = $price_ttc - $price_ht;
+        return $calcul_tva;
     }
         //pas encore operationnel 
-    public static function discount($discount)
+    public static function discount($price_ht, $percent)
     {
-		$pricettc = $price_ht + ($price_ht*$tva/100);
-		return $pricettc;
+		$discount = $price_ht *(1-($percent/100));
+		return $discount;
+    }
+
+
+    public static function priceTTCWithDiscount($price_ht, $tva, $percent)
+    {
+        if($percent > 0){
+            $price_ht_discount = self::discount($price_ht, $percent);
+        }
+        else {
+            $price_ht_discount = $price_ht;
+        }
+
+        return self::priceTTC($price_ht_discount, $tva);
     }
 
 

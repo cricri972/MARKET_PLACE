@@ -121,7 +121,7 @@ class ItemController extends Controller
                     // colonne sql => valeur à insérer
                     'ref'				=> $post['ref'],
 					'name'				=> $post['name'],
-					//s'il n'y a pas de nouvelle photo on recupere l'anciene sinon la nouvelle
+					//s'il y a une nouvelle photo on la récupère sinon l'anciene est recuperée 
                     'picture'   		=> (empty($_FILES)) ? 'upload/'.$newPictureName : $post['picture'],
                     //'picture'   		=> 'upload/'.$newPictureName,
                     'description'		=> $post['description'],
@@ -142,7 +142,8 @@ class ItemController extends Controller
 
 				$item = new ItemsModel();
 				$item->update($datas, $id);
-				$view = $viewItem->find($id); 
+				$view = $viewItem->find($id);
+
 				$this->show('item/viewItem',['view'=> $view]);
 			}
 			else 

@@ -67,7 +67,7 @@
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="discount">Remise</label>
 				<div class="col-md-4">
-					<input type="text" id="discount" name="discount" class="form-control input-md" placeholder="de 0 a 90">
+					<input type="text" id="discount" name="discount" class="form-control input-md" value="<?=(isset($post['discount'])) ? $post['discount'] : 0; ?>" placeholder="remise en chiffre entier">
 				</div>
 			</div>
 
