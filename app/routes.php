@@ -2,6 +2,12 @@
 	
 	$w_routes = array(
 
+		['GET', '/', 'Default#home', 'default_home'],
+       
+        ['GET|POST', '/shop', 'Market#shop', 'Market_shop'],
+        ['GET|POST', '/admin', 'Market#admin', 'Market_admin'],
+        ['GET|POST', '/client', 'Market#client', 'Market_client'],
+        ['GET|POST', '/accueilslider', 'Market#accueilSlider', 'Market_accueilSlider'],
 
 		// GET|POST => méthode acceptée
         // /contactez-nous => URL (lien) de la page
@@ -31,5 +37,6 @@
 		['GET|POST', '/view/[i:id]/', 'Item#ViewItem', 'item_ViewItem'],
 		['GET|POST', '/delete/[i:id]/', 'Item#DeleteItem', 'item_DeleteItem'],
 		['GET|POST', '/update/[i:id]/', 'Item#UpdateItem', 'item_UpdateItem'],
+
 
 	);

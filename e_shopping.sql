@@ -3,7 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 05 Avril 2017 à 20:26
+
+-- Généré le :  Jeu 06 Avril 2017 à 18:39
+
 -- Version du serveur :  10.1.19-MariaDB
 -- Version de PHP :  5.6.28
 
@@ -39,7 +41,9 @@ CREATE TABLE `clients` (
   `phone_2` int(11) NOT NULL,
   `address` varchar(255) NOT NULL,
   `city` varchar(255) NOT NULL,
-  `zipcod` int(11) NOT NULL
+
+  `zipcode` int(11) NOT NULL
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -68,21 +72,52 @@ CREATE TABLE `items` (
 -- --------------------------------------------------------
 
 --
+
+-- Structure de la table `options`
+--
+
+CREATE TABLE `options` (
+  `address` varchar(255) NOT NULL,
+  `phone` int(11) NOT NULL,
+  `cover1` varchar(255) NOT NULL,
+  `cover2` varchar(255) NOT NULL,
+  `cover3` varchar(255) NOT NULL,
+  `cover4` varchar(255) NOT NULL,
+  `cover5` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `options`
+--
+
+INSERT INTO `options` (`address`, `phone`, `cover1`, `cover2`, `cover3`, `cover4`, `cover5`) VALUES
+('siège social', 696258963, 'intersport-bandeauok.jpg', 'Mango-bandeau.jpg', 's12_mm_samsung_dream_lancement_bhp.jpg', 'Grande recre-bandeau.jpg', 'Celio-bandeau.jpg');
+
+
 -- Structure de la table `shop`
 --
 
 CREATE TABLE `shop` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
+
   `commercialName` varchar(255) NOT NULL,
+
   `raisonSocial` varchar(255) NOT NULL,
   `immatriculation` int(11) NOT NULL,
   `apeCode` int(11) NOT NULL,
   `nameGerant` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+
+  `address` varchar(255) NOT NULL,
+  `city` varchar(255) NOT NULL,
+  `zipcode` int(11) NOT NULL,
+  `phone` int(11) NOT NULL,
+
   `adress` varchar(255) NOT NULL,
   `city` varchar(255) NOT NULL,
   `zipcode` int(11) NOT NULL,
+
   `cover` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -124,7 +159,12 @@ ALTER TABLE `items`
 --
 ALTER TABLE `shop`
   ADD PRIMARY KEY (`id`),
+
+  ADD UNIQUE KEY `email` (`email`),
+  ADD KEY `cover` (`cover`);
+
   ADD UNIQUE KEY `email` (`email`);
+
 
 --
 -- Index pour la table `users`
@@ -151,7 +191,11 @@ ALTER TABLE `items`
 -- AUTO_INCREMENT pour la table `shop`
 --
 ALTER TABLE `shop`
+
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT pour la table `users`
 --
