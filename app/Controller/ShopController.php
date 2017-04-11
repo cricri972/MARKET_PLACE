@@ -195,11 +195,13 @@ class ShopController extends Controller
 	}
 /* ------------------- UPDATE SHOP -------------------------------------------------*/
 
-	public function updateShop($id)
-	{
+	public function addOrUpdateShop($id = 0)
+	{	
+
 		$errors = [];
 		$post = [];
-		//var_dump($_POST);
+		var_dump($id);
+		echo '<br>';
 		$maxSize = (1024 * 1000) * 2; // Taille maximum du fichier
 		//$uploadDir = 'HHH/uploads/'; // Répertoire d'upload
 		$mimeTypeAvailable = ['image/jpg', 'image/jpeg', 'image/pjpeg', 'image/png', 'image/gif'];
@@ -303,7 +305,7 @@ class ShopController extends Controller
 			// ecriture dans la base
 				$post['logo'] = $uploadDir.$newPictureName;
 				
-				$dataShopModel->update($post);
+				$dataShopModel->update($post, $id);
 			}
 			else { // Si j'ai des erreurs
 
