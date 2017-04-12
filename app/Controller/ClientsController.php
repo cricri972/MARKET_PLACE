@@ -4,7 +4,7 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \Model\ClientsModel;
-use \W\Security\AuthentificationModel as aut;
+use \W\Security\AuthentificationModel as AuthModel;
 
 class ClientsController extends Controller{
 
@@ -122,30 +122,7 @@ class ClientsController extends Controller{
 		if ($client-> delete($id)){
 		$this->show('clients/delete');
         }
-
-// <script src="js/jquery-3.2.0.min.js"></script>
-// <script>
-// //pour signifier que le dom est prêt
-// $(function(){
-//     $('#submitForm').click(function(el){
-//         el.preventDefault(); // On bloque l'action par défaut
-
-//         var form_user = $('#addUser'); // On récupère le formulaire, form_user pe Toto, #addUser c'est le nom du formulaire en haut
-//         $.ajax({
-//             method: 'post',
-//             url: 'inc/ajax_add_user.php', //va chercher le fichier dans inc (vérifs etc)
-//             data: form_user.serialize(), // On récupère les données à envoyer
-//             success: function(resultat){
-//                 $('#result').html(resultat); // id de la div indiquant l'endroit du formulaire où on affichera le résultat.
-//                 // result a été utilisé dans ajax_add_user pour afficher le succes ou l'echec; ne pas oublier le echo $result.
-//                 form_user.find('input').val(''); // Permet de vider les champs du formulaire.. 
-//             }
-//         });
-//     });
-// });
-// </script>
 	}
-
 
 
 
@@ -233,14 +210,14 @@ class ClientsController extends Controller{
         $post = [];
         $errors = [];
 
-        $login = new aut();
+        $login = new ClientsModel();
 
         if(!empty($_POST)){
                 foreach($_POST as $key => $value){
                     $post[$key] = trim(strip_tags($value));
                 }
 
-            if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
+                if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
                     $errors[] = "Email invalide";
                 }
 
@@ -249,16 +226,33 @@ class ClientsController extends Controller{
                 }
 
                 if(count($errors) === 0){
-                    $login->isValidLoginInfo($post['email'], $post['password']);
-                    $result = 'Connexion réussie';
-                } else {
+                    // La connexion est effective si la fonction retourne un ID
+                    $idClient = $login->isValidLoginInfo($post['email'], $post['password']);
+                    if($login !== 0){
+                        $result = 'Couple email / password OK. ID = '.$idClient;
+                        $clientDatas = $login->find($idClient);
+                        //variable qui récupère l'ID du client
+
+                        // Connecte le client
+                        $authModel = new AuthModel;
+                        $authModel->logUserIn($clientDatas);
+
+                        // Redirection vers...
+                        $this->redirectToRoute('Market_accueilSlider');
+
+                    }
+                    else {
+                        $result = 'Couple email / password NOTOK';
+                    }
+                } 
+                else {
                     $result =implode("<br>", $errors);
                 }
-                echo $result;
+            // var_dump($result);
         }
         
         $this->show('clients/login');
-}
+    }
     // // Connecte un utilisateur
     // // L'argument à passer est un tableau contenant les données utilisateur
     // // Les données seront stockées sous la clé 'user' dans $_SESSION
