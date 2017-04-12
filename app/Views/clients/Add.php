@@ -1,4 +1,6 @@
-<?php $this->layout('layout', ['title' => 'Créer mon compte test git']) ?>
+
+<?php $this->layout('layoutclient', ['title' => 'Créer mon compte']) ?>
+
 
 <?php $this->start('main_content') ?>
 
