@@ -32,7 +32,7 @@
                     <ul class="nav nav-pills">
                         
                         <a href="#"><img src ="<?= $this->assetUrl('img/logo1.png') ?>" class="logo"></a>
-                          <h4>Commander en ligne<br> 
+                          <h4>Commandez en ligne<br> 
                         Retirer en Boutique</h4>   
                     </ul>
                         
@@ -93,8 +93,9 @@
                                         SHOP    
     
    --------------------------------------------------------------------------------------->		
-
+          
             <div class="container-fluid pull-left" id="boutique">
+               
                 <div class="row">
                     <h2 class="col-xs-12">Boutiques</h2>
                 </div><!-- /row -->

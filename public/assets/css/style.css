@@ -66,6 +66,7 @@ body
 }
 #item-picture{
     margin-top: 35px;
+  
 }
 
 
@@ -75,18 +76,42 @@ body
 #shop{
    width:100%;
    height: auto;
-    
+   
 }
 #boutique{
     background-color: #1d1e1f;
     height: 900px;
-    margin-top: -25px;
+    margin-top: -2em;
    
 }
 
 #boutique h2{
     color:orange;
+}
+#addclient{
+    margin-right: 5em;
+}
+#addclient input{
+    width:40em;
    
+   
+}
+#addclient label{
+    text-align: left;
+}
+
+#login{
+    margin-right: 10em;
+}
+#login input
+{
+    width:40em;
+}
+#login label{
+    text-align: left;
+}
+#login button{
+   margin-right: 1em;
 }
 
 /*---------------------------

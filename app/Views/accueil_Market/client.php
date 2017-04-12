@@ -4,10 +4,12 @@
 
 <?php $this->start('main_content') ?>
 
-<div class="container-fluid pull-right" id="item-picture">
+
+
+<div class="container-fluid pull-right " id="item-picture">
 		<div class="row">
 	    
-	    <div class="col-xs-12 col-sm-12">
+	    <div class="col-xs-9 col-sm-9">
 	        <div class="row">
                
                 <div class="col-xs-9 col-sm-4">
