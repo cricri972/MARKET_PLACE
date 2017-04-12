@@ -104,11 +104,11 @@
                 <div class="row">
                     <div class="col-xs-3 col-sm-12" id="shop">
                         <div class="list-group">
-                            <a href="#" class="list-group-item primary">
+                            <a href="<?=$this->url('shop_listShop')?>" class="list-group-item primary">
                             Modification information        
                             </a>
                             
-                            <a href="#" class="list-group-item">
+                            <a href="<?=$this->url('shop_listShop')?>" class="list-group-item">
                             Liste articles 
                             </a>   
                             <a href="#" class="list-group-item">
@@ -126,8 +126,8 @@
                                 
                             </a>
                            
-                             <a href="#" class="list-group-item">
-                               
+                            <a href="#" class="list-group-item">
+                              
                             </a>
                              <a href="#" class="list-group-item">
                                

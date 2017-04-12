@@ -101,6 +101,9 @@
                             Modification Information Client   
                                
                             </a>
+                             <a href="<?=$this->url('shop_addShop')?>" class="list-group-item">
+                            Ajouter une Boutique
+                            </a>
                             <a href="#" class="list-group-item">
                             Modification Information Boutique
                                 
