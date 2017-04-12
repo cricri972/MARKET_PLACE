@@ -11,12 +11,12 @@ $w_routes = array(
 	
 ['GET', '/', 'Default#home', 'default_home'], 				// Accueil
 //['GET|POST', '/addshop/', 'Shop#addShop', 'shop_formShop'], // Ajout boutique
-['GET|POST', '/listshop/', 'Shop#listShop', 'shop_listShop'], // Liste des boutiques
-['GET|POST', '/viewshop/[:id]', 'Shop#viewShop', 'shop_viewShop'],	// Détails de la boutique
-['GET|POST', '/mailtoshop/', 'Shop#mailToShop', 'shop_mailToShop'], // adresser Mail
-['GET|POST', '/deleteshop/[:id]', 'Shop#deleteShop', 'shop_deleteShop'], // Suppression boutique
-['GET|POST', '/addshop/', 'Shop#addOrUpdateShop', 'shop_addShop'], // Ajout boutique
-['GET|POST', '/updateshop/[:id]', 'Shop#addOrUpdateShop', 'shop_updateShop'], // Maj boutique
+['GET|POST', '/shop/list/', 'Shop#listShop', 'shop_listShop'], // Liste des boutiques
+['GET|POST', '/shop/view/[:id]', 'Shop#viewShop', 'shop_viewShop'],	// Détails de la boutique
+['GET|POST', '/shop/mailto/', 'Shop#mailToShop', 'shop_mailToShop'], // adresser Mail
+['GET|POST', '/shop/[:id]', 'Shop#deleteShop', 'shop_deleteShop'], // Suppression boutique
+['GET|POST', '/shop/add/', 'Shop#addOrUpdateShop', 'shop_addShop'], // Ajout boutique
+['GET|POST', '/shop/modify/[:id]', 'Shop#addOrUpdateShop', 'shop_addOrUpdateShop'], // Maj boutique
 
 
 
