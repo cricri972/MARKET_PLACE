@@ -1,4 +1,4 @@
-<?php $this->layout('layoutItems', ['title' => 'Liste des articles']) ?>
+<?php $this->layout('layoutshop', ['title' => 'Liste des articles']) ?>
 
 <?php $this->start('main_content') ?>
 	
