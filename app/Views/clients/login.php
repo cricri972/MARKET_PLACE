@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Connexion']) ?>
+<?php $this->layout('layoutclient', ['title' => 'Connexion']) ?>
 
 <?php $this->start('main_content') ?>
 
