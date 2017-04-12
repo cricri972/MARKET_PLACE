@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content')?>
 
-<div class="container-fluid " style="margin-left:100px;">
+<div class="container-fluid" style="margin-left:200px;">
     <div class="row">
         <div class="col-xs-12">
             <div class="center">

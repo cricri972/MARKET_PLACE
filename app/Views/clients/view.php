@@ -1,4 +1,4 @@
-<?php $this->layout('layoutadmin', ['title' => 'Détails Client']) ?>
+<?php $this->layout('layoutshop', ['title' => 'Détails Client']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -19,5 +19,16 @@
 <a href="<?php echo $this->url('Clients_deleteClient',['id' => $descriptif['id']]);?>" class="btn btn-warning">Supprimer</a>
 <a href="<?php echo $this->url('Clients_listClient');?>" class="btn btn-info">Retour liste</a>
 
+<style>
+    h1{
+        width: 320px;
+        border-radius: 10px;
+        background-color: brown;
+        color: aliceblue;
+        padding: 10px;
+        text-align: center;
+    };
+                
+</style>
 
 <?php $this->stop('main_content') ?>
