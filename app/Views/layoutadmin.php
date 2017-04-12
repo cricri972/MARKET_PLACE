@@ -26,8 +26,8 @@
                     <ul class="nav nav-pills">
                         
                         <a href="#"><img src ="<?= $this->assetUrl('img/logo1.png') ?>" class="logo"></a>
-                          <h4>Commander en ligne<br> 
-                        Retirer en Boutique</h4>   
+                          <h4>Bienvenue<br> 
+                        </h4>
                     </ul>
                         
                         
@@ -62,7 +62,7 @@
                                 </label>
                             </div>
                             
-                              <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur" value="Mon Panier">Déconnexion</button>
+                              <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur pull-right" value="Mon Panier">Déconnexion</button>
                         </form>
                     
                     </div>
@@ -90,10 +90,13 @@
                            <a href="#" class="list-group-item">
                             Liste user  
                             </a>
+                            <a href="#" class="list-group-item">
+                            Ajouter User   
+                            </a>
                             <a href="#" class="list-group-item primary">
                             Modification information user       
-                                
                             </a>
+                            
                             <a href="#" class="list-group-item">
                             Modification Information Client   
                                
@@ -109,10 +112,12 @@
                             Modification Article  
                             </a>
                             <a href="#" class="list-group-item">
-                             Modification slider     
+                            Modification slider     
                             </a>
-                             
-                             <a href="#" class="list-group-item">
+                            <a href="#" class="list-group-item">
+                            Supprimer  
+                            </a> 
+                            <a href="#" class="list-group-item">
                                
                             </a>
                              <a href="#" class="list-group-item">

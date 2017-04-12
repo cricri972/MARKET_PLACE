@@ -32,8 +32,8 @@
                     <ul class="nav nav-pills">
                         
                         <a href="#"><img src ="<?= $this->assetUrl('img/logo1.png') ?>" class="logo"></a>
-                          <h4>Commander en ligne<br> 
-                        Retirer en Boutique</h4>   
+                          <h4>Bienvenue<br> 
+                        </h4>   
                     </ul>
                         
                       
@@ -55,19 +55,21 @@
 
                     </form>
                    
-                    <ul class="nav navbar-nav navbar-right" id="button-right">
-                        <form class="navbar-form inline-form"  method="post">
-                            <button id="button" type="submit" action="login.php" class="btn btn-warning btn-md couleur" value="Accès membre">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></button> 
-                        
+                     <form class="connexion" method="post" id=connexion>
+                            <div class="form-group">
+                                <label class="col-md-8 control-label" for="email">Email
+                                    <input id="email" name="email" type="email" placeholder="Veuillez saisir votre email" class="form-control input-md">
+                                </label>
+                            </div><br><br><br>
+                            <div class="form-group">
+                                <label class="col-md-8 control-label" for="password">Mot de passe
 
-                        <input id="button" type="submit" action="add.php" class="btn btn-warning btn-md couleur" value="Inscrivez vous">
-                        
-               
-                            <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur" value="Mon Panier">Mon Panier&nbsp&nbsp<span class="glyphicon glyphicon-shopping-cart"></span></button>
-                   
-                        
+                                    <input id="password" name="password" type="text" placeholder="Veuillez saisir votre mot de passe" class="form-control input-md">
+                                </label>
+                            </div>
+                            
+                              <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur pull-right" value="Mon Panier">Déconnexion</button>
                         </form>
-                    </ul>
                     </div>
                
             </div>
@@ -104,25 +106,26 @@
                         <div class="list-group">
                             <a href="#" class="list-group-item primary">
                             Modification information        
-                                
+                            </a>
+                            
+                            <a href="#" class="list-group-item">
+                            Liste articles 
+                            </a>   
+                            <a href="#" class="list-group-item">
+                            Voir article    
                             </a>
                             <a href="#" class="list-group-item">
-                            Liste articles    
-                               
+                            Ajouter article   
                             </a>
+                            <a href="#" class="list-group-item">
+                            Modification article    
+                            </a>   
+                           
                             <a href="#" class="list-group-item">
                             Supprimer article   
                                 
                             </a>
-                            <a href="#" class="list-group-item">
-                            Voir un article    
-                            </a>
-                            <a href="#" class="list-group-item">
-                               
-                            </a>
-                            <a href="#" class="list-group-item">
-                                
-                            </a>
+                           
                              <a href="#" class="list-group-item">
                                
                             </a>

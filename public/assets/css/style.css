@@ -1,16 +1,18 @@
 #connexion{
     margin-left: 50em;
     color: orange;
-      
+    margin-top: -40%  
 }
 
 #connexion label{
     margin-left: 30%;
     
 }
-#connexion button {
-	;
+.connexion button {
+	margin-right: 2em;
+    margin-bottom: 2%;
 }
+
 
 
 
@@ -19,32 +21,34 @@
     border: none;
 }
 .navbar-inverse h4{
-    margin-left: 40%;
+    margin-left: 10%;
     position: absolute;
     color: white;
     transform:rotate(340deg);
-   padding-top: 5%;
+   padding-top: 7%;
 }
 .navbar-inverse .logo {
-	width: 180px;
+	width: 170px;
     height: auto;
     position: absolute;
-    margin-bottom: 50%;
+    margin-bottom:50%;
+    margin-left: 45%
 }
 
 
 .menu .navbar-nav{
-    padding-top: 3%;
+    padding-top: 0;
+    margin-bottom: 10%;
 }
 
 .menu .navbar-brand
 {
     color: orange;
-    margin-top:5% ;
+    margin-top:1%;
 }
 .menu .navbar-form{
     color: orange;
-    margin-top:5% ;
+    margin-top:1em;
 }
    
 #Market
@@ -63,10 +67,7 @@ body
     background-color: #d6d6d6;
     } 
 
-.menu{
-    margin-top: 10%;
-    display: block;
-}
+
 
 #button-right{
     margin-top: 0%;
@@ -121,14 +122,21 @@ body
 #login input
 {
     width:40em;
+    
 }
 #login label{
     text-align: left;
 }
 #login button{
-   margin-right: 1em;
+    margin-right: 1em;
+   
 }
-
+#password{
+	margin-bottom: 5%; 
+}
+#button{
+    margin-bottom: 1em; 
+}
 /*---------------------------
         FOOTER
 ----------------------------*/
