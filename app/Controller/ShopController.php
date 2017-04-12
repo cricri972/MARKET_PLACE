@@ -187,7 +187,7 @@ class ShopController extends Controller
 
 		//var_dump($detailsShop); // affiche valeurs enregistrement
 
-		echo '<br>';
+		//echo '<br>';
 		$info = ['shop' => $viewShop]; 
 		//var_dump($info);
 
@@ -200,15 +200,15 @@ class ShopController extends Controller
 
 		$errors = [];
 		$post = [];
-		var_dump($id);
-		echo '<br>';
+		//var_dump($id);
+		//echo '<br>';
 		$maxSize = (1024 * 1000) * 2; // Taille maximum du fichier
 		//$uploadDir = 'HHH/uploads/'; // Répertoire d'upload
 		$mimeTypeAvailable = ['image/jpg', 'image/jpeg', 'image/pjpeg', 'image/png', 'image/gif'];
 
 		$dataShopModel = new ShopModel;
     	$shop = $dataShopModel->find($id);
-		var_dump($shop);
+		//var_dump($shop);
 
 		if(!empty($_POST)){
 
@@ -319,8 +319,8 @@ class ShopController extends Controller
 		}
 
 		$params = ['shop'=> $shop];
-		var_dump($params);
-		$this->show('shop/updateShop', $params); //view 
+		//var_dump($params);
+		$this->show('shop/formShop', $params); //view 
 
 	}
 	

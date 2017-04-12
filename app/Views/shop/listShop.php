@@ -1,13 +1,14 @@
 <!--article-->
 
-<?php $this->layout('layout', ['title' => 'Liste des boutiques']) ?>
+<?php $this->layout('layoutshop', ['title' => 'Liste des boutiques']) ?>
 <?php $this->start('main_content') ?>
 
 
 <article class="listShop">
-
+<div class="container-fluid pull-right">
+<div class="row col-xs-12 col-sm-12">
 <h1>liste des boutiques</h1>
-	<table>
+	<table class="table table-striped" >
 		<thead>
 			<tr>
 				<th>#</th>
@@ -34,6 +35,8 @@
 		</tbody>
 	</table>
 	<?php //var_dump($shop); ?>
+	</div>
+</div>
 </article>
 	
 <?php $this->stop('main_content') ?>
