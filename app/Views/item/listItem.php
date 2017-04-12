@@ -1,10 +1,12 @@
-<?php $this->layout('layoutItems', ['title' => 'Liste des articles']) ?>
+<?php $this->layout('layoutshop', ['title' => 'Liste des articles']) ?>
 
 <?php $this->start('main_content') ?>
+<div class="container-fluid pull-right">
 
+<div class="row col-xs-9 col-sm-9">
 <button id="button1id" name="button1id" class="btn btn-success"><a href="<?php echo $this->url('item_addItem')?>">Ajouter un article</a></button>
 	
-	<table>
+	<table class="table table-striped ">
 		<thead>
 			<tr>
 				<th>#</th>
@@ -35,5 +37,6 @@
 			
 		</tbody>
 	</table>
-
+</div>
+</div>
 <?php $this->stop('main_content') ?>

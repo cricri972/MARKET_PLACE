@@ -1,5 +1,5 @@
 <?php//AddArticle.php ?>
-<?php $this->layout('layoutItems', ['title' => 'Ajouter un article']) ?>
+<?php $this->layout('layoutshop', ['title' => 'Ajouter un article']) ?>
 
 <?php $this->start('main_content') ?>
 	
