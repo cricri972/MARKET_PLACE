@@ -1,3 +1,18 @@
+#connexion{
+    margin-left: 50em;
+    color: orange;
+      
+}
+
+#connexion label{
+    margin-left: 30%;
+    
+}
+#connexion button {
+	;
+}
+
+
 
 .navbar-inverse{
     background-color: #1d1e1f;

@@ -61,9 +61,10 @@
                             
                             <button id="button" type="submit" action="#" class="btn btn-warning btn-md couleur" value="Inscrivez vous"><a href="<?=$this->url('Clients_addClient')?>">Inscrivez vous<span></span></a></button>
                         
-               
+                            <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur" value="Mon Panier">Déconnexion</button>  
+                             
                             <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur" value="Mon Panier">Mon Panier&nbsp&nbsp<span class="glyphicon glyphicon-shopping-cart"></span></button>
-                   
+                            
                         
                         </form>
                     </ul>
@@ -97,12 +98,12 @@
             <div class="container-fluid pull-left" id="boutique">
                
                 <div class="row">
-                    <h2 class="col-xs-12">Boutiques</h2>
+                    <h2 class="col-xs-12">Nos Boutiques</h2>
                 </div><!-- /row -->
                 <div class="row">
                     <div class="col-xs-3 col-sm-12" id="shop">
                         <div class="list-group">
-                            <a href="#" class="list-group-item primary">
+                            <a href="<?=$this->url('item_ViewItem')?>" class="list-group-item primary">
                                
                                 <img src="<?= $this->assetUrl('img/M_BricolagePtt.jpg') ;?>">
                             </a>
