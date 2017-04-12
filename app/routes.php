@@ -3,10 +3,6 @@
 
 $w_routes = array(
 
-/*
-['METHODE', 'URL', NAMECONTROLLER#METHODE,nom de la route]
-
-*/
 
 	
 ['GET', '/', 'Default#home', 'default_home'], 				// Accueil
@@ -20,37 +16,6 @@ $w_routes = array(
 
 
 
-
-	/* ['GET', '/article/enum', 'CreateArticle#enumArticle', 'article_enumArticle']
-	*
-	* '/article/enum' tapé dans url 
-	*
-	* 'Article# fait reférence au controleur 'ArticleController 
-	*
-	*	#enumArticle : la fonction appelée issue du controleur ArticleController
-    
-    * dernier argument correspond a la vue et son chemin
-    
-	//'shop_formShop'
-		
-		//['GET|POST', '/shop', 'Shop#addShop', 'shop_detail_Shop'],
-		
-        
-        //['GET|POST', '/article/', 'Article#createArticle', 'article_createArticle'],
-		
-        
-        //['GET|POST', '/article/[:id]/', 'Article#detailArticle', 'article_detailArticle'],
-		
-                
-        //['GET|POST', '/mail/', 'Mail#newMail', 'mail_newMail'],
-	*
-	*
-	*
-	*
-	*
-	*
-	*
-	**/
  
         ['GET|POST', '/shop', 'Market#shop', 'Market_shop'],
         ['GET|POST', '/admin', 'Market#admin', 'Market_admin'],
@@ -67,7 +32,8 @@ $w_routes = array(
 		['GET|POST', '/client/details/[i:id]', 'Clients#viewClient', 'Clients_viewClient'],
 		['GET|POST', '/client/delete/[i:id]', 'Clients#deleteClient', 'Clients_deleteClient'],
 		['GET|POST', '/client/modify/[i:id]', 'Clients#modifyClient', 'Clients_modifyClient'],
-		['GET|POST', '/client/login', 'Clients#loginClient', 'Clients_loginClient'], 
+		['GET|POST', '/client/login', 'Clients#loginClient', 'Clients_loginClient'],
+		['GET|POST', '/client/logout', 'Clients#logoutClient', 'Clients_logoutClient'], 
         
         
 		['GET|POST', '/user/add', 'Users#addUser', 'Users_addUser'],

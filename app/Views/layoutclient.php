@@ -54,14 +54,14 @@
                         <?php if(empty($w_user)): ?>
                            <a href="<?=$this->url('Clients_loginClient')?>" class="btn btn-warning btn-md couleur">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></a>
                             
-                                  <a href="<?=$this->url('Clients_addClient')?>" class="btn btn-warning btn-md couleur">Inscrivez vous</a>
+                                  <a href="<?=$this->url('Clients_addClient')?>" class="btn btn-warning btn-md couleur">Inscrivez-vous</a>
                                     <?php else: ?>
 
                                         Bonjour <?=$w_user['firstname']; ?>
                                     <?php endif; ?>
                           
                         
-                            <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur" value="Mon Panier">Déconnexion</button>  
+                           <a href="<?=$this->url('Clients_logoutClient')?>" class="btn btn-warning btn-md couleur">Déconnexion<span class="glyphicon glyphicon-user"></span></a>   
                              
 
                            
