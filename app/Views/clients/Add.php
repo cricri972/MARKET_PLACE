@@ -1,4 +1,7 @@
-<?php $this->layout('layoutshop', ['title' => 'Créer mon compte']) ?>
+
+<?php $this->layout('layoutclient', ['title' => 'Créer mon compte']) ?>
+
+
 
 <?php $this->start('main_content') ?>
 

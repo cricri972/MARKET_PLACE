@@ -57,7 +57,7 @@
                    
                     <ul class="nav navbar-nav navbar-right" id="button-right">
                         <form class="navbar-form inline-form"  method="post">
-                           <button id="button" type="submit" action="<?=$this->url('clients_login')?>" class="btn btn-warning btn-md couleur" value="Accès membre">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></button> 
+                           <button id="button" type="submit" action="<?=$this->url('Clients_loginClient')?>" class="btn btn-warning btn-md couleur" value="Accès membre">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></button> 
                             
                         <input id="button" type="submit" action="add.php" class="btn btn-warning btn-md couleur" value="Inscrivez vous">
                         
