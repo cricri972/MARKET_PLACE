@@ -57,9 +57,9 @@
                    
                     <ul class="nav navbar-nav navbar-right" id="button-right">
                         <form class="navbar-form inline-form"  method="post">
-                           <button id="button" type="submit" action="<?=$this->url('Clients_loginClient')?>" class="btn btn-warning btn-md couleur" value="Accès membre">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></button> 
+                           <button id="button" type="submit" class="btn btn-warning btn-md couleur" value="Accès membre"><a href="<?=$this->url('Clients_loginClient')?>">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></a></button> 
                             
-                        <input id="button" type="submit" action="add.php" class="btn btn-warning btn-md couleur" value="Inscrivez vous">
+                            <button id="button" type="submit" action="#" class="btn btn-warning btn-md couleur" value="Inscrivez vous"><a href="<?=$this->url('Clients_addClient')?>">Inscrivez vous<span></span></a></button>
                         
                
                             <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur" value="Mon Panier">Mon Panier&nbsp&nbsp<span class="glyphicon glyphicon-shopping-cart"></span></button>
@@ -94,7 +94,7 @@
     
    --------------------------------------------------------------------------------------->		
 
-            <div class="container-fluid pull-left " id="boutique">
+            <div class="container-fluid pull-left" id="boutique">
                 <div class="row">
                     <h2 class="col-xs-12">Boutiques</h2>
                 </div><!-- /row -->

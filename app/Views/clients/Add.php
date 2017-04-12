@@ -1,6 +1,12 @@
 <?php $this->layout('layoutclient', ['title' => 'Créer mon compte']) ?>
 
-<?php $this->start('main_content') ?>
+<?php $this->start('main_content')?>
+
+<div class="container-fluid " style="margin-left:100px;">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="center">
+         
 
   <form class="form-horizontal" method="post" id="form_clients" enctype="multipart/form-data">
 <fieldset>
@@ -87,6 +93,10 @@
 
 </fieldset>
 </form>
-
+       
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php $this->stop('main_content') ?>

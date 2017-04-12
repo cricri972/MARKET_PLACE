@@ -75,16 +75,18 @@ body
 #shop{
    width:100%;
    height: auto;
-   
+    
 }
 #boutique{
     background-color: #1d1e1f;
     height: 900px;
     margin-top: -25px;
+   
 }
 
 #boutique h2{
     color:orange;
+   
 }
 
 /*---------------------------
