@@ -14,14 +14,7 @@
 
 <body>
 
-        
-    <!-------------------------------------------------------------------------------------------	
-                        
-                                        HEADER    
-    
-    --------------------------------------------------------------------------------------------->		
-
-
+<!--HEADER-->
 	<div class="container">
 	
 		<header>
@@ -57,10 +50,15 @@
                    
                     <ul class="nav navbar-nav navbar-right" id="button-right">
                         <form class="navbar-form inline-form"  method="post">
-                           <button id="button" type="submit" class="btn btn-warning btn-md couleur" value="Accès membre"><a href="<?=$this->url('Clients_loginClient')?>">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></a></button> 
+
+                        <?php if(empty($w_user)): ?>
+                           <a href="<?=$this->url('Clients_loginClient')?>" class="btn btn-warning btn-md couleur">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></a>
                             
-                            <button id="button" type="submit" action="#" class="btn btn-warning btn-md couleur" value="Inscrivez vous"><a href="<?=$this->url('Clients_addClient')?>">Inscrivez vous<span></span></a></button>
-                        
+                            <a href="<?=$this->url('Clients_addClient')?>" class="btn btn-warning btn-md couleur">Inscrivez vous</a>
+                        <?php else: ?>
+
+                            Bonjour <?=$w_user['firstname']; ?>
+                        <?php endif; ?>
                
                             <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur" value="Mon Panier">Mon Panier&nbsp&nbsp<span class="glyphicon glyphicon-shopping-cart"></span></button>
                    
@@ -73,11 +71,8 @@
               
             </nav>
 
-    <!---------------------------------------------------------------------------------------	
-                        
-                                        END-HEADER    
-    
-     --------------------------------------------------------------------------------------->		
+            <!-- <?php //var_dump($w_user);?> -->
+    <!--END-HEADER-->		
 
 
 
@@ -88,11 +83,7 @@
 		<section>
 			<?= $this->section('main_content') ?>
 
-   <!---------------------------------------------------------------------------------------	
-                        
-                                        SHOP    
-    
-   --------------------------------------------------------------------------------------->		
+   <!--SHOP-->		
 
             <div class="container-fluid pull-left" id="boutique">
                 <div class="row">
@@ -144,18 +135,10 @@
                 </div><!-- /row -->
             </div><!-- /container -->
             
-   <!------------------------------------------------------------------------------------------	
-                        
-                                       END-SHOP    
-    
-   -------------------------------------------------------------------------------------------->		
+   <!--END-SHOP-->		
 		</section>
 
-   <!------------------------------------------------------------------------------------------	
-                        
-                                       FOOTER    
-    
-   -------------------------------------------------------------------------------------------->		
+   <!--FOOTER-->		
 
 
 		<footer class="container-full col-sm-12">
@@ -217,11 +200,7 @@
 		
 		</footer>
 	</div>
-    <!-----------------------------------------------------------------------------------------	
-                        
-                                       END-FOOTER   
-    
-    ------------------------------------------------------------------------------------------->		
+    <!--END-FOOTER-->		
 	
 	
 <script src="<?= $this->assetUrl('js/jquery-3.2.0.min.js')?>"></script>
