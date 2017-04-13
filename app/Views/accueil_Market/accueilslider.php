@@ -4,6 +4,7 @@
 
 	
     <div class="container-full" id="marketcarousel" >
+       <div class="row">
        <div class="col-sm-12" id="column">
        
 
@@ -50,13 +51,13 @@
                                 </div>     
                             </div>
                         </div>	
-                       
+            </div>           
         </div>
     </div>
   
 
 <div class="container-fluid pull-right" id="item-picture">
-		<div class="row">
+    <div class="row">
 	    
 	    <div class="col-xs-12 col-sm-12">
 	        <div class="row">

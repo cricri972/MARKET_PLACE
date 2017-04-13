@@ -15,77 +15,79 @@
 <body>
 
 <!--HEADER-->
-	<div class="container">
 	
-		<header>
-			
-			<nav class="navbar navbar-inverse">
-              <div class="container">
-                <div class="navbar-header" >
+		
+		        <header>
+			        <div class="container">
+	                    <div class="row">
+	                        <div class="col-xs-12">
+			        <nav class="navbar navbar-inverse">
+                        <div class="row">
+                        <div class="container">
+                            <div class="navbar-header" >
                     <ul class="nav nav-pills">
                         
                         <a href="#"><img src ="<?= $this->assetUrl('img/logo1.png') ?>" class="logo"></a>
-                          <h4>Commandez en ligne<br> 
+                        <h4>Commandez en ligne<br> 
                         Retirez en Boutique</h4>   
                     </ul>
                         
                       
                         
-                </div>
-                    <div class="menu">
-                     <a class="navbar-brand" href="#">Madinina Market</a>
-                      
-                       
-                    <form class="navbar-form navbar-left" method="post" action="<?=$this->url('Clients_searchItemClient');  ?>">
-                        <div class="input-group">
-                            <input type="text" class="form-control" name="recherche" placeholder="Rechercher un produit">
-                                <div class="input-group-btn">
-                                    <button class="btn btn-default" type="submit">
-                                        <i class="glyphicon glyphicon-search"></i>
-                                    </button>
-                                </div>
-                        </div>
-
-                   </form>
-                   
-                   
-                    <ul class="nav navbar-nav navbar-right" id="button-right">
-                        <form class="navbar-form inline-form"  method="post">
-
-                        <?php if(empty($w_user)): ?>
-                           <a href="<?=$this->url('Clients_loginClient')?>" class="btn btn-warning btn-md couleur">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></a>
-                            
-                                  <a href="<?=$this->url('Clients_addClient')?>" class="btn btn-warning btn-md couleur">Inscrivez-vous</a>
-                                    <?php else: ?>
-
-                                        Bonjour <?=$w_user['firstname']; ?>
-                                    <?php endif; ?>
-                          
-                        
-                           <a href="<?=$this->url('Clients_logoutClient')?>" class="btn btn-warning btn-md couleur">Déconnexion<span class="glyphicon glyphicon-user"></span></a>   
-                             
-
-                           
-               
-
-                            <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur" value="Mon Panier">Mon Panier&nbsp&nbsp<span class="glyphicon glyphicon-shopping-cart"></span></button>
-                            
-                        
-                        </form>
-                    </ul>
                     </div>
+                            <div class="menu">
+                            <a class="navbar-brand" href="#">Madinina Market</a>
+
+
+                            <form class="navbar-form navbar-left" method="post" action="<?=$this->url('Clients_searchItemClient');  ?>">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="recherche" placeholder="Rechercher un produit">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">
+                                                <i class="glyphicon glyphicon-search"></i>
+                                            </button>
+                                        </div>
+                                </div>
+
+                            </form>
+                            <ul class="nav navbar-nav navbar-right" id="button-right">
+                                <form class="navbar-form inline-form"  method="post">
+
+                                    <?php if(empty($w_user)): ?>
+                                    <a href="<?=$this->url('Clients_loginClient')?>" class="btn btn-warning btn-md couleur">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></a>
+
+                                    <a href="<?=$this->url('Clients_addClient')?>" class="btn btn-warning btn-md couleur">Inscrivez-vous</a>
+                                            <?php else: ?>
+
+                                                Bonjour <?=$w_user['firstname']; ?>
+                                            <?php endif; ?>
+
+
+                                    <a href="<?=$this->url('Clients_logoutClient')?>" class="btn btn-warning btn-md couleur">Déconnexion<span class="glyphicon glyphicon-user"></span></a>   
+
+                                    <a href="<?=$this->url('Clients_logoutClient')?>" class="btn btn-warning btn-md couleur">Mon Panier&nbsp&nbsp<span class="glyphicon glyphicon-shopping-cart"></span></a>
+
+
+                                </form>
+                            </ul>
+                            </div>
                
-            </div>
+                            </div>
+                        </div>
               
-            </nav>
+                    </nav>
 
                     
-    <!--END-HEADER-->		
+ 
+                </div>
+                </div>
+            </div>
 
 
-
-    </header>
-
+        </header>
+       <!--END-HEADER-->		
+   
+  
    
 
 		<section>
@@ -94,11 +96,13 @@
 
    <!--SHOP-->
           
-
-  
-            <div class="container-fluid pull-left" id="boutique">
-               
-                <div class="row">
+          
+           <div class="container-fluid pull-left" id="boutique">
+                <div class="col-xs-12">
+                    <div class="row">
+                   
+                        <div class="row">
+           
                     <h2 class="col-xs-12">Nos Boutiques</h2>
                 </div><!-- /row -->
                 <div class="row">
@@ -145,6 +149,7 @@
                     </div><!-- /col -->
 
                 </div><!-- /row -->
+                </div>
             </div><!-- /container -->
             
    <!--END-SHOP-->		

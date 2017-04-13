@@ -7,7 +7,7 @@
 
 
 <div class="container-fluid pull-right " id="item-picture">
-		<div class="row">
+    <div class="row">
 	    
 	    <div class="col-xs-9 col-sm-9">
 	        <div class="row">
@@ -34,7 +34,7 @@
                           <img src="<?= $this->assetUrl('img/8386346-Ptt.jpg');?>">
                         </a>
                 </div><!-- /col -->
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-xs-9 col-sm-4">
                         <a href="<?=$this->url('item_ViewItem')?>" class="thumbnail">
                           <img src="<?= $this->assetUrl('img/BMKeter-Ptt.jpg') ;?>">
                         </a>
