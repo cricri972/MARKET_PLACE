@@ -33,8 +33,10 @@ $w_routes = array(
 		['GET|POST', '/client/delete/[i:id]', 'Clients#deleteClient', 'Clients_deleteClient'],
 		['GET|POST', '/client/modify/[i:id]', 'Clients#modifyClient', 'Clients_modifyClient'],
 		['GET|POST', '/client/login', 'Clients#loginClient', 'Clients_loginClient'],
-		['GET|POST', '/client/logout', 'Clients#logoutClient', 'Clients_logoutClient'], 
-        
+		['GET|POST', '/client/logout', 'Clients#logoutClient', 'Clients_logoutClient'],
+		// ['GET|POST', '/client/search', 'Clients#searchClient', 'Clients_searchClient'],
+        ['GET|POST', '/client/searchItem', 'Clients#searchItemClient', 'Clients_searchItemClient'],
+        ['GET|POST', '/client/viewItem/[i:id]', 'Clients#viewItemClient', 'Clients_viewItemClient'],
         
 		['GET|POST', '/user/add', 'Users#addUser', 'Users_addUser'],
 		['GET|POST', '/user/list', 'Users#listUser', 'Users_listUser'],

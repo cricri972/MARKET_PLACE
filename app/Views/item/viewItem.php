@@ -30,7 +30,7 @@
 	
 	
 
-	 <button id="button2id" name="button2id" class="btn btn-info"><a href="<?php echo $this->url('item_listItem')?>">Lister les  articles</a></button>
+	 <!-- <button id="button2id" name="button2id" class="btn btn-info"><a href="<?php //echo $this->url('item_listItem')?>">Lister les  articles</a></button> -->
 
 	
 	<br>

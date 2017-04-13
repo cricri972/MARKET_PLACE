@@ -36,9 +36,9 @@
                      <a class="navbar-brand" href="#">Madinina Market</a>
                       
                        
-                    <form class="navbar-form navbar-left" >
+                    <form class="navbar-form navbar-left" method="post" action="<?=$this->url('Clients_searchItemClient');  ?>">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Rechercher un produit">
+                            <input type="text" class="form-control" name="recherche" placeholder="Rechercher un produit">
                                 <div class="input-group-btn">
                                     <button class="btn btn-default" type="submit">
                                         <i class="glyphicon glyphicon-search"></i>
@@ -46,7 +46,8 @@
                                 </div>
                         </div>
 
-                    </form>
+                   </form>
+                   
                    
                     <ul class="nav navbar-nav navbar-right" id="button-right">
                         <form class="navbar-form inline-form"  method="post">
