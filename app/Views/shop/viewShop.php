@@ -1,4 +1,8 @@
+
 <?php $this->layout('layoutshop', ['title' => 'Détails']) ?>
+
+<?php $this->layout('layoutadmin', ['title' => 'Détails']) ?>
+
 <?php $this->start('main_content') ?>
 
 
@@ -11,6 +15,7 @@
 <h3><?= $shop['immatriculation'] ?></h3><br>
 <h3><?= $shop['apeCode'] ?></h3><br>
 <h3><?= $shop['nameGerant'] ?></h3><br>
+<h3><?= $shop['phone'] ?></h3><br>
 <h3><a href="<?= $this->url('shop_mailToShop', ['id'=> $shop['id']]); ?>"><?= $shop['email'] ?></a></h3><br>
 <h3><?= $shop['adress'] ?></h3><br>
 <h3><?= $shop['zipcode'] ?></h3><br>

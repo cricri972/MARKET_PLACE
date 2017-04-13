@@ -5,6 +5,7 @@ namespace Controller;
 use \W\Controller\Controller;
 use \Model\ClientsModel;
 use \W\Security\AuthentificationModel as AuthModel;
+use \Model\ItemsModel;
 
 class ClientsController extends Controller
 {
@@ -314,9 +315,48 @@ class ClientsController extends Controller
         $logout->logUserOut();
 
          // Redirection vers...
-        $this->redirectToRoute('Clients_loginClient');
+        $this->redirectToRoute('Market_accueilSlider');
     }
             
     
-}
+
+    public function searchItemClient() {
+
+        $itemsModel = new ItemsModel();
+        if(!empty($_POST)){
+            foreach($_POST as $key => $value){
+                $post[$key] = trim(strip_tags($value));
+            }
+        }
+
+        $searchDatas = [
+            'name' => $post['recherche'],
+        ];
+        $items = $itemsModel->search($searchDatas);
+
+         $this->show('clients/searchItem', ['items' => $items]);
+    }
+
+
+
+  public function viewItemClient($id)
+    {
+    // On instancie le model qui permet d'effectuer un viewArticle
+        
+            $viewItem = new ItemsModel();
+            
+            $view = $viewItem->find($id); 
+
+            // $prixttc = ($view['price_ht'] * ($view['taxes']/100));
+            // var_dump($prixttc);
+
+            $params = [
+                'view' => $view
+            ];
+        $this->show('clients/viewItemClient', $params);
+      
+    }
+
+
+    }
 

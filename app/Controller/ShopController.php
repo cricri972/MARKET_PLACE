@@ -35,8 +35,6 @@ class ShopController extends Controller
 		$viewShop = $viewShopModel -> find($id); //tableau/enregistrement d'id $id
 
 		//var_dump($detailsShop); // affiche valeurs enregistrement
-
-		echo '<br>';
 		$info = ['shop' => $viewShop]; 
 		//var_dump($info);
 
@@ -85,19 +83,23 @@ class ShopController extends Controller
 			}
 
 			if(strlen($post['nameGerant']) < 1 || strlen($post['nameGerant']) > 40) {
-				$errors[] = 'Le nom du gérant doit comporter  entre 1 et 40 caractères ';
+				$errors[] = 'Le nom du gérant doit comporter  entre 1 et 40 caractères ! ';
 			}
 
 			if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
-				$errors[] = "Votre email n'est pas conforme";
+				$errors[] = 'Votre email n\'est pas conforme !';
+			}
+
+			if(!is_numeric($post['phone'])) {
+				$errors[] = 'Votre N° de téléphone n\'est pas conforme';
 			}
 			
 			
 			if(strlen($post['adress']) < 2 || strlen($post['adress']) > 30) {
-				$errors[] = 'Votre adresse ne semble pas complète. Elle doit comporter  entre 2 et 30 caractères ';
+				$errors[] = 'Votre adresse ne semble pas complète. Elle doit comporter  entre 2 et 30 caractères ! ';
 			}
 			if(strlen($post['city']) < 2 || strlen($post['city']) > 30) {
-				$errors[] = 'La ville doit comporter  entre 2 et 30 caractères ';
+				$errors[] = 'La ville doit comporter  entre 2 et 30 caractères ! ';
 			}
 			if(!is_numeric($post['zipcode']) || strlen($post['zipcode']) < 5) {
 				$errors[] = 'Le code postal doit comporter uniquement 5 chiffres ! ';
@@ -158,6 +160,7 @@ class ShopController extends Controller
 				
 				if($id !=0){
 					$shopModel->update($post, $id);
+					
 				}
 
 				else if($id === 0){
@@ -177,7 +180,8 @@ class ShopController extends Controller
 		}
 
 		$params = ['shop'=> $shop];
-		var_dump($params);
+		
+		//var_dump($params);
 		$this->show('shop/formShop', $params); //view 
 
 	}

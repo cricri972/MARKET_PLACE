@@ -1,6 +1,10 @@
 <!--article-->
 
+
 <?php $this->layout('layoutshop', ['title' => 'Liste des boutiques']) ?>
+
+<?php $this->layout('layoutadmin', ['title' => 'Liste des boutiques']) ?>
+
 <?php $this->start('main_content') ?>
 
 <div class="container-fluid pull-right " id="listshop">

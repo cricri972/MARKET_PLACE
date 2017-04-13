@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Connexion']) ?>
+<?php $this->layout('layoutadmin', ['title' => 'Connexion membre']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -16,12 +16,12 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="password">Mot de passe</label>
       <div class="col-md-4">
-      <input id="password" name="password" type="text" placeholder="Veuillez entrer votre mot de passe" class="form-control input-md">
+      <input id="password" name="password" type="password" placeholder="Veuillez entrer votre mot de passe" class="form-control input-md">
       </div>
     </div>
 
     <div class="form-group">
-      <label class="col-md-4 control-label" for="password">Confirmez votre rôle</label>
+      <label class="col-md-4 control-label" for="selectmultiple">Confirmez votre rôle</label>
       <div class="col-md-4">
       <select id="selectmultiple" name="selectmultiple" class="form-control">
       <option value="1">Editeur</option>
@@ -34,7 +34,7 @@
       <label class="col-md-4 control-label" for="submit"></label>
       <div class="col-md-8">
         <button type="submit" class="btn btn-primary">Se connecter</button>
-        <button type="submit" class="btn btn-warning">Retour Accueil</button>
+        <a href="<?=$this->url('Market_admin')?>" class="btn btn-warning btn-md couleur">Retour Accueil<span class="glyphicon glyphicon-user"></span></a>
       </div>
     </div>
 

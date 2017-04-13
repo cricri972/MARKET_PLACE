@@ -13,15 +13,7 @@
 
 
 <body>
-
-        
-    <!-------------------------------------------------------------------------------------------	
-                        
-                                        HEADER    
-    
-    --------------------------------------------------------------------------------------------->		
-
-
+ 
 	<div class="container">
 	
 		<header>
@@ -43,9 +35,9 @@
                      <a class="navbar-brand" href="#">Madinina Market</a>
                       
                        
-                    <form class="navbar-form navbar-left" >
+                    <form class="navbar-form navbar-left" method="post" action="<?=$this->url('item_searchItems');  ?>">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Rechercher un produit">
+                            <input type="text" class="form-control" name="recherche" placeholder="Rechercher un produit">
                                 <div class="input-group-btn">
                                     <button class="btn btn-default" type="submit">
                                         <i class="glyphicon glyphicon-search"></i>
@@ -76,11 +68,6 @@
               
             </nav>
 
-    <!---------------------------------------------------------------------------------------	
-                        
-                                        END-HEADER    
-    
-     --------------------------------------------------------------------------------------->		
 
 
 
@@ -91,16 +78,11 @@
 		<section>
 			<?= $this->section('main_content') ?>
 
-   <!---------------------------------------------------------------------------------------	
-                        
-                                        SHOP    
-    
-   --------------------------------------------------------------------------------------->		
 
             <div class="container-fluid pull-left " id="boutique">
                 <div class="row">
                     <h2 class="col-xs-12">Gérer ma Boutique</h2>
-                </div><!-- /row -->
+                </div>
                 <div class="row">
                     <div class="col-xs-3 col-sm-12" id="shop">
                         <div class="list-group">
@@ -148,18 +130,9 @@
                 </div><!-- /row -->
             </div><!-- /container -->
             
-   <!------------------------------------------------------------------------------------------	
-                        
-                                       END-SHOP    
-    
-   -------------------------------------------------------------------------------------------->		
+ 	
 		</section>
-
-   <!------------------------------------------------------------------------------------------	
-                        
-                                       FOOTER    
-    
-   -------------------------------------------------------------------------------------------->		
+	
 
 
 		<footer class="container-full col-sm-12">
@@ -221,11 +194,7 @@
 		
 		</footer>
 	</div>
-    <!-----------------------------------------------------------------------------------------	
-                        
-                                       END-FOOTER   
-    
-    ------------------------------------------------------------------------------------------->		
+ 	
 	
 	
 <script src="<?= $this->assetUrl('js/jquery-3.2.0.min.js')?>"></script>

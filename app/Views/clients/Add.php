@@ -45,7 +45,7 @@
 <div class="form-group">
   <label class="col-md-6 control-label" for="password">Mot de passe
   
-  <input id="password" name="password" type="text" placeholder="Veuillez entrer votre mot de passe" class="form-control input-md">
+  <input id="password" name="password" type="password" placeholder="Veuillez entrer votre mot de passe" class="form-control input-md">
  </label><br>
 </div>
 
