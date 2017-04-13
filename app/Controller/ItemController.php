@@ -384,5 +384,30 @@ class ItemController extends Controller
 		$this->show('item/AddItem');
 	}
 
+	/**
+	 * Effectue une recherche
+	 * @param array $data Un tableau associatif des valeurs à rechercher
+	 * @param string $operator La direction du tri, AND ou OR
+	 * @param boolean $stripTags Active le strip_tags automatique sur toutes les valeurs
+	 * @return mixed false si erreur, le résultat de la recherche sinon
+	 */
+// ['colonne_sql' => 'valeur recherchée', ]
+	public function searchItems() {
+
+		$itemsModel = new ItemsModel();
+		if(!empty($_POST)){
+			foreach($_POST as $key => $value){
+				$post[$key] = trim(strip_tags($value));
+			}
+		}
+
+		$searchDatas = [
+			'name' => $post['recherche'],
+		];
+		$items = $itemsModel->search($searchDatas);
+
+		$this->show('item/listItem', ['items' => $items]);
+	} 
+
 }
 
