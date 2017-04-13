@@ -6,6 +6,8 @@
 <div class="row col-xs-9 col-sm-9">
 <button id="button1id" name="button1id" class="btn btn-success"><a href="<?php echo $this->url('item_addItem')?>">Ajouter un article</a></button>
 	
+	
+
 	<table class="table table-striped ">
 		<thead>
 			<tr>
@@ -34,7 +36,7 @@
 				
 			</tr>
 		<?php endforeach; ?>
-			
+		<p> <?=isset($quote) ? preg_replace('#'.preg_quote($quote).'#', '<span style="background:yellow;color:black">\\0</span>', $items['ref']) : $items['ref']; ?>	</p>
 		</tbody>
 	</table>
 </div>
