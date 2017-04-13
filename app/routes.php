@@ -15,6 +15,10 @@ $w_routes = array(
 ['GET|POST', '/shop/modify/[:id]', 'Shop#addOrUpdateShop', 'shop_addOrUpdateShop'], // Maj boutique
 
 
+['GET|POST', '/order/basket/[:id]', 'Order#createBasket', 'order_createBasket'], // Maj boutique
+
+
+
 
  
         ['GET|POST', '/shop', 'Market#shop', 'Market_shop'],

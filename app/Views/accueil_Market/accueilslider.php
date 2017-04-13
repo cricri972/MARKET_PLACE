@@ -62,12 +62,14 @@
 	        <div class="row">
                
                 <div class="col-xs-9 col-sm-4">
-                        <a href="#" class="thumbnail">
+                        <?php $item['id']= 22; ?>
+                        <a href="<?= $this->url('order_createBasket', ['id'=> $item['id']]); ?>" class="thumbnail">
                           <img src="<?= $this->assetUrl('img/271AGCI-Ptt.jpg');?>">
                         </a>
                 </div><!-- /col -->
                 <div class="col-xs-9 col-sm-4">
-                        <a href="#" class="thumbnail">
+                		<?php $item['id']= 19; ?>
+                        <a href="<?= $this->url('order_createBasket', ['id'=> $item['id']]); ?>" class="thumbnail">
                           <img src="<?= $this->assetUrl('img/8322471-Ptt.jpg');?>">
                         </a>
                 </div><!-- /col -->

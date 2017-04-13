@@ -1,4 +1,6 @@
-<?php $this->layout('layout', ['title' => 'Modifier une boutique']) ?>
+
+
+<?php $this->layout('layoutadmin', ['title' => 'Ajouter/Modifier une boutique']) ?>
 <?php $this->start('main_content') ?>
 
 <main>
@@ -65,6 +67,10 @@
 <label class="col-md-3 control-label" for="email">Adresse Email</label>  
     <div class="col-md-3">
         <input id="email" name="email" type="email" value="<?=(isset($shop['email'])) ? $shop['email'] : '';?>" placeholder="ex. donaldtrompe@tentivement.bar" class="form-control input-md">
+    </div>
+<label class="col-md-3 control-label" for="phone">Téléphone</label>  
+    <div class="col-md-3">
+        <input id="phone" name="phone" type="tel" value="<?=(isset($shop['phone'])) ? $shop['phone'] : '';?>" placeholder="" class="form-control input-md">
     </div>
 </div>
 </fieldset>

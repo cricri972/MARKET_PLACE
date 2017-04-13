@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,7 +9,9 @@
 <body>
 	<div class="container">
 		<header>
-
+<?php
+	var_dump($_SESSION);
+	?>
 
 		</header>
 
@@ -19,6 +20,7 @@
 		</section>
 
 		<footer>
+
 		</footer>
 	</div>
 </body>

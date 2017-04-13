@@ -1,6 +1,6 @@
 <!--article-->
 
-<?php $this->layout('layout', ['title' => 'Liste des boutiques']) ?>
+<?php $this->layout('layoutadmin', ['title' => 'Liste des boutiques']) ?>
 <?php $this->start('main_content') ?>
 
 
