@@ -33,9 +33,9 @@
                         
                 </div>
                     <div class="menu">
-                     <a class="navbar-brand" href="#">Madinina Market</a>
+                        <a class="navbar-brand" href="#">Madinina Market</a>
                       
-                   <form class="navbar-form navbar-left" method="post" action="<?=$this->url('Clients_searchClient');  ?>">
+                    <form class="navbar-form navbar-left" method="post" >
                         <div class="input-group">
                             <input type="text" class="form-control" name="recherche" placeholder="Rechercher un produit">
                                 <div class="input-group-btn">
@@ -45,27 +45,26 @@
                                 </div>
                         </div>
 
-                   </form>
+                    </form>
                    
                     
                         <ul class="nav navbar-nav navbar-right" id="button-right">
                         <form class="navbar-form inline-form"  method="post">
 
                         <?php if(empty($w_user)): ?>
-                           <a href="<?=$this->url('Users_loginUser')?>" class="btn btn-warning btn-md couleur">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></a>
+                            <a href="<?=$this->url('Users_loginUser')?>" class="btn btn-warning btn-md couleur">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></a>
                             
                         <?php else: ?>
 
                             Bonjour <?=$w_user['firstname']; ?>
                         <?php endif; ?>
-                          
-                        
-                           <button type="submit" class="btn btn-warning"><a href="<?=$this->url('Users_logoutUser')?>">Déconnexion</a></button>
-                           </form>
-                           </ul>
+                            
+                            <a href="<?=$this->url('Users_logoutUser')?>" class="btn btn-warning btn-md couleur">Déconnexion&nbsp<span class="glyphicon glyphicon-log-in"></span></a>
+                        </form>
+                        </ul>
                
-            </div>
-              
+                    </div>
+                </div>
             </nav>
     </header>
     </div>
@@ -138,7 +137,7 @@
             
    <!-- END-SHOP -->	
 
-		</section>
+		
 
    <!-- FOOTER -->		
 
@@ -200,7 +199,7 @@
                 </div> 
 		
 		</footer>
-	</div>
+	
     <!-- END-FOOTER-->		
 	
 <script src="<?= $this->assetUrl('js/jquery-3.2.0.min.js')?>"></script>
