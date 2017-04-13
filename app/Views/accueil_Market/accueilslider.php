@@ -85,7 +85,7 @@
                           <img src="<?= $this->assetUrl('img/8386346-Ptt.jpg');?>">
                         </a>
                 </div><!-- /col -->
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-xs-9 col-sm-4">
                         <a href="#" class="thumbnail">
                           <img src="<?= $this->assetUrl('img/BMKeter-Ptt.jpg') ;?>">
                         </a>
