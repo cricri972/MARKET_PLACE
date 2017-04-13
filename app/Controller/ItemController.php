@@ -395,6 +395,7 @@ class ItemController extends Controller
 	public function searchItems() {
 
 		$itemsModel = new ItemsModel();
+		//var_dump($_POST);
 		if(!empty($_POST)){
 			foreach($_POST as $key => $value){
 				$post[$key] = trim(strip_tags($value));
@@ -402,9 +403,10 @@ class ItemController extends Controller
 		}
 
 		$searchDatas = [
-			'name' => $post['recherche'],
+			'name' 	=> $post['recherche'],
 		];
 		$items = $itemsModel->search($searchDatas);
+		//var_dump($items);
 
 		$this->show('item/listItem', ['items' => $items]);
 	}
