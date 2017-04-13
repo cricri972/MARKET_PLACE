@@ -35,7 +35,7 @@
                      <a class="navbar-brand" href="#">Madinina Market</a>
                       
                        
-                    <form class="navbar-form navbar-left" method="post">
+                    <form class="navbar-form navbar-left" method="post" action="<?=$this->url('item_searchItems');  ?>">
                         <div class="input-group">
                             <input type="text" class="form-control" name="recherche" placeholder="Rechercher un produit">
                                 <div class="input-group-btn">

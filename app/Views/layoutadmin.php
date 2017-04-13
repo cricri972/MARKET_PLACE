@@ -62,7 +62,7 @@
                                 </label>
                             </div>
                             
-                              <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur pull-right" value="Mon Panier">Déconnexion</button>
+                              <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur pull-right" value="Mon Panier">Connexion</button>
                         </form>
                     
                     </div>

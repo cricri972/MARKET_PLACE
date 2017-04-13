@@ -50,7 +50,7 @@ $w_routes = array(
 		['GET|POST', '/view/[i:id]/', 'Item#ViewItem', 'item_ViewItem'],
 		['GET|POST', '/delete/[i:id]/', 'Item#DeleteItem', 'item_DeleteItem'],
 		['GET|POST', '/update/[i:id]/', 'Item#UpdateItem', 'item_UpdateItem'],
-		['GET|POST', '/recherche', 'Item#rechercheItem', 'item_rechercheItem'],
+		['GET|POST', '/search', 'Item#searchItems', 'item_searchItems'],
 
 
 	);
