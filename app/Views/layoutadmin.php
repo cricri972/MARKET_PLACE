@@ -45,35 +45,31 @@
                                     </button>
                                 </div>
                         </div>
-
                     </form>
                    
                     
-                        <form class="connexion" method="post" id=connexion>
-                            <div class="form-group">
-                                <label class="col-md-8 control-label" for="email">Email
-                                    <input id="email" name="email" type="email" placeholder="Veuillez saisir votre email" class="form-control input-md">
-                                </label>
-                            </div><br><br><br>
-                            <div class="form-group">
-                                <label class="col-md-8 control-label" for="password">Mot de passe
+                        <ul class="nav navbar-nav navbar-right" id="button-right">
+                        <form class="navbar-form inline-form"  method="post">
 
-                                    <input id="password" name="password" type="text" placeholder="Veuillez saisir votre mot de passe" class="form-control input-md">
-                                </label>
-                            </div>
+                        <?php if(empty($w_user)): ?>
+                           <a href="<?=$this->url('Users_loginUser')?>" class="btn btn-warning btn-md couleur">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></a>
                             
-                              <button id="button" type="submit" action="#"  class="btn btn-warning btn-md couleur pull-right" value="Mon Panier">Déconnexion</button>
-                        </form>
-                    
-                    </div>
+                        <?php else: ?>
+
+                            Bonjour <?=$w_user['firstname']; ?>
+                        <?php endif; ?>
+                          
+                        
+                           <button type="submit" class="btn btn-warning"><a href="<?=$this->url('Users_logoutUser')?>">Déconnexion</a></button>
+                           </form>
+                           </ul>
                
             </div>
               
             </nav>
-
-    <!-- END-HEADER -->		
-
     </header>
+    </div>
+        <!-- END-HEADER -->
 
 		<section>
 			<?= $this->section('main_content') ?>
@@ -135,6 +131,7 @@
 
                 </div><!-- /row -->
             </div><!-- /container -->
+        </section>
             
    <!-- END-SHOP -->	
 

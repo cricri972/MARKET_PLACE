@@ -42,6 +42,8 @@ $w_routes = array(
 		['GET|POST', '/user/delete/[i:id]', 'Users#deleteUser', 'Users_deleteUser'],
 		['GET|POST', '/user/modify/[i:id]', 'Users#modifyUser', 'Users_modifyUser'],
 		['GET|POST', '/user/login', 'Users#loginUser', 'Users_loginUser'],
+		['GET|POST', '/user/logout', 'Users#logoutUser', 'Users_logoutUser'], 
+        
         
         
         

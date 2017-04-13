@@ -4,7 +4,7 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \Model\UsersModel;
-use \W\Security\AuthentificationModel as aut;
+use \W\Security\AuthentificationModel as AuthModel;
 
 class UsersController extends Controller{
 
@@ -158,34 +158,74 @@ class UsersController extends Controller{
 
 
 
-	public function loginUser(){
+	public function loginUser()
+    {
         $post = [];
         $errors = [];
-        
-        $login = new aut();
 
-        if(!empty($_POST)){
-                foreach($_POST as $key => $value){
-                    $post[$key] = trim(strip_tags($value));
-                }
+        $login = new UsersModel();
 
-            if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
-                    $errors[] = "Email invalide";
-                }
+        if(!empty($_POST))
+        {
+            foreach($_POST as $key => $value)
+            {
+                $post[$key] = trim(strip_tags($value));
+            }
 
-                if(strlen($post['password']) < 8 || strlen($post['password']) > 16) {
-                    $errors[] = "Mot de passe invalide";
-                }
+            if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL))
+            {
+                $errors[] = "Email invalide";
+            }
 
-                if(count($errors) === 0){
-                    $login->isValidLoginInfo($post['email'], $post['password']);
-                    $result = 'Connexion réussie';
-                } else {
-                    $result =implode("<br>", $errors);
+            if(strlen($post['password']) < 8 || strlen($post['password']) > 16)
+            {
+                $errors[] = "Mot de passe invalide";
+            }
+
+            if(count($errors) === 0)
+            {
+            // La connexion est effective si la fonction retourne un ID
+                $idUser = $login->isValidLoginInfo($post['email'], $post['password']);
+
+                if($login !== 0)
+                {
+                    $result = 'Couple email / password OK';
+                    // ou 'Couple email / password OK. ID = '.$idClient;
+
+                    $userDatas = $login->find($idUser);
+                    //variable qui récupère l'ID du user
+
+                    // Connecte le user
+                    $authModel = new AuthModel;
+                    $authModel->logUserIn($userDatas);
+
+                    // Redirection vers...
+                    $this->redirectToRoute('Market_admin');
                 }
-                echo $result;
+                else
+                {
+                    $result = 'Couple email / password NOTOK';
+                }
+            } 
+            else
+            {
+                $result =implode("<br>", $errors);
+            }
+
+            var_dump($result);
         }
         
         $this->show('users/login');
-	}
+    }
+
+
+    
+    public function logoutUser()
+    {
+        $logout = new AuthModel;
+        $logout->logUserOut();
+
+         // Redirection vers...
+        $this->redirectToRoute('Market_admin');
+    }
 }

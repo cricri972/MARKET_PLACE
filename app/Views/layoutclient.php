@@ -26,7 +26,7 @@
                         
                         <a href="#"><img src ="<?= $this->assetUrl('img/logo1.png') ?>" class="logo"></a>
                           <h4>Commandez en ligne<br> 
-                        Retirer en Boutique</h4>   
+                        Retirez en Boutique</h4>   
                     </ul>
                         
                       

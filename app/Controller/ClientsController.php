@@ -314,7 +314,7 @@ class ClientsController extends Controller
         $logout->logUserOut();
 
          // Redirection vers...
-        $this->redirectToRoute('Clients_loginClient');
+        $this->redirectToRoute('Market_accueilSlider');
     }
             
     
