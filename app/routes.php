@@ -62,6 +62,7 @@ $w_routes = array(
 		['GET|POST', '/search', 'Item#searchItems', 'item_searchItems'],
 		['GET|POST', '/test-pdf', 'Pdf#HtmlToPdf', 'pdf_test'],
 
+		['GET|POST', '/Mail', 'SendMail#SendMail', 'item_MailItem'],
 
 	);
 
