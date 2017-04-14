@@ -1,4 +1,4 @@
-<?php $this->layout('layoutclient', ['title' => 'Modifier mes informations']) ?>
+<?php $this->layout('layoutadmin', ['title' => 'Modifier mes informations']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -85,8 +85,8 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit"></label>
   <div class="col-md-8">
-    <button type="submit" class="btn btn-primary">Envoyer les modifications</button>
-    <button type="submit" class="btn btn-info"><a href = "#">Retour Accueil</a></button>
+    <button type="submit" class="btn btn-success">Valider les modifications</button>
+    <button type="submit" class="btn btn-info"><a href = "Market_client">Retour Accueil</a></button>
   </div>
 </div>
 

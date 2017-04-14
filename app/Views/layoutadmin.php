@@ -8,6 +8,9 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 	
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
+
+    <!-- Ajoute une section pour ma vue, pôur permettre d'ajout des entete dans celle-ci -->
+    <?= $this->section('head'); ?>
 	
 </head>
 
@@ -206,6 +209,9 @@
  </div>      	
 <script src="<?= $this->assetUrl('js/jquery-3.2.0.min.js')?>"></script>
 <script src="<?= $this->assetUrl('js/bootstrap.min.js')?>"></script>
+
+<!-- cette section permet d'ajouter des scripts directement dans mes fichiers de vue -->
+<?= $this->section('script'); ?>
         
 </body>
 </html>

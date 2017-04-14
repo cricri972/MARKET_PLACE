@@ -1,4 +1,9 @@
-<?php $this->layout('layoutshop', ['title' => 'Détails Client']) ?>
+<?php $this->layout('layoutadmin', ['title' => 'Détails Client']) ?>
+
+<?php $this->start ('head') ?>
+<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('bootstrap-sweetalert/dist/sweetalert.css')?>">
+<?php $this->stop ('head') ?>
+
 
 <?php $this->start('main_content') ?>
 
@@ -16,7 +21,8 @@
 <p>Ville :</p><?php echo $descriptif['city'];?>
 <p>Code postal :</p><?php echo $descriptif['zip_code'];?>
 <br>
-<a href="<?php echo $this->url('Clients_deleteClient',['id' => $descriptif['id']]);?>" class="btn btn-warning">Supprimer</a>
+<a href="<?php echo $this->url('Clients_deleteClient',['id' => $descriptif['id']]);?>" id="delete" class="btn btn-danger">Supprimer</a>
+<a href="<?php echo $this->url('Clients_modifyClient',['id' => $descriptif['id']]);?>" id="update" class="btn btn-warning">Modifier les infos</a>
 <a href="<?php echo $this->url('Clients_listClient');?>" class="btn btn-info">Retour liste</a>
 
 <style>
@@ -32,3 +38,29 @@
 </style>
 
 <?php $this->stop('main_content') ?>
+
+
+<?php $this->start('script') ?>
+<script src="<?= $this->assetUrl('bootstrap-sweetalert/dist/sweetalert.min.js') ?>"></script>
+<script>
+    $(function()
+    {
+        $('#delete').click(function(e){
+            e.preventDefault();
+            swal({
+              title: "Etes-vous sûr?",
+              text: "Vous ne pourrez par récupérer ces données",
+              type: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#DD6B55",
+              confirmButtonText: "Oui, supprimer",
+              closeOnConfirm: false,
+              html: false
+            }, function(){
+                // AJAX de suppression
+              swal("Supprimé", "success");
+            });
+        });
+    });
+</script>
+<?php $this->stop('script') ?>
