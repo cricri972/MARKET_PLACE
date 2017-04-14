@@ -20,9 +20,9 @@
 
 <!--HEADER-->
 	
-		
+		  <div class="container">
 		        <header>
-			        <div class="container">
+			      
 	                    <div class="row">
 	                        <div class="col-xs-12">
 			        <nav class="navbar navbar-inverse">
@@ -85,12 +85,12 @@
  
                 </div>
                 </div>
-            </div>
+            
 
 
         </header>
        <!--END-HEADER-->		
-   
+   </div>
   
    
 
@@ -99,7 +99,7 @@
 
 
    <!--SHOP-->
-          
+        <div class="container">
           
            <div class="container-fluid pull-left" id="boutique">
                 <div class="col-xs-12">
@@ -155,13 +155,13 @@
                 </div><!-- /row -->
                 </div>
             </div><!-- /container -->
-            
-   <!--END-SHOP-->		
+            </div>
+ </div>    <!--END-SHOP-->		
 		</section>
 
    <!--FOOTER-->		
 
-
+    <div class="container">
 		<footer class="container-full col-sm-12">
 		    <div class="row col-sm-4">
 		        <div class="gmap">
@@ -218,7 +218,7 @@
                     </address>
                     </fieldset>
                 </div> 
-		
+            
 		</footer>
 	</div>
     <!--END-FOOTER-->		
