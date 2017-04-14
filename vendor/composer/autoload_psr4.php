@@ -11,6 +11,7 @@ return array(
     'mikehaertl\\shellcommand\\' => array($vendorDir . '/mikehaertl/php-shellcommand/src'),
     'W\\' => array($baseDir . '/W'),
     'TrueBV\\' => array($vendorDir . '/true/punycode/src'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'League\\Url\\' => array($vendorDir . '/league/url/src'),
     'League\\Plates\\' => array($vendorDir . '/league/plates/src'),
     '' => array($baseDir . '/app'),
