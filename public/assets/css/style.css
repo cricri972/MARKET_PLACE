@@ -180,14 +180,14 @@ footer {
 }
     
 
-.gmap {
+.social {
     /*-- Dimension et Positionnement --*/
     width: 30%;
     height: 30%;
     float: left;
     /*-- Décoration --*/
     margin-right:15px;
-    margin-top: 15px;
+    margin-top: 20px;
       padding-top: 20px;
     border-radius: 10px;
     display: inline-block;
