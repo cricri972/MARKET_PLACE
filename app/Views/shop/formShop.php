@@ -89,7 +89,7 @@
 
 </fieldset>
 
-<fieldest>
+<fieldset>
 
 <legend>Adresse postale</legend>
 <div class="form-group">
@@ -109,10 +109,11 @@
         <input id="city" name="city" type="text" value="<?=(isset($shop['city'])) ? $shop['city'] : '';?>" placeholder="Ville" class="form-control input-md">
     </label>
 </div>
-</fieldest>
+</fieldset>
 
-<legend>Changer de logo</legend>
 <fieldset>
+<legend>Changer de logo</legend>
+
 <div class="form-group">
       <div class="col-md-8">
         <label class="btn btn-block btn-primary  control-label" for="logo"> Logo de la Boutique
@@ -125,11 +126,12 @@
         <input id="cover" name="cover" type="file" value= placeholder="Images à afficher sur le market" class="form-control input-md">
     </div>
  -->
-
+ 
 <!-- Button (Double) -->
 </div>
 </fieldset>  
 <fieldset> 
+  <legend></legend>
    <div class="form-group">
     <div class="col-md-8">
        <label class="btn btn-block  control-label pull-right"> 
@@ -150,4 +152,5 @@
 </div>
 </div>
 </main>
+<script src="<?=$this->assetUrl('js/js.js')?>"></script>
 <?php $this->stop('main_content') ?>

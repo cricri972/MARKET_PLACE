@@ -7,6 +7,7 @@ use \Model\ClientsModel;
 use \W\Security\AuthentificationModel as AuthModel;
 use \Model\ItemsModel;
 use \Model\ShopModel;
+use W\Security\StringUtils as Util;
 
 class ClientsController extends Controller
 {
@@ -79,8 +80,26 @@ class ClientsController extends Controller
             // S il n'y pas d'erreurs
             if(count($errors) === 0)
             {
+                //$token= new Util;
                 $post['password'] = password_hash($post['password'], PASSWORD_DEFAULT);
-                $a->insert($post);
+                $datas = [
+                    
+                    'pseudo'            => $post['pseudo'],
+                    'firstname'         => $post['firstname'],
+                    'lastname'          => $post['lastname'],
+                    'email'             => $post['email'],
+                    'password'          => $post['password'],
+                    'phone'             => $post['phone'],
+                    'phone_2'           => $post['phone_2'],
+                    'address'           => $post['address'],
+                    'city'              => $post['city'],
+                    'zip_code'          => $post['zip_code'],
+                    'token'             => Util::randomString(),
+                ];
+
+                $a = new ClientsModel();
+               
+                $a->insert($datas);
                 $result = 'Votre demande a bien été transmise';
             }
             else

@@ -9,9 +9,9 @@
 	
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 
-    <!-- Ajoute une section pour ma vue, pôur permettre d'ajout des entete dans celle-ci -->
-    <?= $this->section('head'); ?>
-	
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
 </head>
 
 <body>
@@ -70,14 +70,14 @@
                 </div>
             </nav>
     </header>
-   
+   </div> 
         <!-- END-HEADER -->
 
 		<section>
 			<?= $this->section('main_content') ?>
 
    <!-- SHOP -->		
-	
+	<div class="container">
             <div class="container-fluid pull-left" id="boutique">
                 <div class="row">
                    
@@ -85,59 +85,59 @@
                 </div><!-- /row -->
                 <div class="row">
                     <div class="col-xs-3 col-sm-12" id="shop">
-                        <div class="list-group">
-                            <a href="#" class="list-group-item">
-                            Liste user  
+                        <div class="list-group client">
+                            <a href="<?=$this->url('Clients_addClient')?>" class="list-group-item">
+                            Clients : ajouter  
                             </a>
-                            <a href="#" class="list-group-item">
-                            Ajouter User   
+                            <a href="<?=$this->url('Clients_modifyClient')?>" class="list-group-item">
+                            Clients : modifier   
                             </a>
-                            <a href="#" class="list-group-item primary">
-                            Modification information user       
+                            <a href="<?=$this->url('Clients_listClient')?>" class="list-group-item primary">
+                            Clients : liste       
                             </a>
-                            
-                            <a href="#" class="list-group-item">
-                            Modification Information Client   
-                               
+                            <a href="<?=$this->url('Clients_deleteClient')?>" class="list-group-item">
+                            Clients : supprimer
                             </a>
+                            </div>
+                        <div class="list-group shop">
                             <a href="<?=$this->url('shop_addShop')?>" class="list-group-item">
-                            Ajouter une Boutique
+                            Boutiques : ajouter
                             </a>
-                            <a href="#" class="list-group-item">
-                            Modification Information Boutique
+                            <a href="<?=$this->url('shop_addOrUpdateShop')?>" class="list-group-item">
+                            Boutiques : modifier
                                 
                             </a>
-                            <a href="#" class="list-group-item">
-                            Liste des Articles   
+                            <a href="<?=$this->url('shop_listShop')?>" class="list-group-item">
+                            Boutiques : liste  
                             </a>
-                            <a href="#" class="list-group-item">
-                            Modification Article  
+                            <a href="<?=$this->url('shop_deleteShop')?>" class="list-group-item">
+                            Boutiques : supprimer 
                             </a>
-                            <a href="#" class="list-group-item">
-                            Modification slider     
+                            </div>
+                        <div class="list-group user">
+                            <a href="<?=$this->url('Users_addUser')?>" class="list-group-item">
+                            Users : ajouter     
                             </a>
-                            <a href="#" class="list-group-item">
-                            Supprimer  
+                            <a href="<?=$this->url('Users_modifyUser')?>" class="list-group-item">
+                            Users : modifier  
                             </a> 
-                            <a href="#" class="list-group-item">
-                               
+                            <a href="<?=$this->url('Users_listUser')?>" class="list-group-item">
+                            Users : liste   
                             </a>
-                             <a href="#" class="list-group-item">
-                              
+                             <a href="<?=$this->url('Users_deleteUser')?>" class="list-group-item">
+                            Users : supprimer  
                             </a>
                              <a href="#" class="list-group-item">
                                 
                             </a>
-                             <a href="#" class="list-group-item">
-                               
+                             <a href="#" class="list-group-item">                               
                             </a>
-                           
                         </div><!-- /list-group -->      
                     </div><!-- /col -->
 
                 </div><!-- /row -->
             </div><!-- /container -->
-           
+        </div>   
         </section>
       
    <!-- END-SHOP -->	
@@ -145,15 +145,16 @@
 		
 
    <!-- FOOTER -->		
-
+ <div class="container">
 		<footer class="container-full col-sm-12">
-		    <div class="row col-sm-4">
+		    
 		        <div class="gmap">
-                
+                <div class="row col-sm-12">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247065.12849330145!2d-61.159906857044476!3d14.633639839708833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c6aa0f90066070d%3A0xe1001b1217afe7b0!2sMartinique!5e0!3m2!1sfr!2sfr!4v1483542076333" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
-                <div class="newletter row col-sm-4">
+                <div class="newletter">
+                   <div class="row col-sm-12">
                     <br>
                     <fieldset>
                         <legend>Newletters</legend>
@@ -175,9 +176,10 @@
                     </div>
                     </fieldset>
                 </div>
-                 
+            </div>
                  
                 <div class="contact">
+                    <div class="row col-sm-12">
                     <fieldset>
                         <legend>Contactez nous</legend>
                     <address>
@@ -194,24 +196,22 @@
                         &nbsp&nbsp&nbsp&nbsp Fort de France<br>
                         <br>
                         <br>
-                        <br>
-                        <br>
+                        
                         <div class="cgv">
                         <a href="<?= $this->assetUrl('img/CGV-SAMPLE.pdf') ?>">Conditions Générales de Vente</a>
                         </div>
                     </address>
                     </fieldset>
                 </div> 
-		
+            </div>
 		</footer>
-	
+    </div>
     <!-- END-FOOTER-->		
- </div>      	
+
+  
+   	
 <script src="<?= $this->assetUrl('js/jquery-3.2.0.min.js')?>"></script>
 <script src="<?= $this->assetUrl('js/bootstrap.min.js')?>"></script>
 
-<!-- cette section permet d'ajouter des scripts directement dans mes fichiers de vue -->
-<?= $this->section('script'); ?>
-        
 </body>
 </html>

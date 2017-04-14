@@ -86,7 +86,7 @@
   <label class="col-md-4 control-label" for="submit"></label>
   <div class="col-md-8">
     <button type="submit" class="btn btn-success">Valider les modifications</button>
-    <button type="submit" class="btn btn-info"><a href = "Market_client">Retour Accueil</a></button>
+    <a href="<?php echo $this->url('Market_client');?>" class="btn btn-info">Retour Accueil</a>
   </div>
 </div>
 

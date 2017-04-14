@@ -30,8 +30,9 @@
     <div class="form-group">
       <label class="col-md-6 control-label" for="submit"></label>
       <div class="col-md-8">
-        <button type="submit" class="btn btn-primary">Se connecter</button>
-        <button type="submit" class="btn btn-warning"><a href="<?=$this->url('Clients_addClient')?>">Pas encore Membre ?</a></button>
+        <button type="submit" class="btn btn-success">Me connecter</button>
+        <button type="submit" class="btn btn-warning">Mot de passe oublié ?</button>
+        <button type="submit" class="btn btn-info"><a href="<?=$this->url('Clients_addClient')?>">Créer mon compte</a></button>
       </div>
     </div>
 

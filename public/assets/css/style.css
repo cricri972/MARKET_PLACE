@@ -55,7 +55,7 @@
     {
     
     border-color: none;    
-    width: 100%;
+    max-width: 100%;
     height:400px; 
     margin-top:-20px;
     }
@@ -82,7 +82,7 @@ body
 }
 #item-picture{
     margin-top: 35px;
-  
+    margin-right:28em;
 }
 
 
@@ -92,7 +92,13 @@ body
 #formshop {
 	width: 100%;
     margin-left: 7%;
+    align-self: 
 }
+#formshop legend{
+	color: orange;
+ 
+}
+
 #formshop label #logo{
  width: 10em;
 }
@@ -100,12 +106,12 @@ body
 #formshop label{
     width: 50%;
     text-align: left;
-   
-
+    
 }
 
+
 #formshop #addShopButton{
-    margin-left: 90%;
+    margin-left: 120%;
     
 }
 #shop{
@@ -124,7 +130,7 @@ body
     color:orange;
 }
 #addclient{
-    margin-right: 5em;
+    margin-right: 35em;
 }
 #addclient input{
     width:40em;
@@ -134,7 +140,7 @@ body
 }
 
 #login{
-    margin-right: 10em;
+    margin-right: 30em;
 }
 #login input
 {
@@ -174,14 +180,14 @@ footer {
 }
     
 
-.gmap {
+.social {
     /*-- Dimension et Positionnement --*/
     width: 30%;
     height: 30%;
     float: left;
     /*-- Décoration --*/
     margin-right:15px;
-    margin-top: 15px;
+    margin-top: 20px;
       padding-top: 20px;
     border-radius: 10px;
     display: inline-block;
@@ -197,7 +203,7 @@ footer {
     float: left;
     
     /* --Décoration -- */
-    margin: 0 15px 0 15px;
+    margin: 0 10px 0 10px;
     
     font-family: Arial, sans-serif;
     text-align: left;
@@ -206,7 +212,7 @@ footer {
 .newletter input[type=email],
 .newletter input[type=text] {
     width: 91%;
-    height:30px;
+    height:20px;
     padding: 5px 10px;
     margin-bottom: 5px;
    
@@ -219,21 +225,13 @@ footer {
     margin-bottom: 5px;
   
 } 
-.newletter select[name=pays]{
-    width: 100%;
-    height:30px;
-    padding: 2px 15px;
-    margin-bottom: 5px;
-    
-    
-} 
 .newletter input[type=submit]{
     width: 91%;
-    height:30px;
+    height:27px;
     padding: 5px 10px;
     margin-bottom: 5px;
-    
-    color: black; 
+    color: black;
+    text-align:center;
 }
 
 .contact {

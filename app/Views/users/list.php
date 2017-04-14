@@ -28,6 +28,9 @@
 					<a href="<?php echo $this->url('Users_viewUser', ['id' => $user['id']]) ;?>" class="btn btn-info">
 						Détails
 						</a>
+						<a href="<?php echo $this->url('Market_admin');?>" class="btn btn-info">
+						Retour Accueil
+						</a>
 					</td>
 					<!-- <td>
 					<a href="<?php echo $this->url('Users_viewUser', ['id' => $user['id']]) ;?>" class="btn btn-warning">
