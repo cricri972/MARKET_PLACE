@@ -203,7 +203,7 @@ footer {
     float: left;
     
     /* --Décoration -- */
-    margin: 0 15px 0 15px;
+    margin: 0 10px 0 10px;
     
     font-family: Arial, sans-serif;
     text-align: left;
@@ -212,7 +212,7 @@ footer {
 .newletter input[type=email],
 .newletter input[type=text] {
     width: 91%;
-    height:30px;
+    height:20px;
     padding: 5px 10px;
     margin-bottom: 5px;
    
@@ -225,21 +225,13 @@ footer {
     margin-bottom: 5px;
   
 } 
-.newletter select[name=pays]{
-    width: 100%;
-    height:30px;
-    padding: 2px 15px;
-    margin-bottom: 5px;
-    
-    
-} 
 .newletter input[type=submit]{
     width: 91%;
-    height:30px;
+    height:27px;
     padding: 5px 10px;
     margin-bottom: 5px;
-    
-    color: black; 
+    color: black;
+    text-align:center;
 }
 
 .contact {
