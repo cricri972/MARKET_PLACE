@@ -26,6 +26,8 @@ $w_routes = array(
         ['GET|POST', '/client', 'Market#client', 'Market_client'],
         ['GET|POST', '/accueilslider', 'Market#accueilSlider', 'Market_accueilSlider'],
         
+
+
 		// GET|POST => méthode acceptée
         // /contactez-nous => URL (lien) de la page
         // Default#contact => Default : nom du controller, contact : nom de la méthode/fonction
@@ -42,7 +44,10 @@ $w_routes = array(
         ['GET|POST', '/client/searchItem', 'Clients#searchItemClient', 'Clients_searchItemClient'],
         ['GET|POST', '/client/viewItem/[i:id]', 'Clients#viewItemClient', 'Clients_viewItemClient'],
         ['GET|POST', '/client/viewShop/[i:id]', 'Clients#viewShopClient', 'Clients_viewShopClient'],
+        ['GET|POST', '/client/updatePassword', 'Clients#updatePassword', 'Clients_updatePassword'],
         
+
+
 		['GET|POST', '/user/add', 'Users#addUser', 'Users_addUser'],
 		['GET|POST', '/user/list', 'Users#listUser', 'Users_listUser'],
 		['GET|POST', '/user/details/[i:id]', 'Users#viewUser', 'Users_viewUser'],

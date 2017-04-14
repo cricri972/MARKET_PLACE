@@ -380,8 +380,11 @@ class ClientsController extends Controller
 
     public function viewShopClient($id)
     {
-        
-
-
     }
+
+    public function updatePassword()
+    {
+        $this->show('clients/updatePassword');
+    }
+
 }
