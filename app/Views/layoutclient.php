@@ -23,9 +23,9 @@
 
 <!--HEADER-->
 	
-		
+		  <div class="container">
 		        <header>
-			        <div class="container">
+			      
 	                    <div class="row">
 	                        <div class="col-xs-12">
 			        <nav class="navbar navbar-inverse">
@@ -76,11 +76,20 @@
 
                                     <a href="<?=$this->url('Clients_logoutClient')?>" class="btn btn-warning btn-md couleur">Mon Panier&nbsp&nbsp<span class="glyphicon glyphicon-shopping-cart"></span></a>
 
-                                            <?php endif; ?>
+
+                            <div class="social">
+                            <a type="button" class="btn-floating btn-large btn-fb"><i class="fa fa-facebook"></i></a>    
+                            <a type="button" class="btn-floating btn-large btn-tw"><i class="fa fa-twitter"></i></a>
+                            </div>
+
+                                                                    <?php endif; ?>
+
 
 
                                 </form>
                             </ul>
+                            
+                           
                             </div>
                
                             </div>
@@ -92,12 +101,12 @@
  
                 </div>
                 </div>
-            </div>
+            
 
 
         </header>
        <!--END-HEADER-->		
-   
+   </div>
   
    
 
@@ -106,7 +115,7 @@
 
 
    <!--SHOP-->
-          
+        <div class="container">
           
            <div class="container-fluid pull-left" id="boutique">
                 <div class="col-xs-12">
@@ -162,21 +171,35 @@
                 </div><!-- /row -->
                 </div>
             </div><!-- /container -->
+<<<<<<< HEAD
             
    <!--END-SHOP-->
+=======
+            </div>
+ </div>    <!--END-SHOP-->		
+>>>>>>> origin/Dev
 		</section>
 
    <!--FOOTER-->		
 
-
+    <div class="container">
 		<footer class="container-full col-sm-12">
-		    <div class="row col-sm-4">
+		    
 		        <div class="gmap">
-                
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247065.12849330145!2d-61.159906857044476!3d14.633639839708833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c6aa0f90066070d%3A0xe1001b1217afe7b0!2sMartinique!5e0!3m2!1sfr!2sfr!4v1483542076333" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div class="row col-sm-12">
+                  <p>Nous rejoindre sur :</p> 
+   <ul class="fa-ul"> 
+      <li><i class="fa-li fa fa-twitter"></i> Twitter</li> 
+      <li><i class="fa-li fa fa-facebook-official"></i> Facebook</li> 
+      <li><i class="fa-li fa fa-google-plus"></i> Google +</li> 
+      <li><i class="fa-li fa fa-youtube-play"></i> Youtube</li> 
+   </ul>
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247065.12849330145!2d-61.159906857044476!3d14.633639839708833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c6aa0f90066070d%3A0xe1001b1217afe7b0!2sMartinique!5e0!3m2!1sfr!2sfr!4v1483542076333" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
-                <div class="newletter row col-sm-4">
+              
+                <div class="newletter">
+                    <div class="row col-sm-12">
                     <br>
                     <fieldset>
                         <legend>Newletters</legend>
@@ -197,10 +220,12 @@
                     <input type="submit" class="btn btn-warning btn-md pull-left " value="Envoyer mes informations">
                     </div>
                     </fieldset>
+                   </div>
                 </div>
                  
                  
                 <div class="contact">
+                    <div class="row col-sm-12">
                     <fieldset>
                         <legend>Contactez nous</legend>
                     <address>
@@ -217,15 +242,16 @@
                         &nbsp&nbsp&nbsp&nbsp Fort de France<br>
                         <br>
                         <br>
-                        <br>
-                        <br>
+                      
+                        
                         <div class="cgv">
                         <a href="<?= $this->assetUrl('img/CGV.pdf') ?>">Conditions Générales de Vente</a>
                         </div>
                     </address>
                     </fieldset>
+                </div>
                 </div> 
-		
+            
 		</footer>
 	</div>
     <!--END-FOOTER-->		
