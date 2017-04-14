@@ -78,7 +78,7 @@ class ShopController extends Controller
 				$errors[] = 'Le numéro SIRET doit comporter  uniquement 14 chiffres !';
 			}
 
-			if(!is_numeric(substr($post['apeCode'],0,3)) && !is_string(substr($post['apeCode'],4,4))) {
+			if(!is_numeric(substr($post['apeCode'],0,4)) && !is_string(substr($post['apeCode'],5,5)) && !strlen($post['apeCode']==5)) {
 				$errors[] = 'Le code APE comporte 4 chiffres + 1 lettre !';
 			}
 

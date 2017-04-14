@@ -1,4 +1,8 @@
-<?php $this->layout('layout', ['title' => 'Détails client']) ?>
+<?php $this->layout('layoutadmin', ['title' => 'Détails client']) ?>
+
+
+
+
 
 <?php $this->start('main_content') ?>
 
@@ -6,3 +10,6 @@
 
 
 <?php $this->stop('main_content') ?>
+
+
+
