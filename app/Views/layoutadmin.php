@@ -85,53 +85,53 @@
                 </div><!-- /row -->
                 <div class="row">
                     <div class="col-xs-3 col-sm-12" id="shop">
-                        <div class="list-group">
-                            <a href="#" class="list-group-item">
-                            Liste user  
+                        <div class="list-group client">
+                            <a href="<?=$this->url('Clients_addClient')?>" class="list-group-item">
+                            Clients : ajouter  
                             </a>
-                            <a href="#" class="list-group-item">
-                            Ajouter User   
+                            <a href="<?=$this->url('Clients_modifyClient')?>" class="list-group-item">
+                            Clients : modifier   
                             </a>
-                            <a href="#" class="list-group-item primary">
-                            Modification information user       
+                            <a href="<?=$this->url('Clients_listClient')?>" class="list-group-item primary">
+                            Clients : liste       
                             </a>
-                            
-                            <a href="#" class="list-group-item">
-                            Modification Information Client   
-                               
+                            <a href="<?=$this->url('Clients_deleteClient')?>" class="list-group-item">
+                            Clients : supprimer
                             </a>
+                            </div>
+                        <div class="list-group shop">
                             <a href="<?=$this->url('shop_addShop')?>" class="list-group-item">
-                            Ajouter une Boutique
+                            Boutiques : ajouter
                             </a>
-                            <a href="#" class="list-group-item">
-                            Modification Information Boutique
+                            <a href="<?=$this->url('shop_addOrUpdateShop')?>" class="list-group-item">
+                            Boutiques : modifier
                                 
                             </a>
-                            <a href="#" class="list-group-item">
-                            Liste des Articles   
+                            <a href="<?=$this->url('shop_listShop')?>" class="list-group-item">
+                            Boutiques : liste  
                             </a>
-                            <a href="#" class="list-group-item">
-                            Modification Article  
+                            <a href="<?=$this->url('shop_deleteShop')?>" class="list-group-item">
+                            Boutiques : supprimer 
                             </a>
-                            <a href="#" class="list-group-item">
-                            Modification slider     
+                            </div>
+                        <div class="list-group user">
+                            <a href="<?=$this->url('Users_addUser')?>" class="list-group-item">
+                            Users : ajouter     
                             </a>
-                            <a href="#" class="list-group-item">
-                            Supprimer  
+                            <a href="<?=$this->url('Users_modifyUser')?>" class="list-group-item">
+                            Users : modifier  
                             </a> 
-                            <a href="#" class="list-group-item">
-                               
+                            <a href="<?=$this->url('Users_listUser')?>" class="list-group-item">
+                            Users : liste   
                             </a>
-                             <a href="#" class="list-group-item">
-                              
+                             <a href="<?=$this->url('Users_deleteUser')?>" class="list-group-item">
+                            Users : supprimer  
                             </a>
                              <a href="#" class="list-group-item">
                                 
                             </a>
-                             <a href="#" class="list-group-item">
-                               
+                             <a href="#" class="list-group-item">                               
                             </a>
-                           
                         </div><!-- /list-group -->      
                     </div><!-- /col -->
 

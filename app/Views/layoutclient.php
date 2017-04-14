@@ -71,7 +71,7 @@
 
                                     <a href="<?=$this->url('Clients_logoutClient')?>" class="btn btn-warning btn-md couleur">Déconnexion<span class="glyphicon glyphicon-user"></span></a> 
 
-                                    <a href="<?=$this->url('Clients_viewClient', ['id' => $client['id']]);?>" class="btn btn-warning btn-md couleur">Mon compte<span class="glyphicon glyphicon-user"></span></a>
+                                    <a href="<?=$this->url('Clients_viewClient', ['id' => $w_user['id']]);?>" class="btn btn-warning btn-md couleur">Mon compte<span class="glyphicon glyphicon-user"></span></a>
 
                                     <a href="<?=$this->url('Clients_logoutClient')?>" class="btn btn-warning btn-md couleur">Mon Panier&nbsp&nbsp<span class="glyphicon glyphicon-shopping-cart"></span></a>
 

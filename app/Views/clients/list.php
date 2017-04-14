@@ -28,6 +28,9 @@
 					<a href="<?php echo $this->url('Clients_viewClient', ['id' => $client['id']]);?>" class="btn btn-info">
 						Détails du compte
 						</a>
+						<a href="<?php echo $this->url('Market_admin');?>" class="btn btn-info">
+						Retour Accueil
+						</a>
 					</td>
 					<!-- <td>
 					<a href="<?php //echo $this->url('Clients_viewClient', ['id' => $client['id']]);?>" class="btn btn-warning">
