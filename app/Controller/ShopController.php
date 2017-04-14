@@ -166,7 +166,9 @@ class ShopController extends Controller
 				else if($id === 0){
 					$shopModel->insert($post);
 				}
-
+           
+                
+                
 			}
 			else { // Si j'ai des erreurs
 
@@ -174,12 +176,13 @@ class ShopController extends Controller
 				$shop = $post;
 			}
 
-			echo $result;
+			
 		
 //*************************************************************************
 		}
 
-		$params = ['shop'=> $shop];
+		$params = ['shop'=> $shop,
+                  'result'=>$result];
 		
 		//var_dump($params);
 		$this->show('shop/formShop', $params); //view 

@@ -14,12 +14,11 @@
 }
 
 
-
-
 .navbar-inverse{
     background-color: #1d1e1f;
     border: none;
 }
+
 .navbar-inverse h4{
     margin-left: 10%;
     position: absolute;
@@ -90,6 +89,20 @@ body
 /*---------------------------
         SHOP
 ----------------------------*/
+#formshop {
+	width: 100%;
+    margin-left: 7%;
+}
+#formshop #logo{
+ width: 10em;
+}
+
+#formshop label{
+    width: 50%;
+    text-align: left;
+   
+
+}
 #shop{
    width:100%;
    height: auto;
@@ -99,7 +112,7 @@ body
     background-color: #1d1e1f;
     height: 900px;
     margin-top: -2em;
-   
+    overflow: hidden;
 }
 
 #boutique h2{

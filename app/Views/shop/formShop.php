@@ -4,32 +4,30 @@
 
 
 <?php $this->layout('layoutadmin', ['title' => 'Ajouter/Modifier une boutique']) ?>
->>>>>>> origin/Dev
+
 <?php $this->start('main_content') ?>
 
-
-<div class="container-fluid pull-right " id="formshop">
-		<div class="row">
-	    
-	    <div class="col-xs-9 col-sm-9">
-
-<main>
-
-  <h1>Maj de la boutique</h1>
-  <br>
+<main id="formshop">
 
 
-<?php if(isset($result)): ?>
-    <p style="color:red;"><?php echo $result; ?></p>
-<?php endif; ?>
-
-  
+<div class="container-fluid pull-right col-xs-9" >
+    <div class="row">
+	    <div class="col-xs-9">
 
 
 
+<form method="post" class="form-horizontal" id='form_shop' enctype="multipart/form-data">
+    <div class="col-xs-12" >
+    <h1>Mettre à jour la boutique</h1>
+    <br>
 
-  <form method="post" class="form-horizontal" id='form_shop' enctype="multipart/form-data">
 
+
+   <p><?php echo $result; ?></p>
+
+
+        
+    
 
 
 <fieldset>
@@ -88,15 +86,11 @@
     </label>
 
     </div>
-<label class="col-md-6 control-label" for="phone">Téléphone
-   
-        <input id="phone" name="phone" type="tel" value="<?=(isset($shop['phone'])) ? $shop['phone'] : '';?>" placeholder="" class="form-control input-md">
-   
-</label>        
 
 </fieldset>
 
 <fieldest>
+
 <legend>Adresse postale</legend>
 <div class="form-group">
     <label class="col-md-6 control-label" for="adress">Adresse  
@@ -110,18 +104,21 @@
         <input id="zipcode" name="zipcode" type="text" value="<?=(isset($shop['zipcode'])) ? $shop['zipcode'] : '';?>" placeholder="97200" class="form-control input-md">
     </label>
 
-<label class="col-md-6 control-label" for="city">Ville  
+    <label class="col-md-6 control-label" for="city">Ville  
             
         <input id="city" name="city" type="text" value="<?=(isset($shop['city'])) ? $shop['city'] : '';?>" placeholder="Ville" class="form-control input-md">
     </label>
 </div>
 </fieldest>
 
+<legend>Changer de logo</legend>
 <fieldset>
-    <label class="col-md-6 control-label" for="logo">Logo de la Boutique  
+<div class="form-group">   
+        <label class="btn btn-block btn-primary col-md-12 control-label" for="logo"> Logo de la Boutique
+        <input id="logo" name="logo" type="file" value="<?=(isset($shop['raisonSocial'])) ? $shop['raisonSocial'] : '';?>" placeholder="Images à afficher sur le market" style="display: none;">
+        </label>
+       
    
-        <input id="logo" name="logo" type="file" value="<?=(isset($shop['raisonSocial'])) ? $shop['raisonSocial'] : '';?>" placeholder="Images à afficher sur le market" class="form-control input-md">
-    </label>
 <!-- <label class="col-md-4 control-label" for="cover">Images Société</label>  
     <div class="col-md-4">
         <input id="cover" name="cover" type="file" value= placeholder="Images à afficher sur le market" class="form-control input-md">
@@ -129,18 +126,22 @@
  -->
 
 <!-- Button (Double) -->
-<div class="form-group">
-  
-  <div class="col-md-8">
-    <button type="submit" id="addShopButton" class="btn btn-success">Mettre à jour la boutique </button>
-  </div>
 </div>
+  
+    <div class="col-md-6">
+        <button type="submit" id="addShopButton" class="btn btn-success pull-right">Mettre à jour la boutique </button>
+    </div>
+
 
 </fieldset>
+    </div>
 </form>
 
+
+
+
+</div>
+</div>
+</div>
 </main>
-</div>
-</div>
-</div>
 <?php $this->stop('main_content') ?>

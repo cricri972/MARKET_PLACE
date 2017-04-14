@@ -16,7 +16,7 @@
         
     <!-- HEADER -->		
 
-	<div class="container">
+<div class="container">
 	
 		<header>
 			
@@ -67,22 +67,23 @@
                 </div>
             </nav>
     </header>
-    </div>
+   
         <!-- END-HEADER -->
 
 		<section>
 			<?= $this->section('main_content') ?>
 
    <!-- SHOP -->		
-
-            <div class="container-fluid pull-left " id="boutique">
+	
+            <div class="container-fluid pull-left" id="boutique">
                 <div class="row">
+                   
                     <h2 class="col-xs-12">Administration</h2>
                 </div><!-- /row -->
                 <div class="row">
                     <div class="col-xs-3 col-sm-12" id="shop">
                         <div class="list-group">
-                           <a href="#" class="list-group-item">
+                            <a href="#" class="list-group-item">
                             Liste user  
                             </a>
                             <a href="#" class="list-group-item">
@@ -96,7 +97,7 @@
                             Modification Information Client   
                                
                             </a>
-                             <a href="<?=$this->url('shop_addShop')?>" class="list-group-item">
+                            <a href="<?=$this->url('shop_addShop')?>" class="list-group-item">
                             Ajouter une Boutique
                             </a>
                             <a href="#" class="list-group-item">
@@ -133,8 +134,9 @@
 
                 </div><!-- /row -->
             </div><!-- /container -->
+           
         </section>
-            
+      
    <!-- END-SHOP -->	
 
 		
@@ -201,7 +203,7 @@
 		</footer>
 	
     <!-- END-FOOTER-->		
-	
+ </div>      	
 <script src="<?= $this->assetUrl('js/jquery-3.2.0.min.js')?>"></script>
 <script src="<?= $this->assetUrl('js/bootstrap.min.js')?>"></script>
         
