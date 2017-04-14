@@ -9,43 +9,21 @@ class OrderController extends Controller
 		//unset($_SESSION['basket']);
 		$itemModel = new \Model\ItemsModel();
 		$product = $itemModel->find($id);
-
-		//var_dump($product);
-		echo'<br>';
-		echo'<br>';
-
-$_SESSION['basket'][] = array;
-echo'<br>';
-
-var_dump($_SESSION['basket']);
-
-		foreach ($_SESSION['basket'] as $key => $value) {
-		 	if($value['id']== $id){
-		 		$_SESSION['basket'][$key]['qty']++;
-		 	}
-
-		}
-		
-
-	$_SESSION['basket'][] = [
+		$_SESSION['basket'][] = [
 			'id'	  => $id,
 			'name'    => $product['name'],
 			'ref' 	  => $product['ref'],
-			'qty'	  => $product['qty'] =0 ,
+			'qty'	  => $product['qty'] = 1 ,
 			'price_ht'=> $product['price_ht'],
-		];
-
 		
 
-		var_dump($_SESSION['basket']);
-		
-		  
+		]; 
 			//debug($_SESSION);
-			var_dump($_SESSION);
+			//var_dump($_SESSION);
 			
 		$params = ['item' => $_SESSION['basket']] ;
-		//echo 'params';
-		//var_dump($params);
+		echo 'params';
+		var_dump($params);
 		$this->show('order/basket', $params);  
 		// $this->show('order/basket',['id'=> $item['id']]);  
 	}
