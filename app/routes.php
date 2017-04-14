@@ -41,6 +41,7 @@ $w_routes = array(
 		// ['GET|POST', '/client/search', 'Clients#searchClient', 'Clients_searchClient'],
         ['GET|POST', '/client/searchItem', 'Clients#searchItemClient', 'Clients_searchItemClient'],
         ['GET|POST', '/client/viewItem/[i:id]', 'Clients#viewItemClient', 'Clients_viewItemClient'],
+        ['GET|POST', '/client/viewShop/[i:id]', 'Clients#viewShopClient', 'Clients_viewShopClient'],
         
 		['GET|POST', '/user/add', 'Users#addUser', 'Users_addUser'],
 		['GET|POST', '/user/list', 'Users#listUser', 'Users_listUser'],

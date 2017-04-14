@@ -6,6 +6,7 @@ use \W\Controller\Controller;
 use \Model\ClientsModel;
 use \W\Security\AuthentificationModel as AuthModel;
 use \Model\ItemsModel;
+use \Model\ShopModel;
 
 class ClientsController extends Controller
 {
@@ -289,7 +290,7 @@ class ClientsController extends Controller
                     $authModel->logUserIn($clientDatas);
 
                     // Redirection vers...
-                    $this->redirectToRoute('Market_accueilSlider');
+                    $this->redirectToRoute('Market_client');
                 }
                 else
                 {
@@ -358,5 +359,10 @@ class ClientsController extends Controller
     }
 
 
-    }
+    public function viewShopClient($id)
+    {
+        
 
+
+    }
+}
