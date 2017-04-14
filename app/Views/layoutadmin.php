@@ -8,8 +8,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 	
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
-	
-	
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
@@ -213,6 +212,5 @@
 <script src="<?= $this->assetUrl('js/jquery-3.2.0.min.js')?>"></script>
 <script src="<?= $this->assetUrl('js/bootstrap.min.js')?>"></script>
 
-            
 </body>
 </html>
