@@ -1,4 +1,4 @@
-<?php $this->layout('layoutadmin', ['title' => 'Détails Client']) ?>
+<?php $this->layout('layoutadmin', ['title' => 'Détails du compte']) ?>
 
 <?php $this->start ('head') ?>
 <link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('bootstrap-sweetalert/dist/sweetalert.css')?>">
@@ -8,7 +8,7 @@
 <?php $this->start('main_content') ?>
 
 <?php if(isset($result)){
-	echo $result; //on peut aussi écrire directement echo $result sans le if
+	echo $result;
 	}?>
 <p>N° :</p><?php echo $descriptif['id'];?>
 <p>Pseudo :</p><?php echo $descriptif['pseudo'];?>
@@ -21,9 +21,16 @@
 <p>Ville :</p><?php echo $descriptif['city'];?>
 <p>Code postal :</p><?php echo $descriptif['zip_code'];?>
 <br>
+
+
+<?php if(!empty($w_user)): ?>
+<a href="<?php echo $this->url('Clients_modifyClient',['id' => $descriptif['id']]);?>" id="update" class="btn btn-warning">Modifier</a>
+<a href="<?php echo $this->url('Market_client');?>" class="btn btn-info">Retour Accueil</a>
+
+<?php else: ?>
 <a href="<?php echo $this->url('Clients_deleteClient',['id' => $descriptif['id']]);?>" id="delete" class="btn btn-danger">Supprimer</a>
-<a href="<?php echo $this->url('Clients_modifyClient',['id' => $descriptif['id']]);?>" id="update" class="btn btn-warning">Modifier les infos</a>
-<a href="<?php echo $this->url('Clients_listClient');?>" class="btn btn-info">Retour liste</a>
+<a href="<?php echo $this->url('Clients_listClient');?>" class="btn btn-info">Retour Liste</a>
+<?php endif; ?>
 
 <style>
     h1{
@@ -58,7 +65,7 @@
               html: false
             }, function(){
                 // AJAX de suppression
-              swal("Supprimé", "success");
+              swal("Supprimé", "");
             });
         });
     });
