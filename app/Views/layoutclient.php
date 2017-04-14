@@ -5,13 +5,15 @@
 	<title><?= $this->e($title) ?></title>
    <!-- Pour etre sur que ie utilise la derniere version du moteur de rendu -->
     <meta http-equiv="X-UA-Compatible" content="IE-Edge">
-
+    <meta name="viewport" content="width=device-width", initial-scle=1>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 	
-	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 
     <!-- Ajoute une section pour ma vue, pour permettre d'ajouter des entêtes dans celle-ci -->
     <?= $this->section('head'); ?>
@@ -25,22 +27,19 @@
 	
 		  <div class="container">
 		        <header>
-			      
-	                    <div class="row">
-	                        <div class="col-xs-12">
-			        <nav class="navbar navbar-inverse">
-                        <div class="row">
-                        <div class="container">
+			      <div class="row">
+	                <div class="col-xs-12">
+			            <nav class="navbar navbar-inverse">
+                            <div class="row">
+                            <div class="container">
                             <div class="navbar-header" >
-                    <ul class="nav nav-pills">
+                                <ul class="nav nav-pills">
                         
-                        <a href="#"><img src ="<?= $this->assetUrl('img/logo1.png') ?>" class="logo"></a>
-                        <h4>Commandez en ligne<br> 
-                        Retirez en Boutique</h4>   
-                    </ul>
-                        
-                      
-                        
+                                    <a href="#"><img src ="<?= $this->assetUrl('img/logo1.png') ?>" class="logo"></a>
+                                    <h4>Commandez en ligne<br> 
+                                    Retirez en Boutique</h4>   
+                                </ul>
+                
                     </div>
                             <div class="menu">
                             <a class="navbar-brand" href="#">Madinina Market</a>
@@ -171,13 +170,12 @@
                 </div><!-- /row -->
                 </div>
             </div><!-- /container -->
-<<<<<<< HEAD
-            
+
    <!--END-SHOP-->
-=======
+
             </div>
  </div>    <!--END-SHOP-->		
->>>>>>> origin/Dev
+
 		</section>
 
    <!--FOOTER-->		
