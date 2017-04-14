@@ -1856,44 +1856,6 @@
         ]
     },
     {
-        "name": "mikehaertl/php-shellcommand",
-        "version": "1.2.4",
-        "version_normalized": "1.2.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/mikehaertl/php-shellcommand.git",
-            "reference": "b0c0bf3ce49a01bd7ddbe07a9bed4ba85b869fa4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/mikehaertl/php-shellcommand/zipball/b0c0bf3ce49a01bd7ddbe07a9bed4ba85b869fa4",
-            "reference": "b0c0bf3ce49a01bd7ddbe07a9bed4ba85b869fa4",
-            "shasum": ""
-        },
-        "time": "2017-02-09T18:28:47+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "mikehaertl\\shellcommand\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Michael Härtl",
-                "email": "haertl.mike@gmail.com"
-            }
-        ],
-        "description": "An object oriented interface to shell commands",
-        "keywords": [
-            "shell"
-        ]
-    },
-    {
         "name": "mikehaertl/php-tmpfile",
         "version": "1.1.0",
         "version_normalized": "1.1.0.0",
@@ -1929,6 +1891,44 @@
         "description": "A convenience class for temporary files",
         "keywords": [
             "files"
+        ]
+    },
+    {
+        "name": "mikehaertl/php-shellcommand",
+        "version": "1.2.4",
+        "version_normalized": "1.2.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mikehaertl/php-shellcommand.git",
+            "reference": "b0c0bf3ce49a01bd7ddbe07a9bed4ba85b869fa4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mikehaertl/php-shellcommand/zipball/b0c0bf3ce49a01bd7ddbe07a9bed4ba85b869fa4",
+            "reference": "b0c0bf3ce49a01bd7ddbe07a9bed4ba85b869fa4",
+            "shasum": ""
+        },
+        "time": "2017-02-09T18:28:47+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "mikehaertl\\shellcommand\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Härtl",
+                "email": "haertl.mike@gmail.com"
+            }
+        ],
+        "description": "An object oriented interface to shell commands",
+        "keywords": [
+            "shell"
         ]
     },
     {

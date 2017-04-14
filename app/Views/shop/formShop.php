@@ -113,12 +113,13 @@
 
 <legend>Changer de logo</legend>
 <fieldset>
-<div class="form-group">   
-        <label class="btn btn-block btn-primary col-md-12 control-label" for="logo"> Logo de la Boutique
-        <input id="logo" name="logo" type="file" value="<?=(isset($shop['raisonSocial'])) ? $shop['raisonSocial'] : '';?>" placeholder="Images à afficher sur le market" style="display: none;">
+<div class="form-group">
+      <div class="col-md-8">
+        <label class="btn btn-block btn-primary  control-label" for="logo"> Logo de la Boutique
+          <input id="logo" name="logo" type="file" value="<?=(isset($shop['raisonSocial'])) ? $shop['raisonSocial'] : '';?>" placeholder="Images à afficher sur le market" accept="image/*" multiple style="display: none;width:100%;">
         </label>
-       
-   
+       </div>
+    
 <!-- <label class="col-md-4 control-label" for="cover">Images Société</label>  
     <div class="col-md-4">
         <input id="cover" name="cover" type="file" value= placeholder="Images à afficher sur le market" class="form-control input-md">
@@ -127,11 +128,16 @@
 
 <!-- Button (Double) -->
 </div>
-  
-    <div class="col-md-6">
-        <button type="submit" id="addShopButton" class="btn btn-success pull-right">Mettre à jour la boutique </button>
+</fieldset>  
+<fieldset> 
+   <div class="form-group">
+    <div class="col-md-8">
+       <label class="btn btn-block  control-label pull-right"> 
+        <button type="submit" id="addShopButton" class="btn btn-success ">Mettre à jour la boutique </button>
+    
+    </label>
     </div>
-
+</div>
 
 </fieldset>
     </div>

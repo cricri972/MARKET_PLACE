@@ -93,7 +93,7 @@ body
 	width: 100%;
     margin-left: 7%;
 }
-#formshop #logo{
+#formshop label #logo{
  width: 10em;
 }
 
@@ -102,6 +102,11 @@ body
     text-align: left;
    
 
+}
+
+#formshop #addShopButton{
+    margin-left: 90%;
+    
 }
 #shop{
    width:100%;
