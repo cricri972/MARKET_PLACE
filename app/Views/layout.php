@@ -10,7 +10,7 @@
 	<div class="container">
 		<header>
 <?php
-	var_dump($_SESSION);
+	
 	?>
 
 		</header>
