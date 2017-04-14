@@ -15,6 +15,12 @@ class ComposerStaticInit3ba6686e48d8dcf09fbfb32c1bbb0dec
     );
 
     public static $prefixLengthsPsr4 = array (
+        'm' => 
+        array (
+            'mikehaertl\\wkhtmlto\\' => 20,
+            'mikehaertl\\tmp\\' => 15,
+            'mikehaertl\\shellcommand\\' => 24,
+        ),
         'W' => 
         array (
             'W\\' => 2,
@@ -31,6 +37,18 @@ class ComposerStaticInit3ba6686e48d8dcf09fbfb32c1bbb0dec
     );
 
     public static $prefixDirsPsr4 = array (
+        'mikehaertl\\wkhtmlto\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikehaertl/phpwkhtmltopdf/src',
+        ),
+        'mikehaertl\\tmp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikehaertl/php-tmpfile/src',
+        ),
+        'mikehaertl\\shellcommand\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src',
+        ),
         'W\\' => 
         array (
             0 => __DIR__ . '/../..' . '/W',
