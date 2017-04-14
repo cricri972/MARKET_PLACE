@@ -7,7 +7,10 @@
     <div class="row">
         <div class="col-xs-12">
             
-         
+  <?php if(!empty($result)){
+  echo $result;
+  }?>
+  <!-- <p class="text-danger"><?php //echo $result; ?></p> -->
 
   <form class="form-horizontal" method="post" id="form_clients" enctype="multipart/form-data">
 <fieldset>

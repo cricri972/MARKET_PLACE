@@ -61,25 +61,31 @@
                                 <form class="navbar-form inline-form"  method="post">
 
                                     <?php if(empty($w_user)): ?>
+                                             <?php echo'Vous n\'êtes pas connecté'; ?>
                                     <a href="<?=$this->url('Clients_loginClient')?>" class="btn btn-warning btn-md couleur">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></a>
 
                                     <a href="<?=$this->url('Clients_addClient')?>" class="btn btn-warning btn-md couleur">Inscrivez-vous</a>
+
                                             <?php else: ?>
 
                                                 Bonjour <?=$w_user['firstname']; ?>
 
-                                            <?php endif; ?>
-
-
                                     <a href="<?=$this->url('Clients_logoutClient')?>" class="btn btn-warning btn-md couleur">Déconnexion<span class="glyphicon glyphicon-user"></span></a> 
-                                    <a href="<?=$this->url('Clients_viewClient')?>" class="btn btn-warning btn-md couleur">Mon compte<span class="glyphicon glyphicon-user"></span></a>   
+
+                                    <a href="<?=$this->url('Clients_viewClient')?>" class="btn btn-warning btn-md couleur">Mon compte<span class="glyphicon glyphicon-user"></span></a>
 
                                     <a href="<?=$this->url('Clients_logoutClient')?>" class="btn btn-warning btn-md couleur">Mon Panier&nbsp&nbsp<span class="glyphicon glyphicon-shopping-cart"></span></a>
+
 
                             <div class="social">
                             <a type="button" class="btn-floating btn-large btn-fb"><i class="fa fa-facebook"></i></a>    
                             <a type="button" class="btn-floating btn-large btn-tw"><i class="fa fa-twitter"></i></a>
                             </div>
+
+                                                                    <?php endif; ?>
+
+
+
                                 </form>
                             </ul>
                             
@@ -176,7 +182,14 @@
 		    
 		        <div class="gmap">
                 <div class="row col-sm-12">
-                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247065.12849330145!2d-61.159906857044476!3d14.633639839708833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c6aa0f90066070d%3A0xe1001b1217afe7b0!2sMartinique!5e0!3m2!1sfr!2sfr!4v1483542076333" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  <p>Nous rejoindre sur :</p> 
+   <ul class="fa-ul"> 
+      <li><i class="fa-li fa fa-twitter"></i> Twitter</li> 
+      <li><i class="fa-li fa fa-facebook-official"></i> Facebook</li> 
+      <li><i class="fa-li fa fa-google-plus"></i> Google +</li> 
+      <li><i class="fa-li fa fa-youtube-play"></i> Youtube</li> 
+   </ul>
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247065.12849330145!2d-61.159906857044476!3d14.633639839708833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c6aa0f90066070d%3A0xe1001b1217afe7b0!2sMartinique!5e0!3m2!1sfr!2sfr!4v1483542076333" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
               
