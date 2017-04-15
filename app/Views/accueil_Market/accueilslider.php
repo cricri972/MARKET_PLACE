@@ -153,5 +153,5 @@
 	</div>
             </div>
  
-<div class="clearfix"></div>
+
 <?php $this->stop('main_content') ?>

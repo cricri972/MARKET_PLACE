@@ -124,6 +124,10 @@ body
    height: auto;
    
 }
+#admincontrol{
+    background-color: #1d1e1f;
+    height: 100%;
+}
 #boutique{
     background-color: #1d1e1f;
     position: absolute;
@@ -146,7 +150,17 @@ body
 #addclient label{
     text-align: left;
 }
+#admincontrol h2{
+    color: orange;
+}
+#loginclient{
+    padding-top: 5%;
+    padding-left: 15%;
+}
 
+#loginclient label{
+    text-align: left;
+}
 #login{
     margin-right: 30em;
 }

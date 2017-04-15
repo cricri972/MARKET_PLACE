@@ -23,14 +23,18 @@
 	
 		<header>
 			
-			<nav class="navbar navbar-inverse">
-              <div class="container">
-                <div class="navbar-header" >
-                    <ul class="nav nav-pills">
+			 <div class="container">
+		        <header >
+			      <div class="row">
+	                <div class="col-md-12">
+			            <nav class="navbar navbar-inverse navbar-fixed-top">
+                            <div class="row">
+                            <div class="container">
+                            <div class="navbar-header" >
+                                <ul class="nav nav-pills">
                         
-                        <a href="#"><img src ="<?= $this->assetUrl('img/logo1.png') ?>" class="logo"></a>
-                          <h4>Bienvenue<br> 
-                        </h4>
+                                    <a href="#"><img src ="<?= $this->assetUrl('img/logo1.png') ?>" class="logo"></a>
+                         
                     </ul>
                         
                         
@@ -67,77 +71,29 @@
                         </ul>
                
                     </div>
+                         </div>
+                        </div>
+              
+                    </nav>
+
+                    
+ 
                 </div>
-            </nav>
-    </header>
-   </div> 
+                </div>
+            
+
+
+        </header>
+              
+  
         <!-- END-HEADER -->
 
 		<section>
 			<?= $this->section('main_content') ?>
 
    <!-- SHOP -->		
-	<div class="container">
-            <div class="container-fluid pull-left" id="boutique">
-                <div class="row">
-                   
-                    <h2 class="col-xs-12">Administration</h2>
-                </div><!-- /row -->
-                <div class="row">
-                    <div class="col-xs-3 col-sm-12" id="shop">
-                        <div class="list-group client">
-                            <a href="<?=$this->url('Clients_addClient')?>" class="list-group-item">
-                            Clients : ajouter  
-                            </a>
-                            <a href="<?=$this->url('Clients_modifyClient')?>" class="list-group-item">
-                            Clients : modifier   
-                            </a>
-                            <a href="<?=$this->url('Clients_listClient')?>" class="list-group-item primary">
-                            Clients : liste       
-                            </a>
-                            <a href="<?=$this->url('Clients_deleteClient')?>" class="list-group-item">
-                            Clients : supprimer
-                            </a>
-                            </div>
-                        <div class="list-group shop">
-                            <a href="<?=$this->url('shop_addShop')?>" class="list-group-item">
-                            Boutiques : ajouter
-                            </a>
-                            <a href="<?=$this->url('shop_addOrUpdateShop')?>" class="list-group-item">
-                            Boutiques : modifier
-                                
-                            </a>
-                            <a href="<?=$this->url('shop_listShop')?>" class="list-group-item">
-                            Boutiques : liste  
-                            </a>
-                            <a href="<?=$this->url('shop_deleteShop')?>" class="list-group-item">
-                            Boutiques : supprimer 
-                            </a>
-                            </div>
-                        <div class="list-group user">
-                            <a href="<?=$this->url('Users_addUser')?>" class="list-group-item">
-                            Users : ajouter     
-                            </a>
-                            <a href="<?=$this->url('Users_modifyUser')?>" class="list-group-item">
-                            Users : modifier  
-                            </a> 
-                            <a href="<?=$this->url('Users_listUser')?>" class="list-group-item">
-                            Users : liste   
-                            </a>
-                             <a href="<?=$this->url('Users_deleteUser')?>" class="list-group-item">
-                            Users : supprimer  
-                            </a>
-                             <a href="#" class="list-group-item">
-                                
-                            </a>
-                             <a href="#" class="list-group-item">                               
-                            </a>
-                        </div><!-- /list-group -->      
-                    </div><!-- /col -->
 
-                </div><!-- /row -->
-            </div><!-- /container -->
-        </div>   
+       
         </section>
       
    <!-- END-SHOP -->	
@@ -145,16 +101,28 @@
 		
 
    <!-- FOOTER -->		
- <div class="container">
-		<footer class="container-full col-sm-12">
-		    
-		        <div class="gmap">
-                <div class="row col-sm-12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247065.12849330145!2d-61.159906857044476!3d14.633639839708833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c6aa0f90066070d%3A0xe1001b1217afe7b0!2sMartinique!5e0!3m2!1sfr!2sfr!4v1483542076333" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <div class="container">
+		<footer class="container-full col-md-12">
+		   
+		        <div class="social">
+                <div class="row col-md-12">
+                
+                <fieldset> 
+                    <legend>Nous rejoindre sur :</legend> 
+                     <div class="form-group">       
+                    <ul class="fa-ul"> 
+                      <li><i class="fa-li fa fa-twitter"></i> Twitter</li> 
+                      <li><i class="fa-li fa fa-facebook-official"></i> Facebook</li> 
+                      <li><i class="fa-li fa fa-google-plus"></i> Google +</li> 
+                      <li><i class="fa-li fa fa-youtube-play"></i> Youtube</li> 
+                    </ul>
+                 </div>
+                 </fieldset>           
                 </div>
-            </div>
+                </div>
+              
                 <div class="newletter">
-                   <div class="row col-sm-12">
+                    <div class="row col-md-12">
                     <br>
                     <fieldset>
                         <legend>Newletters</legend>
@@ -175,11 +143,12 @@
                     <input type="submit" class="btn btn-warning btn-md pull-left " value="Envoyer mes informations">
                     </div>
                     </fieldset>
+                   </div>
                 </div>
-            </div>
+                 
                  
                 <div class="contact">
-                    <div class="row col-sm-12">
+                    <div class="row col-md-12">
                     <fieldset>
                         <legend>Contactez nous</legend>
                     <address>
@@ -196,19 +165,20 @@
                         &nbsp&nbsp&nbsp&nbsp Fort de France<br>
                         <br>
                         <br>
+                      
                         
                         <div class="cgv">
-                        <a href="<?= $this->assetUrl('img/CGV-SAMPLE.pdf') ?>">Conditions Générales de Vente</a>
+                        <a href="<?= $this->assetUrl('img/CGV.pdf') ?>">Conditions Générales de Vente</a>
                         </div>
                     </address>
                     </fieldset>
+                </div>
                 </div> 
-            </div>
+            
 		</footer>
-    </div>
     <!-- END-FOOTER-->		
 
-  
+   </div>   
    	
 <script src="<?= $this->assetUrl('js/jquery-3.2.0.min.js')?>"></script>
 <script src="<?= $this->assetUrl('js/bootstrap.min.js')?>"></script>

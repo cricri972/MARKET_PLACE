@@ -226,6 +226,6 @@ class UsersController extends Controller{
         $logout->logUserOut();
 
          // Redirection vers...
-        $this->redirectToRoute('Market_admin');
+        $this->redirectToRoute('Users_loginUser');
     }
 }
