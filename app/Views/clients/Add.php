@@ -140,7 +140,7 @@
 <div class="form-group " >
   <label class="col-md-12 control-label" for="submit">
   <div class="col-md-6">
-    <button type="submit" class="btn btn-primary">Envoyer le formulaire</button>
+      <button type="submit" class="btn btn-primary">"Envoyer le formulaire</button>
     </div>
     <div class="col-md-6">
     <button type="submit" class="btn btn-warning"><a href="<?=$this->url('Market_accueilSlider')?>">Retour Accueil</a></button>

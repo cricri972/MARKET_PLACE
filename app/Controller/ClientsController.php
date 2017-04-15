@@ -101,6 +101,8 @@ class ClientsController extends Controller
                
                 $a->insert($datas);
                 $result = 'Votre demande a bien été transmise';
+                
+                $this->redirectToRoute('Market_accueilSlider');
             }
             else
             {
@@ -112,7 +114,8 @@ class ClientsController extends Controller
 
 
         $this->show('clients/Add', ['result' => $result]);
-
+        
+        //$this->redirectToRoute('Market_accueilSlider');
     }
 
 

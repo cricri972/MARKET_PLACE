@@ -101,7 +101,7 @@
       <label class="col-md-12 control-label" for="submit">
      
         <button type="submit" class="btn btn-success">Me connecter</button>
-        <button type="submit" class="btn btn-warning">Mot de passe oublié ?</button>
+          <button type="submit" class="btn btn-warning"><a href="<?=$this->url('Users_modifyUser')?>">Mot de passe oublié ?</a></button>
         <a href="<?=$this->url('Market_admin')?>" class="btn btn-info btn-md couleur" >Retour Accueil&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span></a>
     </label>
     </div>
