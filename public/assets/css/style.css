@@ -94,6 +94,11 @@ body
 /*---------------------------
         SHOP
 ----------------------------*/
+#formshopadmin{
+    width: 100%;
+    margin-left: 50%;
+}
+
 #formshop {
 	width: 100%;
     margin-left: 7%;
@@ -127,6 +132,8 @@ body
 #admincontrol{
     background-color: #1d1e1f;
     height: 100%;
+    width: 15%;
+   
 }
 #boutique{
     background-color: #1d1e1f;
@@ -186,7 +193,9 @@ body
 #listshop{
     width: 40em;
 }
-
+#adminlistuser{
+    padding-left: 15%;
+}
 /*---------------------------
         FOOTER
 ----------------------------*/

@@ -212,7 +212,7 @@ class UsersController extends Controller{
                 $result =implode("<br>", $errors);
             }
 
-            var_dump($result);
+            //var_dump($result);
         }
         
        $this->show('users/login');

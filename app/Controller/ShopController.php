@@ -44,7 +44,7 @@ class ShopController extends Controller
 
 	public function addOrUpdateShop($id = 0)
 	{	
-
+        $result ="";
 		$errors = [];
 		$post = [];
 		//echo $id;
