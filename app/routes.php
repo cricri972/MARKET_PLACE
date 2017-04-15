@@ -45,6 +45,7 @@ $w_routes = array(
         ['GET|POST', '/client/viewItem/[i:id]', 'Clients#viewItemClient', 'Clients_viewItemClient'],
         ['GET|POST', '/client/viewShop/[i:id]', 'Clients#viewShopClient', 'Clients_viewShopClient'],
         ['GET|POST', '/client/updatePassword', 'Clients#updatePassword', 'Clients_updatePassword'],
+        ['GET|POST', '/client/SendMail', 'SendMails#SendMailPsw', 'SendMail_SendMailPsw'],
         
 
 
