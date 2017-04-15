@@ -11,9 +11,7 @@
                 <div class="row">
                     <div class="col-xs-3 col-sm-12" id="shop">
                         <div class="list-group client">
-                            <a href="<?=$this->url('Clients_addClient')?>" class="list-group-item">
-                            Clients : ajouter  
-                            </a>
+                          
                             <a href="<?=$this->url('Clients_modifyClient')?>" class="list-group-item">
                             Clients : modifier   
                             </a>
@@ -63,7 +61,7 @@
         </div><!-- /row -->
 <div class="col-md-9">
  <div class="table-responsive">          
-    <table class="table" id="adminlistuser" >
+    <table class="table" id="adminlistclient" >
        <div class="col-md-12">
 	
 
@@ -102,22 +100,12 @@
 				
 			<?php endforeach; ?>
 			
-			<style>
-                h1{
-                    width: 320px;
-                    border-radius: 10px;
-                    background-color: brown;
-                    color: aliceblue;
-                    padding: 10px;
-                    text-align: center;
-                }
-                
-
-            </style>
+			
 		</tbody>
 		</div>
 	</table>
 </div>
 </div>
 </div>
+
 <?php $this->stop('main_content') ?>

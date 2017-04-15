@@ -2,11 +2,56 @@
 
 <?php $this->start('main_content') ?>
 
+ <div class="container">
+        <div class="col-md-12">       
+            
+            <div class="col-md-3"  id="boutique" style="position:inherit;">
+         
+                    <h2 class="">Nos Boutiques</h2>
+                
+                <div class="row">
+                    <div class="col-md-3 col-md-12" id="shop">
+                        <div class="list-group">
+                            <a href="<?=$this->url('item_ViewItem')?>" class="list-group-item primary">
+                               
+                                <img src="<?= $this->assetUrl('img/M_BricolagePtt.jpg') ;?>">
+                            </a>
+                            <a href="#" class="list-group-item">
+                                
+                                <img src="<?= $this->assetUrl('img/IntersportPtt.jpg') ;?>">
+                            </a>
+                            <a href="#" class="list-group-item">
+                               
+                                <img src="<?= $this->assetUrl('img/Sun_RecordsPtt.jpg') ;?>">
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <img src="<?= $this->assetUrl('img/LaGrandeRecreBleu-Ptt.jpg') ;?>">
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <img src="<?= $this->assetUrl('img/CarrefourPtt.jpg') ;?>">
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <img src="<?= $this->assetUrl('img/Mango.jpg') ;?>">
+                            </a>
+                             <a href="#" class="list-group-item">
+                                <img src="<?= $this->assetUrl('img/lacoste.jpg') ;?>">
+                            </a>
+                             <a href="#" class="list-group-item">
+                                <img src="<?= $this->assetUrl('img/Samsung.jpg') ;?>">
+                            </a>
+                           
+                           
+                        </div><!-- /list-group -->      
+                    </div><!-- /col -->
 
-<div class="container-fluid pull-right">
-    <div class="col-xs-12 " id="login">
+                </div><!-- /row -->
+                </div>
+    
+<div class="col-xs-9">    
+<div class="container">
+    <div class="col-xs-9 " id="login">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-9">
              
 <form class="form-horizontal" method="post" id="form_clients">
   <fieldset>
@@ -32,5 +77,7 @@
         </div>
     </div>
 </div>
-
+</div>
+</div>
+ </div>
 <?php $this->stop('main_content') ?>

@@ -7,11 +7,14 @@
 
 <?php $this->start('main_content') ?>
 
+
+<div class="col-md-3"></div>
+
 <div class=container>
 <div class="row">
 
        
-        <div class="col-md-3" id="admincontrol" style="position:absolute";>  
+        <div class="col-md-3" id="admincontrol" style="position:inherit";>  
                   <div class="col-md-3"> 
                     <h2>Administration</h2>
                 </div><!-- /row -->

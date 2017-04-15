@@ -4,15 +4,13 @@
 
 <div class="container">
         <div class="col-md-3" id="admincontrol" style="position:inherit;">  
-                  <div class="col-xs-3"> 
+                  <div class="col-md-3"> 
                     <h2>Administration</h2>
                 </div><!-- /row -->
                 <div class="row">
-                    <div class="col-xs-3 col-sm-12" id="shop">
+                    <div class="col-md-3 col-sm-12" id="shop">
                         <div class="list-group client">
-                            <a href="<?=$this->url('Clients_addClient')?>" class="list-group-item">
-                            Clients : ajouter  
-                            </a>
+                           <fieldset>
                             <a href="<?=$this->url('Clients_modifyClient')?>" class="list-group-item">
                             Clients : modifier   
                             </a>
@@ -22,7 +20,8 @@
                             <a href="<?=$this->url('Clients_deleteClient')?>" class="list-group-item">
                             Clients : supprimer
                             </a>
-                            </div>
+                            </fieldset>    
+                        </div>
                         <div class="list-group shop">
                             <a href="<?=$this->url('shop_addShop')?>" class="list-group-item">
                             Boutiques : ajouter
@@ -37,7 +36,7 @@
                             <a href="<?=$this->url('shop_deleteShop')?>" class="list-group-item">
                             Boutiques : supprimer 
                             </a>
-                            </div>
+                        </div>
                         <div class="list-group user">
                             <a href="<?=$this->url('Users_addUser')?>" class="list-group-item">
                             Users : ajouter     
@@ -57,7 +56,10 @@
                              <a href="#" class="list-group-item">                               
                             </a>
                         </div><!-- /list-group -->      
-                    </div><!-- /col -->
+                    
+                        
+                        </div><!-- /col -->
+                    
             </div>
         </div><!-- /row -->
         
