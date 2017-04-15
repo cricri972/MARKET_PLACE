@@ -41,4 +41,10 @@ class Utils
     }
 
 
+     public static function subTotal($price_ttc, $qty)
+     {
+        $subTotal = $price_ttc * $qty;
+        return $subTotal;
+     }
+
 }

@@ -15,7 +15,8 @@ $w_routes = array(
 		['GET|POST', '/shop/modify/[:id]', 'Shop#addOrUpdateShop', 'shop_addOrUpdateShop'], // Maj boutique
 
 
-['GET|POST', '/order/basket/[:id]', 'Order#createBasket', 'order_createBasket'], // Maj boutique
+['GET|POST', '/order/basket/[:id]', 'Order#createBasket', 'order_createBasket'],
+['GET|POST', '/order/clear/', 'Order#clearBasket', 'Order_clearBasket'], // vider le panier
 
 
 
@@ -68,6 +69,7 @@ $w_routes = array(
 		['GET|POST', '/search', 'Item#searchItems', 'item_searchItems'],
 		['GET|POST', '/test-pdf', 'Pdf#HtmlToPdf', 'pdf_test'],
 
+		['GET|POST', '/Mail', 'SendMail#SendMail', 'item_MailItem'],
 
 	);
 

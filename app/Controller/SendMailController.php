@@ -1,10 +1,13 @@
 <?php
 
+
 use \W\Controller\Controller;
 use \Model\ClientsModel;
 use \W\Security\AuthentificationModel as AuthModel;
 use \Model\ItemsModel;
 use W\Security\StringUtils as Util;
+
+
 
 
 /**
@@ -28,6 +31,7 @@ class SendMailController extends Controller{
 
     
 
+
 public function SendMailPsw(){
 
 	 	$clientsModel = new ClientsModel();
@@ -39,6 +43,10 @@ public function SendMailPsw(){
 var_dump($clients);
 
 $this->show('clients/updatePassword');
+
+public function SendMail(){
+
+
 
    // $message = '
    //                  <html>
@@ -69,11 +77,19 @@ $this->show('clients/updatePassword');
 				$error[] = 'L\'adresse email est invalide';
 			}
 
+
 			if($post['email'] !== $client['email']){
 				$error[] = 'Email non reconnu dans notre base';
 			}
             
             if(empty($client['token'])){
+
+			if($post['email'] !== $clients['email']){
+				$error[] = 'Email non reconnu dans notre base';
+			}
+            
+            if(empty($clients['token'])){
+
                  $error[] = 'erreur sur le token';
             }
 				        
@@ -185,4 +201,8 @@ $this->show('clients/updatePassword');
 			}
 			$this->show('item/MailItem');
 }
+
 }
+
+}
+
