@@ -96,9 +96,23 @@ body
 ----------------------------*/
 #formshopadmin{
     width: 100%;
-    margin-left: 50%;
+    margin-left: 22%;
 }
-
+#formshopadmin label #logo{
+    width: 10em;
+}
+#formshopadmin label{
+     width: 50%;
+    text-align: left;
+    
+}
+#formshopadmin legend {
+    color: orange;
+   
+}
+#formshopadmin #addShopButton{
+     margin-left:250%;
+}
 #formshop {
 	width: 100%;
     margin-left: 7%;

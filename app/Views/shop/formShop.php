@@ -179,7 +179,7 @@
 <legend>Changer de logo</legend>
 
 <div class="form-group">
-      <div class="col-md-8">
+      <div class="col-md-6">
         <label class="btn btn-block btn-primary  control-label" for="logo"> Logo de la Boutique
           <input id="logo" name="logo" type="file" value="<?=(isset($shop['raisonSocial'])) ? $shop['raisonSocial'] : '';?>" placeholder="Images à afficher sur le market" accept="image/*" multiple style="display: none;width:100%;">
         </label>
@@ -197,7 +197,7 @@
 <fieldset> 
   <legend></legend>
    <div class="form-group">
-    <div class="col-md-8">
+    <div class="col-md-6">
        <label class="btn btn-block  control-label pull-right"> 
         <button type="submit" id="addShopButton" class="btn btn-success ">Mettre à jour la boutique </button>
     
