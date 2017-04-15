@@ -26,10 +26,10 @@
 <!--HEADER-->
 	
 		  <div class="container">
-		        <header>
+		        <header >
 			      <div class="row">
-	                <div class="col-xs-12">
-			            <nav class="navbar navbar-inverse">
+	                <div class="col-md-12">
+			            <nav class="navbar navbar-inverse navbar-fixed-top">
                             <div class="row">
                             <div class="container">
                             <div class="navbar-header" >
@@ -60,7 +60,7 @@
                                 <form class="navbar-form inline-form"  method="post">
 
                                     <?php if(empty($w_user)): ?>
-                                             <?php echo'Vous n\'êtes pas connecté'; ?>
+                                    <span style="color:gray"><?php echo'Vous n\'êtes pas connecté '; ?></span>
                                     <a href="<?=$this->url('Clients_loginClient')?>" class="btn btn-warning btn-md couleur">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></a>
 
                                     <a href="<?=$this->url('Clients_addClient')?>" class="btn btn-warning btn-md couleur">Inscrivez-vous</a>
@@ -71,15 +71,12 @@
 
                                     <a href="<?=$this->url('Clients_logoutClient')?>" class="btn btn-warning btn-md couleur">Déconnexion<span class="glyphicon glyphicon-user"></span></a> 
 
-                                    <a href="<?=$this->url('Clients_viewClient', ['id' => $client['id']]);?>" class="btn btn-warning btn-md couleur">Mon compte<span class="glyphicon glyphicon-user"></span></a>
+                                    <a href="<?=$this->url('Clients_viewClient', ['id' => $w_user['id']]);?>" class="btn btn-warning btn-md couleur">Mon compte<span class="glyphicon glyphicon-user"></span></a>
 
                                     <a href="<?=$this->url('Clients_logoutClient')?>" class="btn btn-warning btn-md couleur">Mon Panier&nbsp&nbsp<span class="glyphicon glyphicon-shopping-cart"></span></a>
 
 
-                            <div class="social">
-                            <a type="button" class="btn-floating btn-large btn-fb"><i class="fa fa-facebook"></i></a>    
-                            <a type="button" class="btn-floating btn-large btn-tw"><i class="fa fa-twitter"></i></a>
-                            </div>
+                       
 
                                                                     <?php endif; ?>
 
@@ -109,83 +106,20 @@
   
    
 
-		<section>
-			<?= $this->section('main_content') ?>
+		<section id="section">
+			  <?= $this->section('main_content') ?>
 
-
-   <!--SHOP-->
-        <div class="container">
-          
-           <div class="container-fluid pull-left" id="boutique">
-                <div class="col-xs-12">
-                    <div class="row">
-                   
-                        <div class="row">
-           
-                    <h2 class="col-xs-12">Nos Boutiques</h2>
-                </div><!-- /row -->
-                <div class="row">
-                    <div class="col-xs-3 col-sm-12" id="shop">
-                        <div class="list-group">
-                            <a href="<?=$this->url('item_ViewItem')?>" class="list-group-item primary">
-                               
-                                <img src="<?= $this->assetUrl('img/M_BricolagePtt.jpg') ;?>">
-                            </a>
-                            <a href="#" class="list-group-item">
-                                
-                                <img src="<?= $this->assetUrl('img/IntersportPtt.jpg') ;?>">
-                            </a>
-                            <a href="#" class="list-group-item">
-                               
-                                <img src="<?= $this->assetUrl('img/Sun_RecordsPtt.jpg') ;?>">
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <img src="<?= $this->assetUrl('img/LaGrandeRecreBleu-Ptt.jpg') ;?>">
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <img src="<?= $this->assetUrl('img/CarrefourPtt.jpg') ;?>">
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <img src="<?= $this->assetUrl('img/Mango.jpg') ;?>">
-                            </a>
-                             <a href="#" class="list-group-item">
-                                <img src="<?= $this->assetUrl('img/lacoste.jpg') ;?>">
-                            </a>
-                             <a href="#" class="list-group-item">
-                                <img src="<?= $this->assetUrl('img/Samsung.jpg') ;?>">
-                            </a>
-                             <a href="#" class="list-group-item">
-                                Boutique 9
-                            </a>
-                             <a href="#" class="list-group-item">
-                                Boutique 10
-                            </a>
-                             <a href="#" class="list-group-item">
-                                Boutique 11
-                            </a>
-                           
-                        </div><!-- /list-group -->      
-                    </div><!-- /col -->
-
-                </div><!-- /row -->
-                </div>
-            </div><!-- /container -->
-
-   <!--END-SHOP-->
-
-            </div>
- </div>    <!--END-SHOP-->		
 
 		</section>
 
    <!--FOOTER-->		
 
     <div class="container">
-		<footer class="container-full col-sm-12">
+		<footer class="container-full col-md-12">
 		   
 		        <div class="social">
-                <div class="row col-sm-4">
-                <br>
+                <div class="row col-md-12">
+                
                 <fieldset> 
                     <legend>Nous rejoindre sur :</legend> 
                      <div class="form-group">       
@@ -201,7 +135,7 @@
                 </div>
               
                 <div class="newletter">
-                    <div class="row col-sm-12">
+                    <div class="row col-md-12">
                     <br>
                     <fieldset>
                         <legend>Newletters</legend>
@@ -227,7 +161,7 @@
                  
                  
                 <div class="contact">
-                    <div class="row col-sm-12">
+                    <div class="row col-md-12">
                     <fieldset>
                         <legend>Contactez nous</legend>
                     <address>

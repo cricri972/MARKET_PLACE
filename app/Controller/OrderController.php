@@ -7,48 +7,130 @@ class OrderController extends Controller
 {
 	public function createBasket($id){
 		//unset($_SESSION['basket']);
+//var_dump($product);
 		$itemModel = new \Model\ItemsModel();
 		$product = $itemModel->find($id);
+/*$itemModel = new \Model\ItemsModel();
+		$product = $itemModel->find($id);*/
 
-		//var_dump($product);
-		echo'<br>';
-		echo'<br>';
+		if(!isset($_SESSION['basket'])){
 
-$_SESSION['basket'][] = array;
-echo'<br>';
-
-var_dump($_SESSION['basket']);
-
-		foreach ($_SESSION['basket'] as $key => $value) {
-		 	if($value['id']== $id){
-		 		$_SESSION['basket'][$key]['qty']++;
-		 	}
-
-		}
+			echo '<br>';
+			echo 'session basket n\'existe pas';
+			
+			echo '<br>';
 		
 
-	$_SESSION['basket'][] = [
-			'id'	  => $id,
-			'name'    => $product['name'],
-			'ref' 	  => $product['ref'],
-			'qty'	  => $product['qty'] =0 ,
-			'price_ht'=> $product['price_ht'],
-		];
+		$_SESSION['basket'][] = [
+					'id'	  => $id,
+					'name'    => $product['name'],
+					'ref' 	  => $product['ref'],
+					'qty'	  => 0 ,
+					'price_ht'=> $product['price_ht'],
+					'taxes'	  => $product['taxes'],
+					'discount'=> $product['discount'],
+
+
+				];
+
+				//var_dump($_SESSION['basket']);
+			}  
+				
+
+		if(isset($_SESSION['basket'])){
+
+			echo 'session basket existe';
+
+			foreach($_SESSION['basket'] as $key => $value) {
+
+			/*	if($value['id'] == $id){
+					$_SESSION['basket'][$key]['qty']++;
+				}
+*/
+				$productsId[] = $value['id'];
+			}
+
+
+			if(!in_array($id, $productsId)) {
+				$_SESSION['basket'][] = [
+					'id'	  => $id,
+					'name'    => $product['name'],
+					'ref' 	  => $product['ref'],
+					'qty'	  => 1 ,
+					'price_ht'=> $product['price_ht'],
+					'taxes'	  => $product['taxes'],
+					'discount'=> $product['discount'],
+				];
+			}
+			else {
+				foreach($_SESSION['basket'] as $key => $value){
+					if($value['id'] === $id){
+					$_SESSION['basket'][$key]['qty']++;
+					}
+				}
+			}
+		
+	}
+
+$params = ['item' => $_SESSION['basket']] ;
+
+$this->show('order/basket', $params); 
+
+
+}
+
+	public function clearBasket(){
+		if(isset($_SESSION['basket'])){
+		unset($_SESSION['basket']);
+
+
+		}	
+		$this->redirectToRoute('Market_accueilSlider');
+	}
+
+
+
+}
+// $this->show('order/basket',['id'=> $item['id']]);
+	
+
+//echo'<br>';
+
+//debug($_SESSION['basket']);
+
+
+	//if(isset($_SESSION['basket']['id'])){
+
+		//echo "SESSION EXISTE";
+	//	foreach ($_SESSION['basket'] as $key => $value) {
+
+			/*if($value['id']== $id){
+				$_SESSION['basket'][$key]['qty']++;
+			} */		
+		//echo 'params';
+		//var_dump($params);
+					 
+		
+
+	//}
+
+
+
 
 		
 
-		var_dump($_SESSION['basket']);
+	
+
+		
+
+//		var_dump($_SESSION['basket']);
 		
 		  
 			//debug($_SESSION);
-			var_dump($_SESSION);
+//			var_dump($_SESSION);
 			
-		$params = ['item' => $_SESSION['basket']] ;
-		//echo 'params';
-		//var_dump($params);
-		$this->show('order/basket', $params);  
-		// $this->show('order/basket',['id'=> $item['id']]);  
-	}
+		  
+	
 
 	/*function addItem($name,$qty,$price){
 
@@ -157,4 +239,3 @@ function supprimebasket(){
 
 
 
-}

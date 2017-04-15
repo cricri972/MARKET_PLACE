@@ -4,12 +4,8 @@
 <link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('bootstrap-sweetalert/dist/sweetalert.css')?>">
 <?php $this->stop ('head') ?>
 
-
 <?php $this->start('main_content') ?>
 
-<?php if(isset($result)){
-	echo $result;
-	}?>
 <p>N° :</p><?php echo $descriptif['id'];?>
 <p>Pseudo :</p><?php echo $descriptif['pseudo'];?>
 <p>Nom :</p><?php echo $descriptif['lastname'];?>

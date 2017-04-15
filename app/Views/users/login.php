@@ -33,8 +33,9 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="submit"></label>
       <div class="col-md-8">
-        <button type="submit" class="btn btn-primary">Se connecter</button>
-        <a href="<?=$this->url('Market_admin')?>" class="btn btn-warning btn-md couleur">Retour Accueil<span class="glyphicon glyphicon-user"></span></a>
+        <button type="submit" class="btn btn-success">Me connecter</button>
+        <button type="submit" class="btn btn-warning">Mot de passe oublié ?</button>
+        <a href="<?=$this->url('Market_admin')?>" class="btn btn-info btn-md couleur">Retour Accueil<span class="glyphicon glyphicon-user"></span></a>
       </div>
     </div>
 
