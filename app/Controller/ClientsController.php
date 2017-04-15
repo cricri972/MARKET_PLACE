@@ -312,7 +312,7 @@ class ClientsController extends Controller
                     $authModel->logUserIn($clientDatas);
 
                     // Redirection vers...
-                    $this->redirectToRoute('Market_client');
+                    $this->redirectToRoute('Market_accueilSlider');
                 }
                 else
                 {
