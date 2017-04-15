@@ -4,7 +4,7 @@
 
 <div class="container">
         <div class="col-md-3" id="admincontrol" style="position:inherit;">  
-                  <div class="col-md-3"> 
+                <div class="col-md-3"> 
                     <h2>Administration</h2>
                 </div><!-- /row -->
                 <div class="row">
@@ -60,7 +60,7 @@
                         
                         </div><!-- /col -->
                     
-            </div>
+                </div>
         </div><!-- /row -->
         
  <?php if(empty($w_user)): ?>       
