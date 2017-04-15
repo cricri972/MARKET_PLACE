@@ -12,7 +12,7 @@
                 <div class="row">
                    
                         <div class="list-group">
-                            <a href="<?=$this->url('shop_listShop')?>" class="list-group-item primary">
+                            <a href="<?=$this->url('shop_addOrUpdateShop')?>" class="list-group-item primary">
                             Modification information        
                             </a>
                             

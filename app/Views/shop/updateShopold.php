@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Modifier une boutique']) ?>
+<?php $this->layout('layoutshop', ['title' => 'Modifier une boutique']) ?>
 <?php $this->start('main_content') ?>
 
 <main>

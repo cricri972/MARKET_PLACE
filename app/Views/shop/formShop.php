@@ -85,7 +85,7 @@
 
 <form method="post" class="form-horizontal" id='form_shop' enctype="multipart/form-data">
     <div class="col-md-12">
-    <h1>Mettre à jour la boutique</h1>
+    <h1></h1>
     <br>
 
 
