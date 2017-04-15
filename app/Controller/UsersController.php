@@ -215,7 +215,10 @@ class UsersController extends Controller{
             var_dump($result);
         }
         
-        $this->show('users/login');
+       $this->show('users/login');
+        //$this->redirectToRoute('Users_loginUser');
+
+
     }
 
 

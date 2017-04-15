@@ -62,7 +62,7 @@
             </div>
         </div><!-- /row -->
         
-        
+ <?php if(empty($w_user)): ?>       
 <div class="col-md-9" id="loginclient">
  <h3>Identifiez-Vous</h3>
     <div class="row">
@@ -111,6 +111,7 @@
 </div>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
    
 
