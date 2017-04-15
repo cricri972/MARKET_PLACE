@@ -3,7 +3,7 @@
 
 <?php $this->start('main_content') ?>
 
-  <div class="container col-md-3" id="boutique" style="position:inherit;heigh">
+  <div class="container col-md-3" id="boutique" style="position:inherit;height:48em;">
                <div class="col-md-12">
                 <div class="row ">
                     <h2 >Gérer ma Boutique</h2>
