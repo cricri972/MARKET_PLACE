@@ -61,20 +61,20 @@ class ClientsModel extends \W\Model\UsersModel
 //		return false;
 //	}
 
-
-	public function find($email)
-	{
-		if (!is_string($email)){
-			return false;
-		}
-
-		$sql = 'SELECT password FROM ' . $this->table . ' WHERE email  = :email LIMIT 1';
-		$sth = $this->dbh->prepare($sql);
-		$sth->bindValue(':email', $email);
-		$sth->execute();
-
-		return $sth->fetch();
-	}
+//
+//	public function find($email)
+//	{
+//		if (!is_string($email)){
+//			return false;
+//		}
+//
+//		$sql = 'SELECT password FROM ' . $this->table . ' WHERE email  = :email LIMIT 1';
+//		$sth = $this->dbh->prepare($sql);
+//		$sth->bindValue(':email', $email);
+//		$sth->execute();
+//
+//		return $sth->fetch();
+//	}
 
 	// public function getUserByUsernameOrEmail($usernameOrEmail)
 	// {

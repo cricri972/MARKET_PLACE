@@ -1,5 +1,5 @@
 
-<?php $this->layout('layoutshop', ['title' => 'Modifier une boutique']) ?>
+
 
 
 
@@ -19,7 +19,7 @@
                     <h2>Administration</h2>
                 </div><!-- /row -->
                 <div class="row">
-                    <div class="col-md-3 col-sm-12" id="shop">
+                    <div class="col-md-3 col-xs-12" id="shop">
                         <div class="list-group client">
                             <a href="<?=$this->url('Clients_addClient')?>" class="list-group-item">
                             Clients : ajouter  
