@@ -12,7 +12,8 @@
 <p>Rôle :</p><?php echo $descriptif['role'];?>
 <p>Boutique :</p><?php echo $descriptif['id_shop'];?>
 <br>
-<a href="<?php echo $this->url('Users_deleteUser',['id' => $descriptif['id']]);?>" class="btn btn-warning">Supprimer</a>
+<a href="<?php echo $this->url('Users_deleteUser',['id' => $descriptif['id']]);?>" class="btn btn-danger">Supprimer</a>
+<a href="<?php echo $this->url('Clients_modifyUserByAdmin',['id' => $descriptif['id']]);?>" class="btn btn-warning">Modifier</a>
 <a href="<?php echo $this->url('Users_listUser');?>" class="btn btn-info">Retour liste</a>
 
 <style>

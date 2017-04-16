@@ -51,7 +51,7 @@
                             <form class="navbar-form inline-form"  method="post">
 
                             <?php if(empty($w_user)): ?>
-                               <!-- <a href="<?//=$this->url('Users_loginUser')?>" class="btn btn-warning btn-md couleur">Accès membre&nbsp<span class="glyphicon glyphicon-user"></span></a>-->
+                               <span style="color:gray"><?php echo'Vous n\'êtes pas connecté '; ?></span>
 
                             <?php else: ?>
 

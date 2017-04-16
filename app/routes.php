@@ -18,10 +18,8 @@ $w_routes = array(
 		['GET|POST', '/shop/modifyshop/[:id]', 'Shop#addOrUpdateShopByShop', 'shop_addOrUpdateShopByShop'], // Maj boutique du gérant
 
 
-['GET|POST', '/order/basket/[:id]', 'Order#createBasket', 'order_createBasket'],
-['GET|POST', '/order/clear/', 'Order#clearBasket', 'Order_clearBasket'], // vider le panier
-
-
+		['GET|POST', '/order/basket/[:id]', 'Order#createBasket', 'order_createBasket'],
+		['GET|POST', '/order/clear/', 'Order#clearBasket', 'Order_clearBasket'], // vider le panier
 
 
  
@@ -44,6 +42,7 @@ $w_routes = array(
 		['GET|POST', '/client/modify/[i:id]', 'Clients#modifyClient', 'Clients_modifyClient'],
     
         ['GET|POST', '/client/modifyadmin/[i:id]', 'Clients#modifyClientByAdmin', 'Clients_modifyClientByAdmin'],
+        ['GET|POST', '#', 'Clients"#"modifyUserByAdmin', 'Clients_modifyUserByAdmin'],
     
 		['GET|POST', '/client/login', 'Clients#loginClient', 'Clients_loginClient'],
 		['GET|POST', '/client/logout', 'Clients#logoutClient', 'Clients_logoutClient'],
