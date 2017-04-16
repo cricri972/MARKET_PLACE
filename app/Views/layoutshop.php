@@ -17,7 +17,7 @@
 <body>
  
 	<div class="container">
-		        <header >
+		        <header>
 			      <div class="row">
 	                <div class="col-md-12">
 			            <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -27,8 +27,6 @@
                        <ul class="nav nav-pills">
                         
                         <a href="#"><img src ="<?= $this->assetUrl('img/logo1.png') ?>" class="logo"></a>
-                         
-                           
                     </ul>
                         
                       
@@ -47,11 +45,8 @@
                                     </button>
                                 </div>
                         </div>
-
                     </form>
-                   
-                   
-                          
+ 
                         <ul class="nav navbar-nav navbar-right" id="button-right">
                             <form class="navbar-form inline-form"  method="post">
 
@@ -68,13 +63,13 @@
                         </ul>
                    
                     </div>
-               
+
+                </div>
             </div>
-                            </div>
-         
-                        </nav>
-                      </div>
-                    </div>
+
+        </nav>
+    </div>
+</div>
     </header>
 
    
@@ -88,7 +83,7 @@
 	
 
 
-		 <div class="container">
+        <div class="container">
 		<footer class="container col-md-12">
 		   
 		        <div class="social">
@@ -103,8 +98,8 @@
                       <li><i class="fa-li fa fa-google-plus"></i> Google +</li> 
                       <li><i class="fa-li fa fa-youtube-play"></i> Youtube</li> 
                     </ul>
-                 </div>
-                 </fieldset>           
+                </div>
+                </fieldset>           
                 </div>
                 </div>
               

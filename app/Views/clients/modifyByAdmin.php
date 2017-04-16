@@ -1,60 +1,78 @@
-<?php $this->layout('layoutclient', ['title' => 'Modifier mes informations']) ?>
+<?php $this->layout('layoutadmin', ['title' => 'Modifier mes informations']) ?>
 
 <?php $this->start('main_content') ?>
 
 
 <div class="container">
-    <div class="col-md-12">    
-
-        <div class="col-md-3"  id="boutique">
-         
-            <h2 class="">Nos Boutiques</h2>
-                
+        <div class="col-md-3" id="admincontrol" style="position:inherit;">  
+                  <div class="col-md-3"> 
+                    <h2>Administration</h2>
+                </div><!-- /row -->
                 <div class="row">
-                    <div class="col-md-3 col-md-12" id="shop">
-                        <div class="list-group">
-                            <a href="<?=$this->url('item_ViewItem')?>" class="list-group-item primary">
-                               
-                                <img class="img-responsive" src="<?= $this->assetUrl('img/M_BricolagePtt.jpg') ;?>">
+                    <div class="col-md-3 col-sm-12" id="shop">
+                        <div class="list-group client">
+                           <fieldset>
+                            <a href="<?=$this->url('Clients_modifyClientByAdmin')?>" class="list-group-item">
+                            Clients : modifier   
                             </a>
-                            <a href="#" class="list-group-item">
+                            <a href="<?=$this->url('Clients_listClient')?>" class="list-group-item primary">
+                            Clients : liste       
+                            </a>
+                            <a href="<?=$this->url('Clients_deleteClient')?>" class="list-group-item">
+                            Clients : supprimer
+                            </a>
+                            </fieldset>
+                            </div>
+                        <div class="list-group shop">
+                            <a href="<?=$this->url('shop_addShop')?>" class="list-group-item">
+                            Boutiques : ajouter
+                            </a>
+                            <a href="<?=$this->url('shop_addOrUpdateShop')?>" class="list-group-item">
+                            Boutiques : modifier
                                 
-                                <img class="img-responsive" src="<?= $this->assetUrl('img/IntersportPtt.jpg') ;?>">
                             </a>
-                            <a href="#" class="list-group-item">
-                               
-                                <img class="img-responsive" src="<?= $this->assetUrl('img/Sun_RecordsPtt.jpg') ;?>">
+                            <a href="<?=$this->url('shop_listShop')?>" class="list-group-item">
+                            Boutiques : liste  
                             </a>
-                            <a href="#" class="list-group-item">
-                                <img class="img-responsive" src="<?= $this->assetUrl('img/LaGrandeRecreBleu-Ptt.jpg') ;?>">
+                            <a href="<?=$this->url('shop_deleteShop')?>" class="list-group-item">
+                            Boutiques : supprimer 
                             </a>
-                            <a href="#" class="list-group-item">
-                                <img class="img-responsive" src="<?= $this->assetUrl('img/CarrefourPtt.jpg') ;?>">
+                            </div>
+                        <div class="list-group user">
+                            <a href="<?=$this->url('Users_addUser')?>" class="list-group-item">
+                            Users : ajouter     
                             </a>
-                            <a href="#" class="list-group-item">
-                                <img class="img-responsive" src="<?= $this->assetUrl('img/Mango.jpg') ;?>">
+                            <a href="<?=$this->url('Users_modifyUser')?>" class="list-group-item">
+                            Users : modifier  
+                            </a> 
+                            <a href="<?=$this->url('Users_listUser')?>" class="list-group-item">
+                            Users : liste   
+                            </a>
+                             <a href="<?=$this->url('Users_deleteUser')?>" class="list-group-item">
+                            Users : supprimer  
                             </a>
                              <a href="#" class="list-group-item">
-                                <img class="img-responsive" src="<?= $this->assetUrl('img/lacoste.jpg') ;?>">
+                                
                             </a>
-                             <a href="#" class="list-group-item">
-                                <img class="img-responsive" src="<?= $this->assetUrl('img/Samsung.jpg') ;?>">
+                             <a href="#" class="list-group-item">                               
                             </a>
-                           
-                           
                         </div><!-- /list-group -->      
                     </div><!-- /col -->
-
-                </div><!-- /row -->
-        </div>
-
+            </div>
+        </div><!-- /row -->
     
 <?php if(isset($result)){
 	echo $result; //on peut aussi écrire directement echo $result sans le if
 	}?>
+	
+	
+<div class="col-md-9">	
+	
+<div class="container " >
+    <div class="row">
+	    <div class="col-md-9">	
 
-
-  <form class="form-horizontal" method="post" id="form_clients" enctype="multipart/form-data">
+  <form class="form-horizontal" method="post" id="form_clients" enctype="multipart/form-data" >
 <fieldset>
 
 <!-- Text input-->
@@ -139,7 +157,11 @@
 
 </fieldset>
 </form>
-
+        </div>
+    </div>
+    </div>
+    </div>
+    
 <style>
     h1{
         width: 320px;

@@ -55,7 +55,7 @@
                                         </div>
                                 </div>
                             
-                           <!-- <div class="alert alert-success" role="alert" style="animation:fadein 3s;">Votre inscription à été transmise vous pouvez vous connectez</div>-->
+                        
                             
                             
                             </form>

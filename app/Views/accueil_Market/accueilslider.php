@@ -103,6 +103,7 @@
    <!--END-SHOP-->
 
    <!--END-SHOP-->		
+<!--<div class="alert alert-success" role="alert" style="animation:fadein 3s;">Votre inscription à été transmise vous pouvez vous connectez</div>-->
 
 <div class="col-md-8">
 

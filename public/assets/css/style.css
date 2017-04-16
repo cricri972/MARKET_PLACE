@@ -146,7 +146,7 @@ body
 #admincontrol{
     background-color: #1d1e1f;
     height: 100%;
-    width: 25%;
+   
    
 }
 #boutique{
@@ -203,12 +203,19 @@ body
 #button{
     margin-bottom: 1em; 
 }
-
+#loginshop{
+    margin-right: -15%;
+}
 #listshop{
     width: 40em;
 }
 #adminlistuser{
     padding-left: 15%;
+}
+
+#additshop{
+    margin-top:  5%; 
+    
 }
 /*---------------------------
         FOOTER

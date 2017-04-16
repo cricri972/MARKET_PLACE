@@ -1,4 +1,4 @@
-<?php $this->layout('layoutadmin', ['title' => 'admin']) ?>
+<?php $this->layout('layoutadmin', ['title' => 'adminclinetmodif']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -11,7 +11,7 @@
                     <div class="col-md-3 col-sm-12" id="shop">
                         <div class="list-group client">
                            <fieldset>
-                            <a href="<?=$this->url('Clients_modifyClient')?>" class="list-group-item">
+                            <a href="<?=$this->url('Clients_modifyClientByAdmin')?>" class="list-group-item">
                             Clients : modifier   
                             </a>
                             <a href="<?=$this->url('Clients_listClient')?>" class="list-group-item primary">

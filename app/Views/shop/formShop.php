@@ -1,25 +1,15 @@
 
-
-
-
-
 <?php $this->layout('layoutadmin', ['title' => 'Ajouter/Modifier une boutique']) ?>
 
 <?php $this->start('main_content') ?>
 
 
-<div class="col-md-3"></div>
+<div class="container">
 
-<div class=container>
-<div class="row">
-
-       
-        <div class="col-md-3" id="admincontrol" style="position:inherit";>  
-                  <div class="col-md-3"> 
-                    <h2>Administration</h2>
-                </div><!-- /row -->
-                <div class="row">
-                    <div class="col-md-3 col-xs-12" id="shop">
+    <div class="col-md-3" id="admincontrol" style="position:inherhit; height:80em;">  
+        <h2>Administration</h2>
+            <div class="row">
+                <div class="col-md-3 col-xs-12" id="shop">
                         <div class="list-group client">
                             <a href="<?=$this->url('Clients_addClient')?>" class="list-group-item">
                             Clients : ajouter  
@@ -33,7 +23,7 @@
                             <a href="<?=$this->url('Clients_deleteClient')?>" class="list-group-item">
                             Clients : supprimer
                             </a>
-                            </div>
+                        </div>
                         <div class="list-group shop">
                             <a href="<?=$this->url('shop_addShop')?>" class="list-group-item">
                             Boutiques : ajouter
@@ -71,29 +61,26 @@
                     </div><!-- /col -->
             </div>
         </div><!-- /row -->
+    
+ 
 
 
-
-<div class="col-md-9" id="formshopadmin">
-
-
-<div class="container " >
+   
+    <p><?php if ($result){
+    echo '<div class="alert alert-danger text-center" style="border-radius:10px;width:75em;">' .$result. '</div>';
+    header('refresh:3;url=shop_addOrUpdateShop');}?>
+    
+   </p>
+      
+            
+<div class="col-md-9">
+    
     <div class="row">
-	    <div class="col-md-9">
-
-
-
-<form method="post" class="form-horizontal" id='form_shop' enctype="multipart/form-data">
-    <div class="col-md-12">
-    <h1></h1>
-    <br>
-
-
-
-   <p><?php echo $result; ?></p>
-
-
-        
+	    <div class="col-md-8" id="formshopadmin" style="margin-left:0%;">	
+            <form method="post" class="form-horizontal" id='form_shop' enctype="multipart/form-data">
+              
+   
+     
     
 
 
@@ -209,16 +196,18 @@
 </div>
 
 </fieldset>
-    </div>
+  
 </form>
 
-
-        
-        
-</div>
-</div>
-</div>
+  </div>
+        </div>
+            </div>
     </div>
-</div>
-</div>
+
+          
+          
+     
+     
+
+
 <?php $this->stop('main_content') ?>
