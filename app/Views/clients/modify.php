@@ -53,7 +53,10 @@
 	echo $result; //on peut aussi écrire directement echo $result sans le if
 	}?>
 
-
+   <div class="col-md-9" >
+	    
+	    <div class="col-xs-9 col-sm-12"  style="margin-left:45%;margin-top:10%;position:inherit;">
+	        <div class="row">
   <form class="form-horizontal" method="post" id="form_clients" enctype="multipart/form-data">
 <fieldset>
 

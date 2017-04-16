@@ -40,6 +40,11 @@ $w_routes = array(
 		['GET|POST', '/client/add', 'Clients#addClient', 'Clients_addClient'],
 		['GET|POST', '/client/list', 'Clients#listClient', 'Clients_listClient'],
 		['GET|POST', '/client/details/[i:id]', 'Clients#viewClient', 'Clients_viewClient'],
+    
+    
+        ['GET|POST', '/client/detailsclient/[i:id]', 'Clients#viewClientByClient', 'Clients_viewClientByClient'],
+    
+    
 		['GET|POST', '/client/delete/[i:id]', 'Clients#deleteClient', 'Clients_deleteClient'],
 		['GET|POST', '/client/modify/[i:id]', 'Clients#modifyClient', 'Clients_modifyClient'],
     
@@ -69,6 +74,7 @@ $w_routes = array(
     
         ['GET|POST', '/user/loginshop', 'Users#loginUser', 'Users_loginUserShop'],
         ['GET|POST', '/user/logoutshop', 'Users#logoutUsershop', 'Users_logoutUserShop'],
+    
         ['GET|POST', '/user/updatePasswordUserShop', 'SendMail#SendMailPswUserShop', 'item_MailItemPswUserShop'],
         
         

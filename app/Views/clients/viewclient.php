@@ -1,19 +1,14 @@
-<?php $this->layout('layoutshop', ['title' => '']) ?>
+
+<?php $this->layout('layoutclient', ['title' => 'Liste des boutiques']) ?>
 
 <?php $this->start('main_content') ?>
-	
-	<?php
 
-		$priceTTC = \Tools\Utils::priceTTCWithDiscount($view['price_ht'], $view['taxes'], $view['discount']);
-		$discount = \Tools\Utils::discount($view['price_ht'],$view['discount']);
-		$tva = \Tools\Utils::calculTVA($priceTTC, $discount);
-		
-	?>
 
-<div class="container">
+
+ <div class="container">
         <div class="col-md-12">       
-           <div class="row">
-            <div class="col-md-3"  id="boutique" style="height:90em;">
+            
+            <div class="col-md-3"  id="boutique" style="height:70em;">
          
                     <h2 >Nos Boutiques</h2>
                 
@@ -56,63 +51,42 @@
                 </div>
            <!-- /container -->
 
-</div> 
-<div class="col-md-9" style="margin-left:30%;margin-top:5%">	
+
+<div class="col-md-9" style="margin-left:50%;margin-top:15%">	
 	
 
     <div class="row">
 	    <div class="col-md-9">
+            
+<span>N° :</span><?php echo $descriptif['id'];?><br>
+<span>Pseudo :</span><?php echo $descriptif['pseudo'];?><br>
+<span>Nom :</span><?php echo $descriptif['lastname'];?><br>
+<span>Prénom :</span><?php echo $descriptif['firstname'];?><br>
+<span>Email :</span><?php echo $descriptif['email'];?><br>
+<span>Tel :</span><?php echo $descriptif['phone'];?><br>
+<span>Fixe :</span><?php echo $descriptif['phone_2'];?><br>
+<span>Adresse :</span><?php echo $descriptif['address'];?><br>
+<span>Ville :</span><?php echo $descriptif['city'];?><br>
+<span>Code postal :</span><?php echo $descriptif['zip_code'];?><br>
 
 
-	<div class="gallery_product col-md-9  col-xs-6 filter hdpe">
-	<img src="<?= $this->assetUrl($view['picture']) ?>" alt="<?php echo $view['picture'];?>" class="img-responsive ">
-	</div>
 
-	<div class="col-md-12" style="border:0px solid gray">
-<!-- 	<h1>Description</h1> -->
-	<h3>Réference :<br><?php echo $view['ref'];?></h3>
-	<h3>Description :<br><?php echo $view['description'];?></h3>
-	
-	<h3>Dont :<br><?php echo $tva;?> € de TVA</h3>
+<?php if(!empty($w_user)): ?>
+<a href="<?php echo $this->url('Clients_modifyClient',['id' => $descriptif['id']]);?>" id="update" class="btn btn-warning">Modifier</a>
+<a href="<?php echo $this->url('Market_client');?>" class="btn btn-info">Retour Accueil</a>
 
-	<h3>Prix HT remisé : <br><?php echo $discount;?> €</h3>
+<?php else: ?>
+<a href="<?php echo $this->url('Clients_deleteClient',['id' => $descriptif['id']]);?>" id="delete" class="btn btn-danger">Supprimer</a>
+<a href="<?php echo $this->url('Clients_listClient');?>" class="btn btn-info">Retour Liste</a>
+<?php endif; ?>
+    </div>
+</div>
+</div>
+</div>
+</div>
 
-	<h3>Prix TTC :<br><?php echo $priceTTC;?> €</h3>
 
-	<h3>Attention il reste <?php echo $view['stock'];?> articles en stock</h3>
-	</div>
-	
-	
 
-	 <!-- <button id="button2id" name="button2id" class="btn btn-info"><a href="<?php //echo $this->url('item_listItem')?>">Lister les  articles</a></button> -->
-
-	
-	<br>
-	<!-- form class="form-horizontal" method="post" enctype="multipart/form-data">
-
-			
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="firstname">PSEUDO</label>
-				<div class="col-md-4">
-					<input type="text" id="firstname" name="firstname" class="form-control input-md">
-				</div>
-			</div>
-           
-            <div class="form-group">
-			  <label class="col-md-4 control-label" for="comment">Votre commentaire</label>
-			  <div class="col-md-4">                     
-			    <textarea class="form-control" id="comment" name="comment" placeholder="mettre un contenu"></textarea>
-			  </div>
-			</div>
-			
-
-			
-			<div class="form-group">
-				<div class="col-md-4 col-md-offset-4">
-					<button type="submit">commenter</button>
-				</div>
-			</div>
-		</form> -->
-	
 
 <?php $this->stop('main_content') ?>
+
