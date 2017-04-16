@@ -17,30 +17,30 @@
                         <div class="list-group">
                             <a href="<?=$this->url('item_ViewItem')?>" class="list-group-item primary">
                                
-                                <img src="<?= $this->assetUrl('img/M_BricolagePtt.jpg') ;?>">
+                                <img class="img-responsive" src="<?= $this->assetUrl('img/M_BricolagePtt.jpg') ;?>">
                             </a>
                             <a href="#" class="list-group-item">
                                 
-                                <img src="<?= $this->assetUrl('img/IntersportPtt.jpg') ;?>">
+                                <img class="img-responsive" src="<?= $this->assetUrl('img/IntersportPtt.jpg') ;?>">
                             </a>
                             <a href="#" class="list-group-item">
                                
-                                <img src="<?= $this->assetUrl('img/Sun_RecordsPtt.jpg') ;?>">
+                                <img class="img-responsive" src="<?= $this->assetUrl('img/Sun_RecordsPtt.jpg') ;?>">
                             </a>
                             <a href="#" class="list-group-item">
-                                <img src="<?= $this->assetUrl('img/LaGrandeRecreBleu-Ptt.jpg') ;?>">
+                                <img class="img-responsive" src="<?= $this->assetUrl('img/LaGrandeRecreBleu-Ptt.jpg') ;?>">
                             </a>
                             <a href="#" class="list-group-item">
-                                <img src="<?= $this->assetUrl('img/CarrefourPtt.jpg') ;?>">
+                                <img class="img-responsive" src="<?= $this->assetUrl('img/CarrefourPtt.jpg') ;?>">
                             </a>
                             <a href="#" class="list-group-item">
-                                <img src="<?= $this->assetUrl('img/Mango.jpg') ;?>">
+                                <img class="img-responsive" src="<?= $this->assetUrl('img/Mango.jpg') ;?>">
                             </a>
                              <a href="#" class="list-group-item">
-                                <img src="<?= $this->assetUrl('img/lacoste.jpg') ;?>">
+                                <img class="img-responsive" src="<?= $this->assetUrl('img/lacoste.jpg') ;?>">
                             </a>
                              <a href="#" class="list-group-item">
-                                <img src="<?= $this->assetUrl('img/Samsung.jpg') ;?>">
+                                <img class="img-responsive" src="<?= $this->assetUrl('img/Samsung.jpg') ;?>">
                             </a>
                            
                            
@@ -140,10 +140,10 @@
 <div class="form-group " >
   <label class="col-md-12 control-label" for="submit">
   <div class="col-md-6">
-    <button type="submit" class="btn btn-primary">Envoyer le formulaire</button>
+      <button type="submit" class="btn btn-primary">Envoyer le formulaire</button>
     </div>
     <div class="col-md-6">
-    <button type="submit" class="btn btn-warning"><a href="<?=$this->url('Market_accueilSlider')?>">Retour Accueil</a></button>
+    <button type="submit" class="btn btn-warning"><a href="<?=$this->url('Market_accueilSlider')?>" style="text-decoration:none;color:white;">Retour Accueil</a></button>
   </div>
   </label>  
 </div>

@@ -1,10 +1,10 @@
 <?php//AddArticle.php ?>
-<?php $this->layout('layoutshop', ['title' => 'Ajouter un article']) ?>
+<?php $this->layout('layoutadmin', ['title' => 'Ajouter un article']) ?>
 
 <?php $this->start('main_content') ?>
 	
 	
-	<div class=container>
+<div class=container>
 <div class="row">
 
        
@@ -66,6 +66,12 @@
             </div>
         </div><!-- /row -->
 
+
+ <p><?php if ($result){
+    echo '<div class="alert alert-danger text-center" style="border-radius:10px;width:75em;">' .$result. '</div>';
+    header('refresh:3;url=shop_addOrUpdateShop');}?>
+    
+   </p>
 <div class="col-md-9">	
 	
 <div class="container " >

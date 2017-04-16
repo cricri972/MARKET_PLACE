@@ -1,5 +1,5 @@
 
-<?php $this->layout('layoutshop', ['title' => 'Détails']) ?>
+
 
 <?php $this->layout('layoutadmin', ['title' => 'Détails']) ?>
 

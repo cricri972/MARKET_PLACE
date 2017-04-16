@@ -15,66 +15,56 @@ class OrderController extends Controller
 
 		if(!isset($_SESSION['basket'])){
 
-			echo '<br>';
-			echo 'session basket n\'existe pas';
-			
-			echo '<br>';
-		
-
-		$_SESSION['basket'][] = [
-					'id'	  => $id,
-					'name'    => $product['name'],
-					'ref' 	  => $product['ref'],
-					'qty'	  => 0 ,
-					'price_ht'=> $product['price_ht'],
-					'taxes'	  => $product['taxes'],
-					'discount'=> $product['discount'],
-
-
+			$_SESSION['basket'][] = [
+				'id'	  => $id,
+				'name'    => $product['name'],
+				'ref' 	  => $product['ref'],
+				'qty'	  => 0 ,
+				'price_ht'=> $product['price_ht'],
+				'taxes'	  => $product['taxes'],
+				'discount'=> $product['discount'],
+				'verrou'  => 0,
 				];
 
 				//var_dump($_SESSION['basket']);
-			}  
+		}  
 				
 
 		if(isset($_SESSION['basket'])){
 
-			echo 'session basket existe';
-
 			foreach($_SESSION['basket'] as $key => $value) {
 
-			/*	if($value['id'] == $id){
-					$_SESSION['basket'][$key]['qty']++;
-				}
-*/
 				$productsId[] = $value['id'];
 			}
 
 
-			if(!in_array($id, $productsId)) {
-				$_SESSION['basket'][] = [
-					'id'	  => $id,
-					'name'    => $product['name'],
-					'ref' 	  => $product['ref'],
-					'qty'	  => 1 ,
-					'price_ht'=> $product['price_ht'],
-					'taxes'	  => $product['taxes'],
-					'discount'=> $product['discount'],
-				];
+		if(!in_array($id, $productsId)) {
+			$_SESSION['basket'][] = [
+				'id'	  => $id,
+				'name'    => $product['name'],
+				'ref' 	  => $product['ref'],
+				'qty'	  => 1 ,
+				'price_ht'=> $product['price_ht'],
+				'taxes'	  => $product['taxes'],
+				'discount'=> $product['discount'],
+				'verrou'  => 0,
+			];
 			}
-			else {
-				foreach($_SESSION['basket'] as $key => $value){
-					if($value['id'] === $id){
+		else {
+			foreach($_SESSION['basket'] as $key => $value){
+				
+				if($value['id'] === $id){
 					$_SESSION['basket'][$key]['qty']++;
-					}
 				}
 			}
+		}
 		
 	}
 
-$params = ['item' => $_SESSION['basket']] ;
 
-$this->show('order/basket', $params); 
+	$params = ['item' => $_SESSION['basket']] ;
+
+	$this->show('order/basket', $params); 
 
 
 }
@@ -87,6 +77,19 @@ $this->show('order/basket', $params);
 		}	
 		$this->redirectToRoute('Market_accueilSlider');
 	}
+
+	/*public function {
+
+	}*/
+
+
+
+
+	/*public function validateBasket(){
+
+
+	}*/
+
 
 
 
