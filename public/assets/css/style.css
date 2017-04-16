@@ -68,11 +68,12 @@
 body
     {
     position: relative;
-    background-color: #d6d6d6;
+    background-image: url(../img/1adb7a68d91c798d988cfeb80a9e5db4.jpg);
+     
+    
+        
     top:60px;    
     } 
-
-
 
 #button-right{
     margin-top: 0%;
@@ -184,7 +185,9 @@ body
 }
 #login{
     margin-right: 30em;
+   
 }
+
 #login input
 {
     width:50em;
