@@ -221,6 +221,69 @@ class UsersController extends Controller{
 
     }
 
+    public function loginUserShop()
+    {
+        $post = [];
+        $errors = [];
+
+        $login = new UsersModel();
+
+        if(!empty($_POST))
+        {
+            foreach($_POST as $key => $value)
+            {
+                $post[$key] = trim(strip_tags($value));
+            }
+
+            if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL))
+            {
+                $errors[] = "Email invalide";
+            }
+
+            if(strlen($post['password']) < 8 || strlen($post['password']) > 16)
+            {
+                $errors[] = "Mot de passe invalide";
+            }
+
+            if(count($errors) === 0)
+            {
+            // La connexion est effective si la fonction retourne un ID
+                $idUser = $login->isValidLoginInfo($post['email'], $post['password']);
+
+                if($login !== 0)
+                {
+                    $result = 'Couple email / password OK';
+                    // ou 'Couple email / password OK. ID = '.$idClient;
+
+                    $userDatas = $login->find($idUser);
+                    //variable qui récupère l'ID du user
+
+                    // Connecte le user
+                    $authModel = new AuthModel;
+                    $authModel->logUserIn($userDatas);
+
+                    // Redirection vers...
+                    $this->redirectToRoute('addItemShop');
+                }
+                else
+                {
+                    $result = 'Couple email / password NOTOK';
+                }
+            } 
+            else
+            {
+                $result =implode("<br>", $errors);
+            }
+
+            //var_dump($result);
+        }
+        
+       $this->show('/shop');
+        //$this->redirectToRoute('Users_loginUser');
+
+
+    }
+
 
     
     public function logoutUser()
@@ -230,5 +293,14 @@ class UsersController extends Controller{
 
          // Redirection vers...
         $this->redirectToRoute('Users_loginUser');
+    }
+
+    public function logoutUserShop()
+    {
+        $logout = new AuthModel;
+        $logout->logUserOut();
+
+         // Redirection vers...
+        $this->redirectToRoute('Users_loginUserShop');
     }
 }

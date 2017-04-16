@@ -112,12 +112,12 @@
 		<section id="section">
 			  <?= $this->section('main_content') ?>
 
-  <nav class="social" >
+    <nav class="social" >
           <ul>
-              <li><a href="http://twitter.com/gian_michelle">Twitter <i class="fa fa-twitter"></i></a></li>
-              <li><a href="http://facebook.com/gian.michelle">Facebook <i class="fa fa-facebook"></i></a></li>
-              <li><a href="http://dribbble.com/gian_michelle">Dribbble <i class="fa fa-dribbble"></i></a></li>
-              <li><a href="http://behance.net">Behance <i class="fa fa-behance"></i></a></li>
+              <li><a href="http://twitter.com">Twitter <i class="fa fa-twitter"></i></a></li>
+              <li><a href="http://facebook.com">Facebook <i class="fa fa-facebook"></i></a></li>
+              <li><a href="http://dribbble.com">Dribbble <i class="fa fa-dribbble"></i></a></li>
+              <li><a href="http://gmail.com">Google <i class="fa fa-behance"></i></a></li>
               
           </ul>
       </nav>

@@ -57,9 +57,9 @@
   <div class="container">
         <div class="col-md-12">       
             
-            <div class="col-md-3"  id="boutique" style="position:inherit;">
+            <div class="col-md-3"  id="boutique" style="height:79em;">
          
-                    <h2 class="">Nos Boutiques</h2>
+                    <h2 >Nos Boutiques</h2>
                 
                 <div class="row">
                     <div class="col-md-3 col-md-12" id="shop">
@@ -105,11 +105,11 @@
    <!--END-SHOP-->		
 <!--<div class="alert alert-success" role="alert" style="animation:fadein 3s;">Votre inscription à été transmise vous pouvez vous connectez</div>-->
 
-<div class="col-md-8">
 
-    <div class="row" id="item-picture">
+
+    <div class="col-md-9" >
 	    
-	    <div class="col-xs-12 col-sm-12">
+	    <div class="col-xs-9 col-sm-12" id="item-picture" style="margin-left:35%;position:inherit;">
 	        <div class="row">
                
                 <div class="col-xs-9 col-sm-4">
@@ -156,7 +156,7 @@
 	</div><!-- /row -->
 </div><!-- /container -->
 	</div>
-            </div>
+           
  
 
 <?php $this->stop('main_content') ?>

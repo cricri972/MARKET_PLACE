@@ -62,9 +62,14 @@ $w_routes = array(
 		['GET|POST', '/user/details/[i:id]', 'Users#viewUser', 'Users_viewUser'],
 		['GET|POST', '/user/delete/[i:id]', 'Users#deleteUser', 'Users_deleteUser'],
 		['GET|POST', '/user/modify/[i:id]', 'Users#modifyUser', 'Users_modifyUser'],
+    
 		['GET|POST', '/user/login', 'Users#loginUser', 'Users_loginUser'],
-		['GET|POST', '/user/logout', 'Users#logoutUser', 'Users_logoutUser'], 
-        
+        ['GET|POST', '/user/logout', 'Users#logoutUser', 'Users_logoutUser'],
+    
+    
+        ['GET|POST', '/user/loginshop', 'Users#loginUser', 'Users_loginUserShop'],
+        ['GET|POST', '/user/logoutshop', 'Users#logoutUsershop', 'Users_logoutUserShop'],
+        ['GET|POST', '/user/updatePasswordUserShop', 'SendMail#SendMailPswUserShop', 'item_MailItemPswUserShop'],
         
         
         ['GET|POST', '/addItemShop', 'Item#AddItemShop', 'item_addItemShop'],
