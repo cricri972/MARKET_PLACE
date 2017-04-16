@@ -13,6 +13,9 @@ $w_routes = array(
 		['GET|POST', '/shop/[:id]', 'Shop#deleteShop', 'shop_deleteShop'], // Suppression boutique
 		['GET|POST', '/shop/add/', 'Shop#addOrUpdateShop', 'shop_addShop'], // Ajout boutique
 		['GET|POST', '/shop/modify/[:id]', 'Shop#addOrUpdateShop', 'shop_addOrUpdateShop'], // Maj boutique
+        
+        ['GET|POST', '/shop/add/', 'Shop#addOrUpdateShopShop', 'shop_addShopByShop'], // Ajout boutique
+		['GET|POST', '/shop/modifyshop/[:id]', 'Shop#addOrUpdateShopByShop', 'shop_addOrUpdateShopByShop'], // Maj boutique du gérant
 
 
 ['GET|POST', '/order/basket/[:id]', 'Order#createBasket', 'order_createBasket'],
@@ -32,21 +35,25 @@ $w_routes = array(
 		// GET|POST => méthode acceptée
         // /contactez-nous => URL (lien) de la page
         // Default#contact => Default : nom du controller, contact : nom de la méthode/fonction
-        // default_contact => le nom de la route
+        // default_contact => le nom de la routehttp://localhost/market_place/public/client/updatePassword#
 
 		['GET|POST', '/client/add', 'Clients#addClient', 'Clients_addClient'],
 		['GET|POST', '/client/list', 'Clients#listClient', 'Clients_listClient'],
 		['GET|POST', '/client/details/[i:id]', 'Clients#viewClient', 'Clients_viewClient'],
 		['GET|POST', '/client/delete/[i:id]', 'Clients#deleteClient', 'Clients_deleteClient'],
 		['GET|POST', '/client/modify/[i:id]', 'Clients#modifyClient', 'Clients_modifyClient'],
+    
+        ['GET|POST', '/client/modifyadmin/[i:id]', 'Clients#modifyClientByAdmin', 'Clients_modifyClientByAdmin'],
+    
 		['GET|POST', '/client/login', 'Clients#loginClient', 'Clients_loginClient'],
 		['GET|POST', '/client/logout', 'Clients#logoutClient', 'Clients_logoutClient'],
 		// ['GET|POST', '/client/search', 'Clients#searchClient', 'Clients_searchClient'],
         ['GET|POST', '/client/searchItem', 'Clients#searchItemClient', 'Clients_searchItemClient'],
         ['GET|POST', '/client/viewItem/[i:id]', 'Clients#viewItemClient', 'Clients_viewItemClient'],
         ['GET|POST', '/client/viewShop/[i:id]', 'Clients#viewShopClient', 'Clients_viewShopClient'],
-        ['GET|POST', '/client/updatePassword', 'Clients#updatePassword', 'Clients_updatePassword'],
+        ['GET|POST', '/client/updatePassword', 'SendMail#SendMailPsw', 'Clients_updatePassword'],
         ['GET|POST', '/client/SendMail', 'SendMails#SendMailPsw', 'SendMail_SendMailPsw'],
+        ['GET|POST', '/client/SendMail1', 'SendMails#SendMail', 'SendMail_SendMail'],//pour test
         
 
 
@@ -60,8 +67,9 @@ $w_routes = array(
         
         
         
-        
+        ['GET|POST', '/addItemShop', 'Item#AddItemShop', 'item_addItemShop'],
 		['GET|POST', '/addItem', 'Item#AddItem', 'item_addItem'],
+    	['GET', '/list/shop', 'Item#listItemsByShop', 'item_listItemByShop'],
 		['GET', '/list', 'Item#listItems', 'item_listItem'],
 		['GET|POST', '/view/[i:id]/', 'Item#ViewItem', 'item_ViewItem'],
 		['GET|POST', '/delete/[i:id]/', 'Item#DeleteItem', 'item_DeleteItem'],
@@ -69,7 +77,13 @@ $w_routes = array(
 		['GET|POST', '/search', 'Item#searchItems', 'item_searchItems'],
 		['GET|POST', '/test-pdf', 'Pdf#HtmlToPdf', 'pdf_test'],
 
+
+		//route pour les emails
 		['GET|POST', '/Mail', 'SendMail#SendMail', 'item_MailItem'],
+		//['GET|POST', '/client/updatePassword', 'SendMail#SendMailPsw', 'item_MailItemPsw'],
+		['GET|POST', '/MailPswReturn', 'SendMail#resetPassword', 'Client_resetPassword'],
+		['GET|POST', '/MailPswNew', 'SendMail#newPassword', 'Client_newPassword'],
+		['GET|POST', '/client/updatePassword', 'SendMail#SendMailPsw', 'item_MailItemPsw'],
 
 	);
 

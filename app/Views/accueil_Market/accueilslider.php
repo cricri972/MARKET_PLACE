@@ -103,6 +103,7 @@
    <!--END-SHOP-->
 
    <!--END-SHOP-->		
+<!--<div class="alert alert-success" role="alert" style="animation:fadein 3s;">Votre inscription à été transmise vous pouvez vous connectez</div>-->
 
 <div class="col-md-8">
 
@@ -112,36 +113,40 @@
 	        <div class="row">
                
                 <div class="col-xs-9 col-sm-4">
-                        <?php $item['id']= 22; ?>
+                        <?php $item['id']= 10; ?>
                         <a href="<?= $this->url('order_createBasket', ['id'=> $item['id']]); ?>" class="thumbnail">
                           <img src="<?= $this->assetUrl('img/271AGCI-Ptt.jpg');?>">
                         </a>
                 </div><!-- /col -->
                 <div class="col-xs-9 col-sm-4">
-                		<?php $item['id']= 19; ?>
+                		<?php $item['id']= 16; ?>
                         <a href="<?= $this->url('order_createBasket', ['id'=> $item['id']]); ?>" class="thumbnail">
                           <img src="<?= $this->assetUrl('img/8322471-Ptt.jpg');?>">
                         </a>
                 </div><!-- /col -->
                 <div class="col-xs-9 col-sm-4">
-                        <a href="#" class="thumbnail">
+                        <?php $item['id']= 15; ?>
+                        <a href="<?= $this->url('order_createBasket', ['id'=> $item['id']]); ?>" class="thumbnail">
                           <img src="<?= $this->assetUrl('img/8197441-Ptt.jpg');?>">
                         </a>
                 </div><!-- /col -->
 	        </div><!-- /row -->
 	        <div class="row">
                 <div class="col-xs-9 col-sm-4">
-                        <a href="#" class="thumbnail">
+                        <?php $item['id']= 19; ?>
+                        <a href="<?= $this->url('order_createBasket', ['id'=> $item['id']]); ?>" class="thumbnail">
                           <img src="<?= $this->assetUrl('img/8386346-Ptt.jpg');?>">
                         </a>
                 </div><!-- /col -->
                 <div class="col-xs-9 col-sm-4">
-                        <a href="#" class="thumbnail">
+                        <?php $item['id']= 12; ?>
+                        <a href="<?= $this->url('order_createBasket', ['id'=> $item['id']]); ?>" class="thumbnail">
                           <img src="<?= $this->assetUrl('img/BMKeter-Ptt.jpg') ;?>">
                         </a>
                 </div><!-- /col -->
                 <div class="col-xs-9 col-sm-4">
-                        <a href="#" class="thumbnail">
+                        <?php $item['id']= 14; ?>
+                        <a href="<?= $this->url('order_createBasket', ['id'=> $item['id']]); ?>" class="thumbnail">
                            <img src="<?= $this->assetUrl('img/310263.jpg') ;?>">
                          <!-- <img src="//placehold.it/250x350">-->
                         </a>

@@ -68,11 +68,12 @@
 body
     {
     position: relative;
-    background-color: #d6d6d6;
+    background-image: url(../img/1adb7a68d91c798d988cfeb80a9e5db4.jpg);
+     
+    
+        
     top:60px;    
     } 
-
-
 
 #button-right{
     margin-top: 0%;
@@ -146,7 +147,7 @@ body
 #admincontrol{
     background-color: #1d1e1f;
     height: 100%;
-    width: 25%;
+   
    
 }
 #boutique{
@@ -184,7 +185,9 @@ body
 }
 #login{
     margin-right: 30em;
+   
 }
+
 #login input
 {
     width:50em;
@@ -203,12 +206,19 @@ body
 #button{
     margin-bottom: 1em; 
 }
-
+#loginshop{
+    margin-right: -15%;
+}
 #listshop{
     width: 40em;
 }
 #adminlistuser{
     padding-left: 15%;
+}
+
+#additshop{
+    margin-top:  5%; 
+    
 }
 /*---------------------------
         FOOTER

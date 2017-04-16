@@ -40,7 +40,7 @@
                                     Retirez en Boutique</h4>   
                                 </ul>
                 
-                    </div>
+                             </div>
                             <div class="menu">
                             <a class="navbar-brand" href="#">Madinina Market</a>
 
@@ -55,7 +55,7 @@
                                         </div>
                                 </div>
                             
-                           <!-- <div class="alert alert-success" role="alert" style="animation:fadein 3s;">Votre inscription à été transmise vous pouvez vous connectez</div>-->
+                        
                             
                             
                             </form>
@@ -112,7 +112,15 @@
 		<section id="section">
 			  <?= $this->section('main_content') ?>
 
-
+  <nav class="social" >
+          <ul>
+              <li><a href="http://twitter.com/gian_michelle">Twitter <i class="fa fa-twitter"></i></a></li>
+              <li><a href="http://facebook.com/gian.michelle">Facebook <i class="fa fa-facebook"></i></a></li>
+              <li><a href="http://dribbble.com/gian_michelle">Dribbble <i class="fa fa-dribbble"></i></a></li>
+              <li><a href="http://behance.net">Behance <i class="fa fa-behance"></i></a></li>
+              
+          </ul>
+      </nav>
 		</section>
 
    <!--FOOTER-->		
@@ -121,20 +129,17 @@
 		<footer class="container-full col-md-12">
 		   
 		        <div class="social">
+               <div class=row>
                 <div class="row col-md-12">
                 
                 <fieldset> 
                     <legend>Nous rejoindre sur :</legend> 
                      <div class="form-group">       
-                    <ul class="fa-ul"> 
-                      <li><i class="fa-li fa fa-twitter"></i> Twitter</li> 
-                      <li><i class="fa-li fa fa-facebook-official"></i> Facebook</li> 
-                      <li><i class="fa-li fa fa-google-plus"></i> Google +</li> 
-                      <li><i class="fa-li fa fa-youtube-play"></i> Youtube</li> 
-                    </ul>
-                 </div>
+       
+                    </div>
                  </fieldset>           
                 </div>
+                    </div>
                 </div>
               
                 <div class="newletter">
@@ -202,6 +207,90 @@
 <!-- cette section permet d'ajouter des scripts directement dans mes fichiers de vue -->
 <?= $this->section('script'); ?>
  
-        
+        <style>
+            a {
+  color: #fff;
+  text-decoration: none;
+              
+}
+
+}
+.social {
+  position: fixed;
+  margin-top: -100%;
+            }
+.social ul {
+  padding: 0px;
+  -webkit-transform: translate(-270px, 0);
+  -moz-transform: translate(-270px, 0);
+  -ms-transform: translate(-270px, 0);
+  -o-transform: translate(-270px, 0);
+  transform: translate(-270px, 0);
+   margin-left: -270%;
+  
+}
+.social ul li {
+  display: block;
+  
+  margin: 25px;
+  background: rgba(0, 0, 0, 0.36);
+  width:300px;
+  text-align: right;
+  padding: 10px;
+  -webkit-border-radius: 0 30px 30px 0;
+  -moz-border-radius: 0 30px 30px 0;
+  border-radius: 0 30px 30px 0;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.social ul li:hover {
+  -webkit-transform: translate(110px, 0);
+  -moz-transform: translate(110px, 0);
+  -ms-transform: translate(110px, 0);
+  -o-transform: translate(110px, 0);
+  transform: translate(110px, 0);
+  background: rgba(255, 255, 255, 0.4);
+}
+.social ul li:hover a {
+  color: #000;
+}
+.social ul li:hover i {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.36);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.social ul li i {
+  margin-left: 30px;
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  background: #ffffff;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+
+        </style>
 </body>
 </html>

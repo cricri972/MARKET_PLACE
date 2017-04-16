@@ -247,6 +247,22 @@ class ItemController extends Controller
 		];
 		$this->show('item/listItem', $params);
 	}
+    
+       public function listItemsByShop()
+	{
+		// On instancie le model qui permet d'effectuer un findAll() 
+		$itemModel = new ItemsModel();
+		$items = $itemModel->findAll();
+		// var_dump($items);
+		$params = [
+			'items' => $items
+		];
+		$this->show('item/listItemShop', $params);
+	}
+    
+    
+    
+    
 	/**
 	 * Page d'accueil par défaut
 	 */
@@ -348,8 +364,8 @@ class ItemController extends Controller
                 $errors[] = 'Aucune photo sélectionnée';
             }
 
- var_dump($post);
- var_dump($errors);
+ //var_dump($post);
+// var_dump($errors);
 			
 			if(count($errors) === 0)
 			{
@@ -384,6 +400,8 @@ class ItemController extends Controller
 		$this->show('item/AddItem');
 	}
 
+    
+    
 	/**
 	 * Effectue une recherche
 	 * @param array $data Un tableau associatif des valeurs à rechercher
@@ -392,6 +410,140 @@ class ItemController extends Controller
 	 * @return mixed false si erreur, le résultat de la recherche sinon
 	 */
 // ['colonne_sql' => 'valeur recherchée', ]
+    
+    public function AddItemShop()
+	{
+
+		  	$maxSize = (1024 * 1000) * 2; // Taille maximum du fichier
+        	$uploadDir = $_SERVER['DOCUMENT_ROOT'].$_SERVER['W_BASE'].'/assets/upload/'; // Répertoire d'upload
+        	$mimeTypeAvailable = ['image/jpg', 'image/jpeg', 'image/pjpeg', 'image/png', 'image/gif'];
+
+	        $errors = [];
+	        $post = [];
+	        $displayForm = true;
+
+
+		if(!empty($_POST))
+		{
+			
+			foreach($_POST as $key => $value){
+				$post[$key] = trim(strip_tags($value));
+			}
+			//gestion de la reference
+			if(strlen($post['ref']) < 6){
+				$errors[] = 'La référence doit contenir au moins 6 caractères !';
+			}
+
+			//gestion de la du nom de l'article
+			if(strlen($post['name']) <2){
+				$errors[] = 'L\'intitulé de l\'article doit contenir au moins 2 caractères !';
+			}
+
+			//gestion de la description
+			if(strlen($post['description']) <10){
+				$errors[] = 'La description de l\'article doit contenir au moins 10 caractères !';
+			}
+
+			//gestion du prix ht
+			if(!is_numeric($post['price_ht'])){
+				$errors[] = 'Le prix hors-taxe est incorrect !';
+			}
+
+			//gestion de la tva
+			if(empty($post['taxes'])){
+				$errors[] = 'La tva doit être indiquée !';
+			
+			// is numeric
+			}
+
+			//gestion de la remise
+			if(!is_numeric($post['discount'])){
+				$errors[] = 'Le montant de la remise doit être un nombre !';
+			}
+
+			//gestion de la categorie
+			if(empty($post['category'])){
+				$errors[] = 'Merci de choisir une categorie !';
+			}
+
+
+			//gestion du stock
+			if($post['stock'] < 0 || !is_numeric($post['stock'])){
+				$errors[] = 'Le montant du incorrect';
+			}
+
+			//gestion de la photo de l'article
+			if(isset($_FILES['picture']) && $_FILES['picture']['error'] === 0){
+
+                $finfo = new \finfo();
+                $mimeType = $finfo->file($_FILES['picture']['tmp_name'], FILEINFO_MIME_TYPE);
+
+                $extension = pathinfo($_FILES['picture']['name'], PATHINFO_EXTENSION);
+
+                if(in_array($mimeType, $mimeTypeAvailable)){
+
+                    if($_FILES['picture']['size'] <= $maxSize){
+
+                        if(!is_dir($uploadDir)){
+                            mkdir($uploadDir, 0755);
+                        }
+
+                        $newPictureName = uniqid('picture_').'.'.$extension;
+
+                        if(!move_uploaded_file($_FILES['picture']['tmp_name'], $uploadDir.$newPictureName)){
+                            $errors[] = 'Erreur lors de l\'upload de la photo';
+                        }
+                    }
+                    else {
+                        $errors[] = 'La taille du fichier excède 2 Mo';
+                    }
+
+                }
+                else {
+                    $errors[] = 'Le fichier n\'est pas une image valide';
+                }
+            }
+            else {
+                $errors[] = 'Aucune photo sélectionnée';
+            }
+
+ //var_dump($post);
+// var_dump($errors);
+			
+			if(count($errors) === 0)
+			{
+
+				$datas = [
+                    // colonne sql => valeur à insérer
+                    'ref'				=> $post['ref'],
+					'name'				=> $post['name'],
+                    'picture'   		=> 'upload/'.$newPictureName,
+                    'description'		=> $post['description'],
+                    'price_ht'          => $post['price_ht'],
+                    'taxes'				=> $post['taxes'],
+                    'discount'			=> $post['discount'],
+                    'category'			=> $post['category'],
+                    'stock'				=> $post['stock'],
+                    'quantity'			=> 10,
+                    'note'				=> 10,
+                    'id_shop'			=> 10,
+                    'id_client'			=> 10,
+
+                ];
+
+				$item = new ItemsModel();
+				$item->insert($datas);
+			}
+			else 
+			{
+				$formError = true;
+				echo implode('br',$errors);			
+			}
+	}
+		$this->show('item/addItemShop');
+	}
+
+    
 	public function searchItems() {
 
 		$itemsModel = new ItemsModel();
