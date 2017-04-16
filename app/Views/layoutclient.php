@@ -40,7 +40,7 @@
                                     Retirez en Boutique</h4>   
                                 </ul>
                 
-                    </div>
+                             </div>
                             <div class="menu">
                             <a class="navbar-brand" href="#">Madinina Market</a>
 

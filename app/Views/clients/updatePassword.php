@@ -53,7 +53,7 @@
         <div class="row">
             <div class="col-xs-9">
              
-<form class="form-horizontal" method="post" id="form_clients">
+<form class="form-horizontal" method="post" action="<?=$this->url('item_MailItemPsw');?>" id="form_clients">
   <fieldset>
 
     <!-- Text input-->

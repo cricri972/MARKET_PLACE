@@ -32,7 +32,7 @@ $w_routes = array(
 		// GET|POST => méthode acceptée
         // /contactez-nous => URL (lien) de la page
         // Default#contact => Default : nom du controller, contact : nom de la méthode/fonction
-        // default_contact => le nom de la route
+        // default_contact => le nom de la routehttp://localhost/market_place/public/client/updatePassword#
 
 		['GET|POST', '/client/add', 'Clients#addClient', 'Clients_addClient'],
 		['GET|POST', '/client/list', 'Clients#listClient', 'Clients_listClient'],
@@ -45,8 +45,9 @@ $w_routes = array(
         ['GET|POST', '/client/searchItem', 'Clients#searchItemClient', 'Clients_searchItemClient'],
         ['GET|POST', '/client/viewItem/[i:id]', 'Clients#viewItemClient', 'Clients_viewItemClient'],
         ['GET|POST', '/client/viewShop/[i:id]', 'Clients#viewShopClient', 'Clients_viewShopClient'],
-        ['GET|POST', '/client/updatePassword', 'Clients#updatePassword', 'Clients_updatePassword'],
+        ['GET|POST', '/client/updatePassword', 'SendMail#SendMailPsw', 'Clients_updatePassword'],
         ['GET|POST', '/client/SendMail', 'SendMails#SendMailPsw', 'SendMail_SendMailPsw'],
+        ['GET|POST', '/client/SendMail1', 'SendMails#SendMail', 'SendMail_SendMail'],//pour test
         
 
 
@@ -69,7 +70,13 @@ $w_routes = array(
 		['GET|POST', '/search', 'Item#searchItems', 'item_searchItems'],
 		['GET|POST', '/test-pdf', 'Pdf#HtmlToPdf', 'pdf_test'],
 
+
+		//route pour les emails
 		['GET|POST', '/Mail', 'SendMail#SendMail', 'item_MailItem'],
+		//['GET|POST', '/client/updatePassword', 'SendMail#SendMailPsw', 'item_MailItemPsw'],
+		['GET|POST', '/MailPswReturn', 'SendMail#resetPassword', 'Client_resetPassword'],
+		['GET|POST', '/MailPswNew', 'SendMail#newPassword', 'Client_newPassword'],
+		['GET|POST', '/client/updatePassword', 'SendMail#SendMailPsw', 'item_MailItemPsw'],
 
 	);
 
