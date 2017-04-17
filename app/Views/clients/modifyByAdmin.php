@@ -30,11 +30,11 @@
                             
                             </div>
                         <div class="list-group user">
-                            <a href="<?=$this->url('Users_addUser')?>" class="list-group-item">
+                            <a href="<?=$this->url('item_addItem')?>" class="list-group-item">
                             Users : ajouter     
                             </a>
                              
-                            <a href="<?=$this->url('Users_listUser')?>" class="list-group-item">
+                            <a href="<?=$this->url('item_listItem')?>" class="list-group-item">
                             Users : gestion des users   
                             </a>
                             

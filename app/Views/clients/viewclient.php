@@ -1,13 +1,16 @@
-<?php $this->layout('layoutclient', ['title' => 'Connexion']) ?>
+
+<?php $this->layout('layoutclient', ['title' => 'Liste des boutiques']) ?>
 
 <?php $this->start('main_content') ?>
 
-<div class="container">
-    <div class="col-md-12">    
 
-        <div class="col-md-3"  id="boutique" style="position:inherit";>
+
+ <div class="container">
+        <div class="col-md-12">       
+            
+            <div class="col-md-3"  id="boutique" style="height:70em;">
          
-            <h2 class="">Nos Boutiques</h2>
+                    <h2 >Nos Boutiques</h2>
                 
                 <div class="row">
                     <div class="col-md-3 col-md-12" id="shop">
@@ -45,47 +48,45 @@
                     </div><!-- /col -->
 
                 </div><!-- /row -->
-        </div>
+                </div>
+           <!-- /container -->
 
-    <div class="col-md-9" id="backgroud">
-<div class="container" >
-    <div class="col-xs-9 " id="login">
-        <div class="row">
-            <div class="col-xs-12 col-xs-4">
+
+<div class="col-md-9" style="margin-left:50%;margin-top:15%">	
+	
+
+    <div class="row">
+	    <div class="col-md-9">
             
-            
-<form class="form-horizontal" method="post" id="form_clients">
-  <fieldset>
+<span>N° :</span><?php echo $descriptif['id'];?><br>
+<span>Pseudo :</span><?php echo $descriptif['pseudo'];?><br>
+<span>Nom :</span><?php echo $descriptif['lastname'];?><br>
+<span>Prénom :</span><?php echo $descriptif['firstname'];?><br>
+<span>Email :</span><?php echo $descriptif['email'];?><br>
+<span>Tel :</span><?php echo $descriptif['phone'];?><br>
+<span>Fixe :</span><?php echo $descriptif['phone_2'];?><br>
+<span>Adresse :</span><?php echo $descriptif['address'];?><br>
+<span>Ville :</span><?php echo $descriptif['city'];?><br>
+<span>Code postal :</span><?php echo $descriptif['zip_code'];?><br>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-6 control-label" for="email">Email
-      
-      <input id="email" name="email" type="email" placeholder="Veuillez saisir votre adresse email" class="form-control input-md">
-      </label><br>
-    </div>
 
-    <div class="form-group">
-      <label class="col-md-6 control-label" for="password">Mot de passe
-     
-      <input id="password" name="password" type="password" placeholder="Veuillez entrer votre mot de passe" class="form-control input-md">
-      </label>
-    </div>
 
-    <div class="form-group">
-      <label class="col-md-6 control-label" for="submit"></label>
-      <div class="col-md-8">
-        <button type="submit" class="btn btn-success">Me connecter</button>
-          <button type="submit" class="btn btn-warning"><a href="<?=$this->url('Clients_updatePassword')?>">Mot de passe oublié ?</a></button>
-        <button type="submit" class="btn btn-info"><a href="<?=$this->url('Clients_addClient')?>">Créer mon compte</a></button>
-      </div>
-    </div>
+<?php if(!empty($w_user)): ?>
+<a href="<?php echo $this->url('Clients_modifyClient',['id' => $descriptif['id']]);?>" id="update" class="btn btn-warning">Modifier</a>
+<a href="<?php echo $this->url('Market_client');?>" class="btn btn-info">Retour Accueil</a>
 
-  </fieldset>
-</form>
-            </div>
-        </div>
+<?php else: ?>
+<a href="<?php echo $this->url('Clients_deleteClient',['id' => $descriptif['id']]);?>" id="delete" class="btn btn-danger">Supprimer</a>
+<a href="<?php echo $this->url('Clients_listClient');?>" class="btn btn-info">Retour Liste</a>
+<?php endif; ?>
     </div>
 </div>
+</div>
+</div>
+</div>
+
+
+
 
 <?php $this->stop('main_content') ?>
+

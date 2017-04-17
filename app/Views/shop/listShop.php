@@ -2,21 +2,17 @@
 <?php $this->layout('layoutadmin', ['title' => 'Liste des boutiques']) ?>
 
 <?php $this->start('main_content') ?>
+
 <div class="container">
-        <div class="col-md-3" id="admincontrol" style="position:absolute;">  
-                  <div class="col-xs-3"> 
-                    <h2>Administration</h2>
-                </div><!-- /row -->
+    <div class=" col-md-3" id="boutique" style="position:inherit;height:75em;">
+        <div class="col-md-12">
+            <div class="row ">
+                <h2 >Gérer ma Boutique</h2>
+            </div>
+            <div class="col-md-12 " id="shop">
                 <div class="row">
+
                     <div class="col-xs-3 col-sm-12" id="shop">
-                        <div class="list-group client">
-                          
-                            
-                            <a href="<?=$this->url('Clients_listClient')?>" class="list-group-item primary">
-                            Clients : gestion des clients       
-                            </a>
-                           
-                            </div>
                         <div class="list-group shop">
                             <a href="<?=$this->url('shop_addShop')?>" class="list-group-item">
                             Boutiques : ajouter
@@ -25,8 +21,8 @@
                             <a href="<?=$this->url('shop_listShop')?>" class="list-group-item">
                             Boutiques : gestion des boutiques  
                             </a>
-                            
-                            </div>
+                        </div>
+
                         <div class="list-group user">
                             <a href="<?=$this->url('Users_addUser')?>" class="list-group-item">
                             Users : ajouter     
@@ -34,13 +30,17 @@
                             
                             <a href="<?=$this->url('Users_listUser')?>" class="list-group-item">
                             Users : gestion des users   
-                            </a>
+                            </a>    
+                        </div><!-- /list-group --> 
                              
-                             
-                        </div><!-- /list-group -->      
                     </div><!-- /col -->
             </div>
+
         </div><!-- /row -->
+    </div>
+</div><!-- /container -->
+
+    
 <div class="col-md-9">
  <div class="table-responsive">          
     <table class="table" id="adminlistshop" >

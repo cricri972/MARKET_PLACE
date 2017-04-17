@@ -38,6 +38,23 @@ class MarketController extends Controller
         $this->show('accueil_Market/client'); 
     }
     
+    public function mrbricolage()
+    {
+        $this->show('accueil_Market/mrbricolage');
+    }
+    
+   
+    
+      public function carrefour()
+    {
+        $this->show('accueil_Market/carrefour');
+    }
+    
+      public function intersport()
+    {
+        $this->show('accueil_Market/intersport');
+    }
+    
 }
 
   

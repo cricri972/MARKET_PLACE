@@ -20,17 +20,16 @@
                             <a href="<?=$this->url('item_listItemByShop')?>" class="list-group-item">
                             Liste articles 
                             </a>   
-                            <a href="#" class="list-group-item">
+                            <a href="item_listItemByShop" class="list-group-item">
                             Voir article    
                             </a>
-                           
+                            
                             <a href="#" class="list-group-item">
                             Modification article    
                             </a>   
                            
                             <a href="#" class="list-group-item">
                             Supprimer article   
-                                
                             </a>
                            
                             <a href="#" class="list-group-item">

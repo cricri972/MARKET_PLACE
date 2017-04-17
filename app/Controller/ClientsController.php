@@ -163,6 +163,33 @@ class ClientsController extends Controller
         }
 	}
 
+  public function viewclientByClient($id)
+    {
+        $post = [];
+        $errors = [];
+        $result = [];
+
+        $client = new ClientsModel();
+        //création d'1 variable qui permet l'utilisation des fonctions de ClientsModel.
+
+        $detail = $client->find($id);
+        //création d'1 variable contenant le résultat de la requête (rechercher tous les éléments selon critère ID)
+
+        //var_dump($detail);
+
+        //si la requête ne renvoie rien (si l'ID n'existe pas), on affichera ERREUR 404
+        if(empty($detail))
+        {
+            $this->shownotfound();
+        }
+        else
+        {
+        	$this->show('clients/viewclient',[
+                'descriptif' => $detail,
+                'result'     => $result
+            ]);
+        }
+	}
 
 	public function deleteclient($id)
     {

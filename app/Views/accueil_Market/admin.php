@@ -31,8 +31,15 @@
                             <a href="<?=$this->url('Users_listUser')?>" class="list-group-item">
                             Users :  gestion des users   
                             </a>
-                            
-                        </div><!-- /list-group -->      
+                        </div>  
+                        <div class="list-group user">
+                            <a href="<?=$this->url('Users_addUser')?>" class="list-group-item">
+                            Articles : ajouter     
+                            </a> 
+                            <a href="<?=$this->url('Users_listUser')?>" class="list-group-item">
+                            Articles :  gestion des articles   
+                            </a>
+                        </div><!-- /list-group -->   
                     
                         
                         </div><!-- /col -->

@@ -1,6 +1,6 @@
 <?php $this->layout('layoutshop', ['title' => 'modifier ma boutique']) ?>
 <?php $this->start('main_content') ?>
-
+ 
 
 
 <div class="container">
@@ -22,7 +22,7 @@
                             <a href="<?=$this->url('item_listItemByShop')?>" class="list-group-item">
                             Liste articles 
                             </a>   
-                            <a href="#" class="list-group-item">
+                            <a href="item_listItemByShop" class="list-group-item">
                             Voir article    
                             </a>
                             
@@ -32,11 +32,9 @@
                            
                             <a href="#" class="list-group-item">
                             Supprimer article   
-                                
                             </a>
                            
                             <a href="#" class="list-group-item">
-                              
                             </a>
                            
                            

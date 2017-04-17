@@ -33,7 +33,7 @@
                             <div class="navbar-header" >
                                 <ul class="nav nav-pills">
                         
-                                    <a href="#"><img src ="<?= $this->assetUrl('img/logo1.png') ?>" class="logo"></a>
+                                    <a href="<?=$this->url('Market_accueilSlider');  ?>"><img src ="<?= $this->assetUrl('img/logo1.png') ?>" class="logo"></a>
                          
                     </ul>
                         
