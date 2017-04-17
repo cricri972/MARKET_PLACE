@@ -248,17 +248,17 @@ class ItemController extends Controller
 		$this->show('item/listItem', $params);
 	}
     
-       public function listItemsByShop()
-	{
-		// On instancie le model qui permet d'effectuer un findAll() 
-		$itemModel = new ItemsModel();
-		$items = $itemModel->findAll();
-		// var_dump($items);
-		$params = [
-			'items' => $items
-		];
-		$this->show('item/listItemShop', $params);
-	}
+ //       public function listItemsByShop()
+	// {
+	// 	// On instancie le model qui permet d'effectuer un findAll() 
+	// 	$itemModel = new ItemsModel();
+	// 	$items = $itemModel->findAll();
+	// 	// var_dump($items);
+	// 	$params = [
+	// 		'items' => $items
+	// 	];
+	// 	$this->show('item/listItemShop', $params);
+	// }
     
     
     

@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Wkhtmltopdf\\' => array($vendorDir . '/kdyby/wkhtmltopdf'),
     'SecurityLib' => array($vendorDir . '/ircmaxell/security-lib/lib'),
     'RandomLib' => array($vendorDir . '/ircmaxell/random-lib/lib'),
+    'Money' => array($vendorDir . '/mathiasverraes/money/lib'),
+    'JsonMapper' => array($vendorDir . '/netresearch/jsonmapper/src'),
 );

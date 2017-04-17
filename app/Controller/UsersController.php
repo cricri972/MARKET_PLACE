@@ -46,7 +46,7 @@ class UsersController extends Controller{
                 if(isset($result)){
                  $this->show('users/Add', ['result' => $result]);
                 } else{
-                $this->show('users/Add');
+                $this->show('users/Add,');
             }
     }
 

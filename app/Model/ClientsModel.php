@@ -35,6 +35,7 @@ class ClientsModel extends \W\Model\UsersModel
 		return 0;
 	}
 
+
 public function findAllEmail($orderBy = '', $orderDir = 'ASC', $limit = null, $offset = null)
 	{
 
@@ -70,7 +71,70 @@ public function findAllEmail($orderBy = '', $orderDir = 'ASC', $limit = null, $o
 		return $sth->fetchAll();
 	}
 
- 	
+
+
+//	public function getUserByUsernameOrEmail($usernameOrEmail)
+//	{
+//
+//		$app = getApp();
+//
+//		$sql = 'SELECT * FROM ' . $this->table . 
+//			   ' WHERE ' . $app->getConfig('security_username_property') . ' = :username' . 
+//			   ' OR ' . $app->getConfig('security_email_property') . ' = :email LIMIT 1';
+//
+//		$dbh = ConnectionModel::getDbh();
+//		$sth = $dbh->prepare($sql);
+//		$sth->bindValue(':username', $usernameOrEmail);
+//		$sth->bindValue(':email', $usernameOrEmail);
+//		
+//		if($sth->execute()){
+//			$foundUser = $sth->fetch();
+//			if($foundUser){
+//				return $foundUser;
+//			}
+//		}
+//
+//		return false;
+//	}
+
+//
+//	public function find($email)
+//	{
+//		if (!is_string($email)){
+//			return false;
+//		}
+//
+//		$sql = 'SELECT password FROM ' . $this->table . ' WHERE email  = :email LIMIT 1';
+//		$sth = $this->dbh->prepare($sql);
+//		$sth->bindValue(':email', $email);
+//		$sth->execute();
+//
+//		return $sth->fetch();
+//	}
+
+	// public function getUserByUsernameOrEmail($usernameOrEmail)
+	// {
+
+	// 	$app = getApp();
+
+	// 	$sql = 'SELECT * FROM ' . $this->table . 
+	// 		   ' WHERE ' . $app->getConfig('security_username_property') . ' = :username' . 
+	// 		   ' OR ' . $app->getConfig('security_email_property') . ' = :email LIMIT 1';
+
+	// 	$dbh = ConnectionModel::getDbh();
+	// 	$sth = $dbh->prepare($sql);
+	// 	$sth->bindValue(':username', $usernameOrEmail);
+	// 	$sth->bindValue(':email', $usernameOrEmail);
+		
+	// 	if($sth->execute()){
+	// 		$foundUser = $sth->fetch();
+	// 		if($foundUser){
+	// 			return $foundUser;
+	// 		}
+	// 	}
+
+	// 	return false;
+	// }
 
  	public function find($id)
 	{
@@ -83,8 +147,24 @@ public function findAllEmail($orderBy = '', $orderDir = 'ASC', $limit = null, $o
 		$sth->bindValue(':id', $id);
 		$sth->execute();
 
-		return $sth->fetch();
-	}
+	 	return $sth->fetch();
+	 }
+
+	// public function find($email)
+	// {
+	// 	if (!is_string($email)){
+	// 		return false;
+	// 	}
+
+	// 	$sql = 'SELECT password FROM ' . $this->table . ' WHERE email  = :email LIMIT 1';
+	// 	$sth = $this->dbh->prepare($sql);
+	// 	$sth->bindValue(':email', $email);
+	// 	$sth->execute();
+
+	// 	return $sth->fetch();
+	// }
+
+
 
 	public function findtoken($returnToken)
    {

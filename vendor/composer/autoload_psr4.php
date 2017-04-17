@@ -6,9 +6,22 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'mikehaertl\\wkhtmlto\\' => array($vendorDir . '/mikehaertl/phpwkhtmltopdf/src'),
+    'mikehaertl\\tmp\\' => array($vendorDir . '/mikehaertl/php-tmpfile/src'),
+    'mikehaertl\\shellcommand\\' => array($vendorDir . '/mikehaertl/php-shellcommand/src'),
     'W\\' => array($baseDir . '/W'),
     'TrueBV\\' => array($vendorDir . '/true/punycode/src'),
+    'Symfony\\Polyfill\\Php70\\' => array($vendorDir . '/symfony/polyfill-php70'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
+    'Symfony\\Component\\Serializer\\' => array($vendorDir . '/symfony/serializer'),
+    'Symfony\\Component\\PropertyAccess\\' => array($vendorDir . '/symfony/property-access'),
+    'Symfony\\Component\\Inflector\\' => array($vendorDir . '/symfony/inflector'),
     'League\\Url\\' => array($vendorDir . '/league/url/src'),
     'League\\Plates\\' => array($vendorDir . '/league/plates/src'),
+    'League\\Csv\\' => array($vendorDir . '/league/csv/src'),
+    'BrianFaust\\Payload\\' => array($vendorDir . '/faustbrian/payload/src'),
+    'BrianFaust\\LaravelBasket\\' => array($vendorDir . '/faustbrian/laravel-basket/src'),
+    'BrianFaust\\Basket\\' => array($vendorDir . '/faustbrian/basket/src'),
     '' => array($baseDir . '/app'),
 );

@@ -18,7 +18,7 @@
                             <a href="<?=$this->url('item_addItemShop')?>" class="list-group-item">
                             Ajouter article   
                             </a>
-                            <a href="<?=$this->url('item_listItemByShop')?>" class="list-group-item">
+                            <a href="<?=$this->url('item_listItem')?>" class="list-group-item">
                             Liste articles 
                             </a>   
                             <a href="#" class="list-group-item">

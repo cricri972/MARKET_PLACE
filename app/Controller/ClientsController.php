@@ -480,4 +480,24 @@ public function modifyClientByAdmin($id)
         $this->show('clients/updatePassword');
     }
 
+    public function searchClients() {
+
+        $clientsModel = new ClientsModel();
+        //var_dump($_POST);
+        if(!empty($_POST)){
+            foreach($_POST as $key => $value){
+                $post[$key] = trim(strip_tags($value));
+            }
+        }
+
+        $searchDatas = [
+            'name'  => $post['recherche'],
+        ];
+        $clients = $clientsModel->search($searchDatas);
+        //var_dump($items);
+
+        $this->show('clients/list', ['clients' => $clients]);
+    }
+
+
 }

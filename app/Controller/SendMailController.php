@@ -24,22 +24,22 @@ class SendMailController extends Controller{
 
 		$emailTable = new ClientsModel();
 		$emailPassword = $emailTable->findAllEmail();
-			$toto = $emailTable;
-		// debug($emailPassword);
-		// debug($toto);
+		// 	$toto = $emailTable;
+		// // debug($emailPassword);
+		// // debug($toto);
 
-		$user['token'] = 31315151131;
-		$user['email'] = 'hjurin@gmail.com';
+		// $user['token'] = 31315151131;
+		// $user['email'] = 'hjurin@gmail.com';
 
-		$message = ' <html>
-                    <head>
-                    <title>Nouveau mot de passe</title>
-                   </head>
-                   <body>
-                    <p>Veuillez cliquer sur le lien ci-dessous pour générer un nouveau mot de passe</p>
-                    <a href="http://localhost/market_place/public/MailPswReturn">Nouveau mot de passe</a> 
-                    </body>
-                   </html>';
+		// $message = ' <html>
+  //                   <head>
+  //                   <title>Nouveau mot de passe</title>
+  //                  </head>
+  //                  <body>
+  //                   <p>Veuillez cliquer sur le lien ci-dessous pour générer un nouveau mot de passe</p>
+  //                   <a href="http://localhost/market_place/public/MailPswReturn">Nouveau mot de passe</a> 
+  //                   </body>
+  //                  </html>';
 	
 		$error = [];
         $post = [];
@@ -217,13 +217,13 @@ class SendMailController extends Controller{
 		echo 'totot';
 		if(isset($_GET['token']) && !empty($_GET['token'])){
 			$token = $_GET['token'];
-			debug($token);
+			//debug($token);
 			$tokenTable = new ClientsModel();
 			$returnToken = $tokenTable->findtoken($token);
-			debug($returnToken);
+			//debug($returnToken);
 			if($tokenTable->findtoken($token)){
 				if(!empty($_POST)){
-					debug($_POST);
+					//debug($_POST);
 					foreach($_POST as $key => $value){
                         $post[$key] = trim(strip_tags($value));
                     }
@@ -239,17 +239,17 @@ class SendMailController extends Controller{
                         	$data = [
                             'password' => password_hash($post['new'], PASSWORD_DEFAULT),
                         	];
-debug($data);
+							//debug($data);
                         	$newPassword = new ClientsModel();
                         	$passwordToUpdate = $newPassword->findmail($id);
 
-                        	debug($passwordToUpdate);
-                        	if($newPassword->updatePassword($data, $id)){
+                        	//debug($passwordToUpdate);
+                        	if(!$newPassword->updatePassword($data, $id)){
                         		$result = 'mot de passe changer';
-                        		echo 'success';
+                        		echo $result;
                         	}else{
                         		$result = $errors;
-                        		echo 'fail';
+                        		echo $result;
 
                         	}
 					}

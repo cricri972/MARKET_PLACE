@@ -6,5 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    '7745382c92b7799bf1294b1f43023ba2' => $vendorDir . '/tracy/tracy/src/shortcuts.php',
+    'a1d067aa2e53d6b47171c03cfc0ea5be' => $vendorDir . '/nette/safe-stream/src/loader.php',
+    'e7a6fd2e7a869bb207158e9416bdd9b0' => $vendorDir . '/nette/application/src/compatibility.php',
+    '5255c38a0faeba867671b61dfda6d864' => $vendorDir . '/paragonie/random_compat/lib/random.php',
+    '023d27dca8066ef29e6739335ea73bad' => $vendorDir . '/symfony/polyfill-php70/bootstrap.php',
+    '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
+    '5c07e51810209209735cf7390eb0937b' => $vendorDir . '/nette/deprecated/src/loader.php',
+    'c5d10b36c705e5b8f4662d03f1dfdec6' => $vendorDir . '/faustbrian/payload/src/helpers.php',
     'e40631d46120a9c38ea139981f8dab26' => $vendorDir . '/ircmaxell/password-compat/lib/password.php',
 );
