@@ -25,11 +25,13 @@ $w_routes = array(
 
 
  
-        ['GET|POST', '/shop', 'Market#shop', 'Market_shop'],
-        ['GET|POST', '/admin', 'Market#admin', 'Market_admin'],
+        ['GET|POST', '/shop', 'Market#shop', 'Market_shop'],  //vue coté boutique
+        ['GET|POST', '/admin', 'Market#admin', 'Market_admin'],  // vue coté admin
         ['GET|POST', '/client', 'Market#client', 'Market_client'],
-        ['GET|POST', '/accueilslider', 'Market#accueilSlider', 'Market_accueilSlider'],
-        
+        ['GET|POST', '/accueilslider', 'Market#accueilSlider', 'Market_accueilSlider'], //vue acceuil
+       // ['GET|POST', '/mrbricolage', 'Market#mrbricolage', 'Market_mrbricolage'],  // vue boutique route à vérifier
+       // ['GET|POST', '/intersport', 'Market#intersport', 'Market_intersport'],  // vue boutique route à vérifier
+       // ['GET|POST', '/carrefour', 'Market#carrefour', 'Market_carrefour'],  // vue boutique route à vérifier
 
 
 		// GET|POST => méthode acceptée

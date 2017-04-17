@@ -51,7 +51,7 @@
 <div class="container" >
     <div class="col-xs-9 " id="login">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-12 col-xs-4">
             
             
 <form class="form-horizontal" method="post" id="form_clients">

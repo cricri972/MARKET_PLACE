@@ -8,7 +8,7 @@
 <div class="container">
     <div class="col-md-12">    
 
-        <div class="col-md-3"  id="boutique">
+        <div class="col-md-3"  id="boutique" style="height:80em;">
          
             <h2 class="">Nos Boutiques</h2>
                 
