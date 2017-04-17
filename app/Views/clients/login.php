@@ -47,7 +47,7 @@
                 </div><!-- /row -->
         </div>
 
-    <div class="col-md-9">
+    <div class="col-md-9" id="backgroud">
 <div class="container" >
     <div class="col-xs-9 " id="login">
         <div class="row">
