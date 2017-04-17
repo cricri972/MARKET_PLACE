@@ -3,3 +3,4 @@ app/config.php
 /phpDocumentor.phar
 *.log
 app/Views/layoutclient.php
+app/Model/ClientsModel.php

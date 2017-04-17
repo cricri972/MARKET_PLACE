@@ -18,18 +18,18 @@ $w_routes = array(
 		['GET|POST', '/shop/modifyshop/[:id]', 'Shop#addOrUpdateShopByShop', 'shop_addOrUpdateShopByShop'], // Maj boutique du gérant
 
 
-['GET|POST', '/order/basket/[:id]', 'Order#createBasket', 'order_createBasket'],
-['GET|POST', '/order/clear/', 'Order#clearBasket', 'Order_clearBasket'], // vider le panier
-
-
+		['GET|POST', '/order/basket/[:id]', 'Order#createBasket', 'order_createBasket'],
+		['GET|POST', '/order/clear/', 'Order#clearBasket', 'Order_clearBasket'], // vider le panier
 
 
  
-        ['GET|POST', '/shop', 'Market#shop', 'Market_shop'],
-        ['GET|POST', '/admin', 'Market#admin', 'Market_admin'],
+        ['GET|POST', '/shop', 'Market#shop', 'Market_shop'],  //vue coté boutique
+        ['GET|POST', '/admin', 'Market#admin', 'Market_admin'],  // vue coté admin
         ['GET|POST', '/client', 'Market#client', 'Market_client'],
-        ['GET|POST', '/accueilslider', 'Market#accueilSlider', 'Market_accueilSlider'],
-        
+        ['GET|POST', '/accueilslider', 'Market#accueilSlider', 'Market_accueilSlider'], //vue acceuil
+       // ['GET|POST', '/mrbricolage', 'Market#mrbricolage', 'Market_mrbricolage'],  // vue boutique route à vérifier
+       // ['GET|POST', '/intersport', 'Market#intersport', 'Market_intersport'],  // vue boutique route à vérifier
+       // ['GET|POST', '/carrefour', 'Market#carrefour', 'Market_carrefour'],  // vue boutique route à vérifier
 
 
 		// GET|POST => méthode acceptée
@@ -40,10 +40,16 @@ $w_routes = array(
 		['GET|POST', '/client/add', 'Clients#addClient', 'Clients_addClient'],
 		['GET|POST', '/client/list', 'Clients#listClient', 'Clients_listClient'],
 		['GET|POST', '/client/details/[i:id]', 'Clients#viewClient', 'Clients_viewClient'],
+    
+    
+        ['GET|POST', '/client/detailsclient/[i:id]', 'Clients#viewClientByClient', 'Clients_viewClientByClient'],
+    
+    
 		['GET|POST', '/client/delete/[i:id]', 'Clients#deleteClient', 'Clients_deleteClient'],
 		['GET|POST', '/client/modify/[i:id]', 'Clients#modifyClient', 'Clients_modifyClient'],
     
         ['GET|POST', '/client/modifyadmin/[i:id]', 'Clients#modifyClientByAdmin', 'Clients_modifyClientByAdmin'],
+        ['GET|POST', '#', 'Clients"#"modifyUserByAdmin', 'Clients_modifyUserByAdmin'],
     
 		['GET|POST', '/client/login', 'Clients#loginClient', 'Clients_loginClient'],
 		['GET|POST', '/client/logout', 'Clients#logoutClient', 'Clients_logoutClient'],
@@ -62,9 +68,15 @@ $w_routes = array(
 		['GET|POST', '/user/details/[i:id]', 'Users#viewUser', 'Users_viewUser'],
 		['GET|POST', '/user/delete/[i:id]', 'Users#deleteUser', 'Users_deleteUser'],
 		['GET|POST', '/user/modify/[i:id]', 'Users#modifyUser', 'Users_modifyUser'],
+    
 		['GET|POST', '/user/login', 'Users#loginUser', 'Users_loginUser'],
-		['GET|POST', '/user/logout', 'Users#logoutUser', 'Users_logoutUser'], 
-        
+        ['GET|POST', '/user/logout', 'Users#logoutUser', 'Users_logoutUser'],
+    
+    
+        ['GET|POST', '/user/loginshop', 'Users#loginUser', 'Users_loginUserShop'],
+        ['GET|POST', '/user/logoutshop', 'Users#logoutUsershop', 'Users_logoutUserShop'],
+    
+        ['GET|POST', '/user/updatePasswordUserShop', 'SendMail#SendMailPswUserShop', 'item_MailItemPswUserShop'],
         
         
         ['GET|POST', '/addItemShop', 'Item#AddItemShop', 'item_addItemShop'],

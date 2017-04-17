@@ -72,6 +72,7 @@ public function findAllEmail($orderBy = '', $orderDir = 'ASC', $limit = null, $o
 	}
 
 
+<<<<<<< HEAD
 
 //	public function getUserByUsernameOrEmail($usernameOrEmail)
 //	{
@@ -135,6 +136,8 @@ public function findAllEmail($orderBy = '', $orderDir = 'ASC', $limit = null, $o
 
 	// 	return false;
 	// }
+=======
+>>>>>>> 0ea94be1c9e83d062506f2a506a3344ea6afa25c
 
  	public function find($id)
 	{
@@ -216,6 +219,7 @@ public function findAllEmail($orderBy = '', $orderDir = 'ASC', $limit = null, $o
 
        return $sth->fetch();
    }
+
 
 
 

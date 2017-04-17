@@ -11,14 +11,8 @@
                     <div class="col-md-3 col-sm-12" id="shop">
                         <div class="list-group client">
                            <fieldset>
-                            <a href="<?=$this->url('Clients_modifyClientByAdmin')?>" class="list-group-item">
-                            Clients : modifier   
-                            </a>
                             <a href="<?=$this->url('Clients_listClient')?>" class="list-group-item primary">
-                            Clients : liste       
-                            </a>
-                            <a href="<?=$this->url('Clients_deleteClient')?>" class="list-group-item">
-                            Clients : supprimer
+                            Clients : gestion des clients       
                             </a>
                             </fieldset>    
                         </div>
@@ -26,36 +20,26 @@
                             <a href="<?=$this->url('shop_addShop')?>" class="list-group-item">
                             Boutiques : ajouter
                             </a>
-                            <a href="<?=$this->url('shop_addOrUpdateShop')?>" class="list-group-item">
-                            Boutiques : modifier
-                                
-                            </a>
                             <a href="<?=$this->url('shop_listShop')?>" class="list-group-item">
-                            Boutiques : liste  
-                            </a>
-                            <a href="<?=$this->url('shop_deleteShop')?>" class="list-group-item">
-                            Boutiques : supprimer 
+                            Boutiques :  gestion des boutiques  
                             </a>
                         </div>
                         <div class="list-group user">
                             <a href="<?=$this->url('Users_addUser')?>" class="list-group-item">
                             Users : ajouter     
-                            </a>
-                            <a href="<?=$this->url('Users_modifyUser')?>" class="list-group-item">
-                            Users : modifier  
                             </a> 
                             <a href="<?=$this->url('Users_listUser')?>" class="list-group-item">
-                            Users : liste   
+                            Users :  gestion des users   
                             </a>
-                             <a href="<?=$this->url('Users_deleteUser')?>" class="list-group-item">
-                            Users : supprimer  
+                        </div>  
+                        <div class="list-group user">
+                            <a href="<?=$this->url('Users_addUser')?>" class="list-group-item">
+                            Articles : ajouter     
+                            </a> 
+                            <a href="<?=$this->url('Users_listUser')?>" class="list-group-item">
+                            Articles :  gestion des articles   
                             </a>
-                             <a href="#" class="list-group-item">
-                                
-                            </a>
-                             <a href="#" class="list-group-item">                               
-                            </a>
-                        </div><!-- /list-group -->      
+                        </div><!-- /list-group -->   
                     
                         
                         </div><!-- /col -->
@@ -87,23 +71,14 @@
     </label>  
     </div>
 
-    <div class="form-group">
-      <label class="col-md-12 control-label" for="selectmultiple">Confirmez votre rôle
-      
-      <select id="selectmultiple" name="selectmultiple" class="form-control">
-      <option value="1">Editeur</option>
-      <option value="2">Administrateur</option>
-      </select>
-      </label>
-    </div>  
-
+    
     <!-- Button (Double) -->
     <div class="form-group">
       <label class="col-md-12 control-label" for="submit">
      
         <button type="submit" class="btn btn-success">Me connecter</button>
         <button type="submit" class="btn btn-warning">Mot de passe oublié ?</button>
-        <a href="<?=$this->url('Market_admin')?>" class="btn btn-info btn-md couleur" >Retour Accueil&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span></a>
+       
     </label>
     </div>
 

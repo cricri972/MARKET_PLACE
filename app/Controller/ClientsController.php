@@ -163,6 +163,33 @@ class ClientsController extends Controller
         }
 	}
 
+  public function viewclientByClient($id)
+    {
+        $post = [];
+        $errors = [];
+        $result = [];
+
+        $client = new ClientsModel();
+        //création d'1 variable qui permet l'utilisation des fonctions de ClientsModel.
+
+        $detail = $client->find($id);
+        //création d'1 variable contenant le résultat de la requête (rechercher tous les éléments selon critère ID)
+
+        //var_dump($detail);
+
+        //si la requête ne renvoie rien (si l'ID n'existe pas), on affichera ERREUR 404
+        if(empty($detail))
+        {
+            $this->shownotfound();
+        }
+        else
+        {
+        	$this->show('clients/viewclient',[
+                'descriptif' => $detail,
+                'result'     => $result
+            ]);
+        }
+	}
 
 	public function deleteclient($id)
     {
@@ -480,10 +507,17 @@ public function modifyClientByAdmin($id)
         $this->show('clients/updatePassword');
     }
 
+<<<<<<< HEAD
     public function searchClients() {
 
         $clientsModel = new ClientsModel();
         //var_dump($_POST);
+=======
+
+    public function searchClient() {
+
+        $client = new ClientsModel();
+>>>>>>> 0ea94be1c9e83d062506f2a506a3344ea6afa25c
         if(!empty($_POST)){
             foreach($_POST as $key => $value){
                 $post[$key] = trim(strip_tags($value));
@@ -491,6 +525,7 @@ public function modifyClientByAdmin($id)
         }
 
         $searchDatas = [
+<<<<<<< HEAD
             'name'  => $post['recherche'],
         ];
         $clients = $clientsModel->search($searchDatas);
@@ -500,4 +535,12 @@ public function modifyClientByAdmin($id)
     }
 
 
+=======
+            'name' => $post['recherche'],
+        ];
+        $client = $clientModel->search($searchDatas);
+
+         $this->show('clients/searchClient', ['client' => $client]);
+    }
+>>>>>>> 0ea94be1c9e83d062506f2a506a3344ea6afa25c
 }

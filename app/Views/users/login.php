@@ -11,9 +11,6 @@
                 <div class="row">
                     <div class="col-xs-3 col-sm-12" id="shop">
                         <div class="list-group client">
-                            <a href="<?=$this->url('Clients_addClient')?>" class="list-group-item">
-                            Clients : ajouter  
-                            </a>
                             <a href="<?=$this->url('Clients_modifyClient')?>" class="list-group-item">
                             Clients : modifier   
                             </a>
@@ -86,23 +83,14 @@
     </label>  
     </div>
 
-    <div class="form-group">
-      <label class="col-md-12 control-label" for="selectmultiple">Confirmez votre rôle
-      
-      <select id="selectmultiple" name="selectmultiple" class="form-control">
-      <option value="1">Editeur</option>
-      <option value="2">Administrateur</option>
-      </select>
-      </label>
-    </div>  
-
+    
     <!-- Button (Double) -->
     <div class="form-group">
       <label class="col-md-12 control-label" for="submit">
      
         <button type="submit" class="btn btn-success">Me connecter</button>
           <button type="submit" class="btn btn-warning"><a href="<?=$this->url('Users_modifyUser')?>">Mot de passe oublié ?</a></button>
-        <a href="<?=$this->url('Market_admin')?>" class="btn btn-info btn-md couleur" >Retour Accueil&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span></a>
+        
     </label>
     </div>
 

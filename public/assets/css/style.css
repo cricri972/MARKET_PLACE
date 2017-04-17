@@ -69,9 +69,9 @@ body
     {
     position: relative;
     background-image: url(../img/1adb7a68d91c798d988cfeb80a9e5db4.jpg);
-     
+     background-repeat: no-repeat;
+     background-size:100% 120%;
     
-        
     top:60px;    
     } 
 
@@ -88,7 +88,7 @@ body
 }
 #item-picture{
     margin-top: 35px;
-    
+ 
 }
 
 
@@ -152,7 +152,7 @@ body
 }
 #boutique{
     background-color: #1d1e1f;
-    position: absolute;
+   /* position: absolute;*/
     height: 100%;
  
 }
@@ -164,7 +164,7 @@ body
     color:orange;
 }
 #addclient{
-    margin-left: 50%;
+    margin-left: 15%;
 }
 #addclient input{
     width:40em;
@@ -227,7 +227,8 @@ body
 footer {
       /*-- Dimension et Positionnement --*/
     width: 100%;
-    float: inherit;
+   
+
    
   
     /*-- Décoration --*/

@@ -10,11 +10,65 @@
 		
 	?>
 
-	<div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+<div class="container">
+        <div class="col-md-12">       
+           <div class="row">
+            <div class="col-md-3"  id="boutique" style="height:90em;">
+         
+                    <h2 >Nos Boutiques</h2>
+                
+                <div class="row">
+                    <div class="col-md-3 col-md-12" id="shop">
+                        <div class="list-group">
+                            <a href="<?=$this->url('item_ViewItem')?>" class="list-group-item primary">
+                               
+                                <img src="<?= $this->assetUrl('img/M_BricolagePtt.jpg') ;?>">
+                            </a>
+                            <a href="#" class="list-group-item">
+                                
+                                <img src="<?= $this->assetUrl('img/IntersportPtt.jpg') ;?>">
+                            </a>
+                            <a href="#" class="list-group-item">
+                               
+                                <img src="<?= $this->assetUrl('img/Sun_RecordsPtt.jpg') ;?>">
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <img src="<?= $this->assetUrl('img/LaGrandeRecreBleu-Ptt.jpg') ;?>">
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <img src="<?= $this->assetUrl('img/CarrefourPtt.jpg') ;?>">
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <img src="<?= $this->assetUrl('img/Mango.jpg') ;?>">
+                            </a>
+                             <a href="#" class="list-group-item">
+                                <img src="<?= $this->assetUrl('img/lacoste.jpg') ;?>">
+                            </a>
+                             <a href="#" class="list-group-item">
+                                <img src="<?= $this->assetUrl('img/Samsung.jpg') ;?>">
+                            </a>
+                           
+                           
+                        </div><!-- /list-group -->      
+                    </div><!-- /col -->
+
+                </div><!-- /row -->
+                </div>
+           <!-- /container -->
+
+</div> 
+<div class="col-md-9" style="margin-left:30%;margin-top:5%">	
+	
+
+    <div class="row">
+	    <div class="col-md-9">
+
+
+	<div class="gallery_product col-md-9  col-xs-6 filter hdpe">
 	<img src="<?= $this->assetUrl($view['picture']) ?>" alt="<?php echo $view['picture'];?>" class="img-responsive ">
 	</div>
 
-	<div class="col-xs-5" style="border:0px solid gray">
+	<div class="col-md-12" style="border:0px solid gray">
 <!-- 	<h1>Description</h1> -->
 	<h3>Réference :<br><?php echo $view['ref'];?></h3>
 	<h3>Description :<br><?php echo $view['description'];?></h3>

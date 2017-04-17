@@ -1,4 +1,4 @@
-<?php $this->layout('layoutclient', ['title' => 'Accueil']) ?>
+<?php $this->layout('layoutclient', ['title' => 'intersport']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -64,34 +64,41 @@
                 <div class="row">
                     <div class="col-md-3 col-md-12" id="shop">
                         <div class="list-group">
-                            <a href="" class="list-group-item primary">
+                            <a href="<?=$this->url('Market_mrbricolage')?>" class="list-group-item primary">
                                
                                 <img src="<?= $this->assetUrl('img/M_BricolagePtt.jpg') ;?>">
                             </a>
-                            <a href="" class="list-group-item">
-                               
+                            
+                            <a href="<?=$this->url('Market_intersport')?>" class="list-group-item">
+                                
                                 <img src="<?= $this->assetUrl('img/IntersportPtt.jpg') ;?>">
                             </a>
+                            
                             <a href="#" class="list-group-item">
                                
                                 <img src="<?= $this->assetUrl('img/Sun_RecordsPtt.jpg') ;?>">
                             </a>
+                            
                             <a href="#" class="list-group-item">
                                 <img src="<?= $this->assetUrl('img/LaGrandeRecreBleu-Ptt.jpg') ;?>">
                             </a>
-                            <a href="" class="list-group-item">
+                            
+                            <a href="<?=$this->url('Market_carrefour')?>" class="list-group-item">
                                 <img src="<?= $this->assetUrl('img/CarrefourPtt.jpg') ;?>">
                             </a>
+                            
                             <a href="#" class="list-group-item">
                                 <img src="<?= $this->assetUrl('img/Mango.jpg') ;?>">
                             </a>
+                            
                              <a href="#" class="list-group-item">
                                 <img src="<?= $this->assetUrl('img/lacoste.jpg') ;?>">
                             </a>
+                            
                              <a href="#" class="list-group-item">
                                 <img src="<?= $this->assetUrl('img/Samsung.jpg') ;?>">
                             </a>
-                           
+                         
                            
                         </div><!-- /list-group -->      
                     </div><!-- /col -->
@@ -108,8 +115,11 @@
 
 
     <div class="col-md-9" >
-	
-	    <div class="col-xs-9 col-sm-12" id="item-picture" style="margin-left:5%;" >
+	    
+	      <img src="<?= $this->assetUrl('img/intersport.png') ;?>" style="margin-left:5em;">
+	     
+	     
+	    <div class="col-xs-9 col-sm-12" id="item-picture" style="margin-left:5%;position:inherit;">
 	        <div class="row">
                
                 <div class="col-xs-9 col-sm-4">
@@ -156,7 +166,7 @@
 	</div><!-- /row -->
 </div><!-- /container -->
 	</div>
-   </div>        
+           
  
 
 <?php $this->stop('main_content') ?>

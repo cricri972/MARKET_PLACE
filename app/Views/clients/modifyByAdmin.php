@@ -12,50 +12,32 @@
                     <div class="col-md-3 col-sm-12" id="shop">
                         <div class="list-group client">
                            <fieldset>
-                            <a href="<?=$this->url('Clients_modifyClientByAdmin')?>" class="list-group-item">
-                            Clients : modifier   
-                            </a>
+                            
                             <a href="<?=$this->url('Clients_listClient')?>" class="list-group-item primary">
-                            Clients : liste       
+                            Clients : gestion des clients       
                             </a>
-                            <a href="<?=$this->url('Clients_deleteClient')?>" class="list-group-item">
-                            Clients : supprimer
-                            </a>
+                           
                             </fieldset>
                             </div>
                         <div class="list-group shop">
                             <a href="<?=$this->url('shop_addShop')?>" class="list-group-item">
                             Boutiques : ajouter
                             </a>
-                            <a href="<?=$this->url('shop_addOrUpdateShop')?>" class="list-group-item">
-                            Boutiques : modifier
-                                
-                            </a>
+                            
                             <a href="<?=$this->url('shop_listShop')?>" class="list-group-item">
-                            Boutiques : liste  
+                            Boutiques : gestion des boutiques  
                             </a>
-                            <a href="<?=$this->url('shop_deleteShop')?>" class="list-group-item">
-                            Boutiques : supprimer 
-                            </a>
+                            
                             </div>
                         <div class="list-group user">
-                            <a href="<?=$this->url('Users_addUser')?>" class="list-group-item">
+                            <a href="<?=$this->url('item_addItem')?>" class="list-group-item">
                             Users : ajouter     
                             </a>
-                            <a href="<?=$this->url('Users_modifyUser')?>" class="list-group-item">
-                            Users : modifier  
-                            </a> 
-                            <a href="<?=$this->url('Users_listUser')?>" class="list-group-item">
-                            Users : liste   
+                             
+                            <a href="<?=$this->url('item_listItem')?>" class="list-group-item">
+                            Users : gestion des users   
                             </a>
-                             <a href="<?=$this->url('Users_deleteUser')?>" class="list-group-item">
-                            Users : supprimer  
-                            </a>
-                             <a href="#" class="list-group-item">
-                                
-                            </a>
-                             <a href="#" class="list-group-item">                               
-                            </a>
+                            
                         </div><!-- /list-group -->      
                     </div><!-- /col -->
             </div>
@@ -151,7 +133,7 @@
   <label class="col-md-4 control-label" for="submit"></label>
   <div class="col-md-8">
     <button type="submit" class="btn btn-success">Valider les modifications</button>
-    <a href="<?php echo $this->url('Market_client');?>" class="btn btn-info">Retour Accueil</a>
+    <a href="<?php echo $this->url('Clients_listClient');?>" class="btn btn-info">Retour liste</a>
   </div>
 </div>
 
